@@ -1,0 +1,24 @@
+PODS:
+  - LEEAlert (1.5.0)
+  - Masonry (1.1.0)
+  - SPPageMenu (3.5.0)
+
+DEPENDENCIES:
+  - LEEAlert (~> 1.5.0)
+  - Masonry
+  - SPPageMenu (~> 3.5.0)
+
+SPEC REPOS:
+  https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git:
+    - LEEAlert
+    - Masonry
+    - SPPageMenu
+
+SPEC CHECKSUMS:
+  LEEAlert: 0f5157d83ddb6515fa5b9c99b29b4fb1ccf9c38e
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  SPPageMenu: da182aafcec55719d5c326103cc7716c1e48f311
+
+PODFILE CHECKSUM: e46e70fb5db3c563ae576af28cd37a4a1986391a
+
+COCOAPODS: 1.10.2

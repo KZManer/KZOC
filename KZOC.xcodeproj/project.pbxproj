@@ -13,9 +13,14 @@
 		2995F1D62728095C0000D90D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2995F1D52728095C0000D90D /* Assets.xcassets */; };
 		2995F1D92728095C0000D90D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2995F1D72728095C0000D90D /* LaunchScreen.storyboard */; };
 		2995F1DC2728095C0000D90D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2995F1DB2728095C0000D90D /* main.m */; };
+		2995F1EB27280E8C0000D90D /* KUIViewExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 2995F1E627280E8B0000D90D /* KUIViewExt.m */; };
+		2995F1EC27280E8C0000D90D /* KTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 2995F1E727280E8B0000D90D /* KTools.m */; };
+		2995F1ED27280E8C0000D90D /* KZSelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2995F1E927280E8B0000D90D /* KZSelectView.m */; };
+		426D6BC799EB2889F77E9B6A /* libPods-KZOC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A472C9849EA18CE8268B5BB6 /* libPods-KZOC.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A58ED9FFA5AD146D30D45AD /* Pods-KZOC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KZOC.debug.xcconfig"; path = "Target Support Files/Pods-KZOC/Pods-KZOC.debug.xcconfig"; sourceTree = "<group>"; };
 		2995F1C62728095A0000D90D /* KZOC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KZOC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2995F1C92728095A0000D90D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2995F1CA2728095A0000D90D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -26,6 +31,15 @@
 		2995F1D82728095C0000D90D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2995F1DA2728095C0000D90D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2995F1DB2728095C0000D90D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2995F1E227280E720000D90D /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		2995F1E527280E8B0000D90D /* KTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTools.h; sourceTree = "<group>"; };
+		2995F1E627280E8B0000D90D /* KUIViewExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KUIViewExt.m; sourceTree = "<group>"; };
+		2995F1E727280E8B0000D90D /* KTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTools.m; sourceTree = "<group>"; };
+		2995F1E827280E8B0000D90D /* KUIViewExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KUIViewExt.h; sourceTree = "<group>"; };
+		2995F1E927280E8B0000D90D /* KZSelectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KZSelectView.m; sourceTree = "<group>"; };
+		2995F1EA27280E8B0000D90D /* KZSelectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KZSelectView.h; sourceTree = "<group>"; };
+		85502B3BB602ECB193FD3C70 /* Pods-KZOC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KZOC.release.xcconfig"; path = "Target Support Files/Pods-KZOC/Pods-KZOC.release.xcconfig"; sourceTree = "<group>"; };
+		A472C9849EA18CE8268B5BB6 /* libPods-KZOC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KZOC.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				426D6BC799EB2889F77E9B6A /* libPods-KZOC.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +59,8 @@
 			children = (
 				2995F1C82728095A0000D90D /* KZOC */,
 				2995F1C72728095A0000D90D /* Products */,
+				E17EECFE8FFA35EB97173F37 /* Pods */,
+				C1B7DFEFCC58543D575D076E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,6 +79,8 @@
 				2995F1CA2728095A0000D90D /* AppDelegate.m */,
 				2995F1CF2728095A0000D90D /* ViewController.h */,
 				2995F1D02728095A0000D90D /* ViewController.m */,
+				2995F1E327280E8B0000D90D /* KTools */,
+				2995F1E227280E720000D90D /* PrefixHeader.pch */,
 				2995F1D22728095A0000D90D /* Main.storyboard */,
 				2995F1D52728095C0000D90D /* Assets.xcassets */,
 				2995F1D72728095C0000D90D /* LaunchScreen.storyboard */,
@@ -71,6 +90,44 @@
 			path = KZOC;
 			sourceTree = "<group>";
 		};
+		2995F1E327280E8B0000D90D /* KTools */ = {
+			isa = PBXGroup;
+			children = (
+				2995F1E427280E8B0000D90D /* tools */,
+				2995F1E927280E8B0000D90D /* KZSelectView.m */,
+				2995F1EA27280E8B0000D90D /* KZSelectView.h */,
+			);
+			path = KTools;
+			sourceTree = "<group>";
+		};
+		2995F1E427280E8B0000D90D /* tools */ = {
+			isa = PBXGroup;
+			children = (
+				2995F1E527280E8B0000D90D /* KTools.h */,
+				2995F1E727280E8B0000D90D /* KTools.m */,
+				2995F1E827280E8B0000D90D /* KUIViewExt.h */,
+				2995F1E627280E8B0000D90D /* KUIViewExt.m */,
+			);
+			path = tools;
+			sourceTree = "<group>";
+		};
+		C1B7DFEFCC58543D575D076E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A472C9849EA18CE8268B5BB6 /* libPods-KZOC.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E17EECFE8FFA35EB97173F37 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0A58ED9FFA5AD146D30D45AD /* Pods-KZOC.debug.xcconfig */,
+				85502B3BB602ECB193FD3C70 /* Pods-KZOC.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -78,6 +135,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2995F1DF2728095C0000D90D /* Build configuration list for PBXNativeTarget "KZOC" */;
 			buildPhases = (
+				52D51E72B750E1351AA70190 /* [CP] Check Pods Manifest.lock */,
 				2995F1C22728095A0000D90D /* Sources */,
 				2995F1C32728095A0000D90D /* Frameworks */,
 				2995F1C42728095A0000D90D /* Resources */,
@@ -135,14 +193,42 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		52D51E72B750E1351AA70190 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KZOC-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2995F1C22728095A0000D90D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2995F1EB27280E8C0000D90D /* KUIViewExt.m in Sources */,
+				2995F1ED27280E8C0000D90D /* KZSelectView.m in Sources */,
 				2995F1D12728095A0000D90D /* ViewController.m in Sources */,
 				2995F1CB2728095A0000D90D /* AppDelegate.m in Sources */,
 				2995F1DC2728095C0000D90D /* main.m in Sources */,
+				2995F1EC27280E8C0000D90D /* KTools.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,11 +368,13 @@
 		};
 		2995F1E02728095C0000D90D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A58ED9FFA5AD146D30D45AD /* Pods-KZOC.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GDHLWE42T5;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/KZOC/PrefixHeader.pch";
 				INFOPLIST_FILE = KZOC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -300,11 +388,13 @@
 		};
 		2995F1E12728095C0000D90D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 85502B3BB602ECB193FD3C70 /* Pods-KZOC.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GDHLWE42T5;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/KZOC/PrefixHeader.pch";
 				INFOPLIST_FILE = KZOC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

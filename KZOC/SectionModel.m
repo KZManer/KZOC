@@ -20,15 +20,15 @@
     ];
     NSArray *rowTitles = @[
         @[@"ViewController生命周期",@"UITableView",@"UICollectionView"],
-        @[@"导航栏淡入淡出"],
+        @[@"导航栏淡入淡出",@"图片水印"],
         @[@"Cell选择器"],
-        @[@"LEEAlert",@"SPPageMenu"],
+        @[@"LEEAlert",@"SPPageMenu",@"时间选择器"],
     ];
     NSArray *classNames = @[
         @[@"VCLifeCycle",@"TableViewVC",@"CollectionVC"],
-        @[@"NavigationVC"],
+        @[@"NavigationVC",@"ImageWatermarkVC"],
         @[@"CellSelectVC"],
-        @[@"LeeAlertVC",@"SPPageMenuVC"],
+        @[@"LeeAlertVC",@"SPPageMenuVC",@"DatePickerVC"],
     ];
     
     if (sectionTitles.count != rowTitles.count || sectionTitles.count != classNames.count) return nil;

@@ -126,21 +126,12 @@
 			children = (
 				2995F1C92728095A0000D90D /* AppDelegate.h */,
 				2995F1CA2728095A0000D90D /* AppDelegate.m */,
-				2995F1CF2728095A0000D90D /* ViewController.h */,
-				2995F1D02728095A0000D90D /* ViewController.m */,
-				2995F1EE2728D5B60000D90D /* SectionModel.h */,
-				2995F1EF2728D5B60000D90D /* SectionModel.m */,
 				2995F1F12728D5C50000D90D /* 系统相关 */,
 				2995F21C2728E69C0000D90D /* 功能实验 */,
 				2995F2072728D5D50000D90D /* 组件封装 */,
 				2995F2132728D5DE0000D90D /* 三方框架 */,
 				2995F1E327280E8B0000D90D /* KTools */,
-				2995F1E227280E720000D90D /* PrefixHeader.pch */,
-				2995F1D22728095A0000D90D /* Main.storyboard */,
-				2995F1D52728095C0000D90D /* Assets.xcassets */,
-				2995F1D72728095C0000D90D /* LaunchScreen.storyboard */,
-				2995F1DA2728095C0000D90D /* Info.plist */,
-				2995F1DB2728095C0000D90D /* main.m */,
+				2995F28D272906330000D90D /* Supporting Files */,
 			);
 			path = KZOC;
 			sourceTree = "<group>";
@@ -203,8 +194,8 @@
 		2995F1FE2728D5C50000D90D /* UITableView */ = {
 			isa = PBXGroup;
 			children = (
-				2995F1FF2728D5C50000D90D /* TableViewVC.m */,
 				2995F2002728D5C50000D90D /* TableViewVC.h */,
+				2995F1FF2728D5C50000D90D /* TableViewVC.m */,
 			);
 			path = UITableView;
 			sourceTree = "<group>";
@@ -303,6 +294,23 @@
 				2995F2252728ED740000D90D /* PickerViewParameter.h */,
 			);
 			path = CXDatePicker;
+			sourceTree = "<group>";
+		};
+		2995F28D272906330000D90D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2995F1CF2728095A0000D90D /* ViewController.h */,
+				2995F1D02728095A0000D90D /* ViewController.m */,
+				2995F1EE2728D5B60000D90D /* SectionModel.h */,
+				2995F1EF2728D5B60000D90D /* SectionModel.m */,
+				2995F1D52728095C0000D90D /* Assets.xcassets */,
+				2995F1E227280E720000D90D /* PrefixHeader.pch */,
+				2995F1D22728095A0000D90D /* Main.storyboard */,
+				2995F1D72728095C0000D90D /* LaunchScreen.storyboard */,
+				2995F1DA2728095C0000D90D /* Info.plist */,
+				2995F1DB2728095C0000D90D /* main.m */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		C1B7DFEFCC58543D575D076E /* Frameworks */ = {
@@ -602,8 +610,8 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GDHLWE42T5;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/KZOC/PrefixHeader.pch";
-				INFOPLIST_FILE = KZOC/Info.plist;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/KZOC/Supporting Files/PrefixHeader.pch";
+				INFOPLIST_FILE = "KZOC/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -622,8 +630,8 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GDHLWE42T5;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/KZOC/PrefixHeader.pch";
-				INFOPLIST_FILE = KZOC/Info.plist;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/KZOC/Supporting Files/PrefixHeader.pch";
+				INFOPLIST_FILE = "KZOC/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

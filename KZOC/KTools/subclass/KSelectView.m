@@ -1,13 +1,13 @@
 //
-//  KZSelectView.m
+//  KSelectView.m
 //  demo
 //
 //  Created by KZ on 2021/10/23.
 //
 
-#import "KZSelectView.h"
+#import "KSelectView.h"
 
-@interface KZSelectView ()<UITableViewDataSource,UITableViewDelegate>
+@interface KSelectView ()<UITableViewDataSource,UITableViewDelegate>
 
 @property (nonatomic, strong) NSMutableArray *datasource;
 @property (nonatomic, strong) UITableView *tableView;
@@ -15,10 +15,10 @@
 
 @end
 
-@implementation KZSelectView
+@implementation KSelectView
 
 + (instancetype)view {
-    KZSelectView *view = [[KZSelectView alloc]init];
+    KSelectView *view = [[KSelectView alloc]init];
     return view;
 }
 - (KFrame)kFrame {

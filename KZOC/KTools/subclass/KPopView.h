@@ -1,0 +1,22 @@
+//
+//  KPopView.h
+//  TimeInternational
+//
+//  Created by KZ on 2021/8/13.
+//
+
+#import <UIKit/UIKit.h>
+
+NS_ASSUME_NONNULL_BEGIN
+
+@interface KPopView : UIView
+
+@property (nonatomic, strong) UIView *baseView;
+
+- (void)showInView:(UIView *)view;
+
+- (void)hide;
+
+@end
+
+NS_ASSUME_NONNULL_END

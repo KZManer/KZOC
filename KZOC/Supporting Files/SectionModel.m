@@ -22,13 +22,25 @@
         @[@"ViewController生命周期",@"UITableView",@"UICollectionView"],
         @[@"导航栏淡入淡出",@"图片水印"],
         @[@"Cell选择器"],
-        @[@"LEEAlert",@"SPPageMenu",@"时间选择器"],
+        @[
+            @"MBProgressHUD",
+            @"LEEAlert",
+            @"SPPageMenu",
+            @"时间选择器",
+            @"SAMKeychain(钥匙串)"
+        ],
     ];
     NSArray *classNames = @[
         @[@"VCLifeCycle",@"TableViewVC",@"CollectionVC"],
         @[@"NavigationVC",@"ImageWatermarkVC"],
         @[@"CellSelectVC"],
-        @[@"LeeAlertVC",@"SPPageMenuVC",@"DatePickerVC"],
+        @[
+            @"BMProgressHUDVC",
+            @"LeeAlertVC",
+            @"SPPageMenuVC",
+            @"DatePickerVC",
+            @"SAMKeychainVC",
+        ],
     ];
     
     if (sectionTitles.count != rowTitles.count || sectionTitles.count != classNames.count) return nil;

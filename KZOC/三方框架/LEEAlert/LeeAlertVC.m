@@ -26,7 +26,7 @@
     [button addTarget:self action:@selector(buttonClicked) forControlEvents:UIControlEventTouchUpInside];
     
     
-    [KZSelectView view]
+    [KSelectView view]
     .kFrame(self.view.frame)
     .kBackgroundColor([[UIColor redColor]colorWithAlphaComponent:.4])
     .kDatasource(nil)

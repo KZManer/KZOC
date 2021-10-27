@@ -1,28 +1,44 @@
 PODS:
   - LEEAlert (1.5.0)
   - Masonry (1.1.0)
+  - MBProgressHUD (1.2.0)
+  - MJExtension (3.3.0)
+  - SAMKeychain (1.5.3)
   - SPPageMenu (3.5.0)
+  - SVProgressHUD (2.2.5)
   - TZImagePickerController (3.6.4)
 
 DEPENDENCIES:
   - LEEAlert (~> 1.5.0)
-  - Masonry
+  - Masonry (~> 1.1.0)
+  - MBProgressHUD (~> 1.2.0)
+  - MJExtension
+  - SAMKeychain
   - SPPageMenu (~> 3.5.0)
+  - SVProgressHUD
   - TZImagePickerController (~> 3.6.0)
 
 SPEC REPOS:
   https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git:
     - LEEAlert
     - Masonry
+    - MBProgressHUD
+    - MJExtension
+    - SAMKeychain
     - SPPageMenu
+    - SVProgressHUD
     - TZImagePickerController
 
 SPEC CHECKSUMS:
   LEEAlert: 0f5157d83ddb6515fa5b9c99b29b4fb1ccf9c38e
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
+  MJExtension: 01704cca2b60a214c10761b6491eab74069d68a9
+  SAMKeychain: 483e1c9f32984d50ca961e26818a534283b4cd5c
   SPPageMenu: da182aafcec55719d5c326103cc7716c1e48f311
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   TZImagePickerController: 1cc39ec0454d6e94d0397418953164d7aa631719
 
-PODFILE CHECKSUM: da6a428a40cea99bb7588d67abf04639f56fffc3
+PODFILE CHECKSUM: c84d6f5ea7fd15b856bf2687991217ccc37e0413
 
 COCOAPODS: 1.10.2

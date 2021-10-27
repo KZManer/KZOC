@@ -15,7 +15,7 @@
 		2995F1DC2728095C0000D90D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2995F1DB2728095C0000D90D /* main.m */; };
 		2995F1EB27280E8C0000D90D /* KUIViewExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 2995F1E627280E8B0000D90D /* KUIViewExt.m */; };
 		2995F1EC27280E8C0000D90D /* KTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 2995F1E727280E8B0000D90D /* KTools.m */; };
-		2995F1ED27280E8C0000D90D /* KZSelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2995F1E927280E8B0000D90D /* KZSelectView.m */; };
+		2995F1ED27280E8C0000D90D /* KSelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2995F1E927280E8B0000D90D /* KSelectView.m */; };
 		2995F1F02728D5B60000D90D /* SectionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2995F1EF2728D5B60000D90D /* SectionModel.m */; };
 		2995F2012728D5C50000D90D /* VCLifeCycle.m in Sources */ = {isa = PBXBuildFile; fileRef = 2995F1F32728D5C50000D90D /* VCLifeCycle.m */; };
 		2995F2022728D5C50000D90D /* VCLifeCyclePop.m in Sources */ = {isa = PBXBuildFile; fileRef = 2995F1F72728D5C50000D90D /* VCLifeCyclePop.m */; };
@@ -32,6 +32,30 @@
 		2995F2272728ED740000D90D /* NSDate+CXCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 2995F2222728ED740000D90D /* NSDate+CXCategory.m */; };
 		2995F2282728ED740000D90D /* CXDatePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2995F2262728ED740000D90D /* CXDatePickerView.m */; };
 		2995F22C2728EDF80000D90D /* DatePickerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2995F22B2728EDF80000D90D /* DatePickerVC.m */; };
+		2995F297272907530000D90D /* UIView+KView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2995F290272907530000D90D /* UIView+KView.m */; };
+		2995F298272907530000D90D /* UIButton+KImageText.m in Sources */ = {isa = PBXBuildFile; fileRef = 2995F292272907530000D90D /* UIButton+KImageText.m */; };
+		2995F299272907530000D90D /* UIColor+KCustomColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2995F294272907530000D90D /* UIColor+KCustomColor.m */; };
+		2995F29A272907530000D90D /* UIImage+KSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 2995F295272907530000D90D /* UIImage+KSize.m */; };
+		2995F2BC272907620000D90D /* KRechargeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2995F29D272907620000D90D /* KRechargeModel.m */; };
+		2995F2BD272907620000D90D /* recharge_alipay.png in Resources */ = {isa = PBXBuildFile; fileRef = 2995F2A0272907620000D90D /* recharge_alipay.png */; };
+		2995F2BE272907620000D90D /* recharge_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 2995F2A1272907620000D90D /* recharge_normal.png */; };
+		2995F2BF272907620000D90D /* KRechargeWayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2995F2A2272907620000D90D /* KRechargeWayView.m */; };
+		2995F2C0272907620000D90D /* recharge_wechat.png in Resources */ = {isa = PBXBuildFile; fileRef = 2995F2A3272907620000D90D /* recharge_wechat.png */; };
+		2995F2C1272907620000D90D /* recharge_select.png in Resources */ = {isa = PBXBuildFile; fileRef = 2995F2A4272907620000D90D /* recharge_select.png */; };
+		2995F2C2272907620000D90D /* KBottomPopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2995F2A5272907620000D90D /* KBottomPopView.m */; };
+		2995F2C3272907620000D90D /* KEvaluateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2995F2A7272907620000D90D /* KEvaluateView.m */; };
+		2995F2C4272907620000D90D /* k_add_photo.png in Resources */ = {isa = PBXBuildFile; fileRef = 2995F2AD272907620000D90D /* k_add_photo.png */; };
+		2995F2C5272907620000D90D /* KPhotoCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2995F2AF272907620000D90D /* KPhotoCollectionView.m */; };
+		2995F2C6272907620000D90D /* KPhotoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2995F2B0272907620000D90D /* KPhotoCell.m */; };
+		2995F2C7272907620000D90D /* KPhotoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2995F2B1272907620000D90D /* KPhotoCell.xib */; };
+		2995F2C8272907620000D90D /* k_delete_photo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2995F2B3272907620000D90D /* k_delete_photo@2x.png */; };
+		2995F2C9272907620000D90D /* KPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2995F2B4272907620000D90D /* KPickerView.m */; };
+		2995F2CA272907620000D90D /* KPopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2995F2B5272907620000D90D /* KPopView.m */; };
+		2995F2CF272907620000D90D /* KTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2995F2BB272907620000D90D /* KTextView.m */; };
+		2995F2D5272907670000D90D /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2995F2D3272907660000D90D /* MBProgressHUD.bundle */; };
+		2995F2D6272907670000D90D /* MBProgressHUD+Custom.m in Sources */ = {isa = PBXBuildFile; fileRef = 2995F2D4272907660000D90D /* MBProgressHUD+Custom.m */; };
+		2995F2DA272926EE0000D90D /* BMProgressHUDVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2995F2D9272926EE0000D90D /* BMProgressHUDVC.m */; };
+		29C3864027293BC100E9933C /* SAMKeychainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 29C3863F27293BC100E9933C /* SAMKeychainVC.m */; };
 		426D6BC799EB2889F77E9B6A /* libPods-KZOC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A472C9849EA18CE8268B5BB6 /* libPods-KZOC.a */; };
 /* End PBXBuildFile section */
 
@@ -52,8 +76,8 @@
 		2995F1E627280E8B0000D90D /* KUIViewExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KUIViewExt.m; sourceTree = "<group>"; };
 		2995F1E727280E8B0000D90D /* KTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTools.m; sourceTree = "<group>"; };
 		2995F1E827280E8B0000D90D /* KUIViewExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KUIViewExt.h; sourceTree = "<group>"; };
-		2995F1E927280E8B0000D90D /* KZSelectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KZSelectView.m; sourceTree = "<group>"; };
-		2995F1EA27280E8B0000D90D /* KZSelectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KZSelectView.h; sourceTree = "<group>"; };
+		2995F1E927280E8B0000D90D /* KSelectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSelectView.m; sourceTree = "<group>"; };
+		2995F1EA27280E8B0000D90D /* KSelectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSelectView.h; sourceTree = "<group>"; };
 		2995F1EE2728D5B60000D90D /* SectionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SectionModel.h; sourceTree = "<group>"; };
 		2995F1EF2728D5B60000D90D /* SectionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SectionModel.m; sourceTree = "<group>"; };
 		2995F1F32728D5C50000D90D /* VCLifeCycle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCLifeCycle.m; sourceTree = "<group>"; };
@@ -87,6 +111,46 @@
 		2995F2262728ED740000D90D /* CXDatePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXDatePickerView.m; sourceTree = "<group>"; };
 		2995F22A2728EDF80000D90D /* DatePickerVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DatePickerVC.h; sourceTree = "<group>"; };
 		2995F22B2728EDF80000D90D /* DatePickerVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DatePickerVC.m; sourceTree = "<group>"; };
+		2995F28F272907530000D90D /* UIColor+KCustomColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+KCustomColor.h"; sourceTree = "<group>"; };
+		2995F290272907530000D90D /* UIView+KView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+KView.m"; sourceTree = "<group>"; };
+		2995F291272907530000D90D /* UIImage+KSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+KSize.h"; sourceTree = "<group>"; };
+		2995F292272907530000D90D /* UIButton+KImageText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+KImageText.m"; sourceTree = "<group>"; };
+		2995F293272907530000D90D /* UIView+KView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+KView.h"; sourceTree = "<group>"; };
+		2995F294272907530000D90D /* UIColor+KCustomColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+KCustomColor.m"; sourceTree = "<group>"; };
+		2995F295272907530000D90D /* UIImage+KSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+KSize.m"; sourceTree = "<group>"; };
+		2995F296272907530000D90D /* UIButton+KImageText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+KImageText.h"; sourceTree = "<group>"; };
+		2995F29D272907620000D90D /* KRechargeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KRechargeModel.m; sourceTree = "<group>"; };
+		2995F29E272907620000D90D /* KRechargeWayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KRechargeWayView.h; sourceTree = "<group>"; };
+		2995F29F272907620000D90D /* KRechargeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KRechargeModel.h; sourceTree = "<group>"; };
+		2995F2A0272907620000D90D /* recharge_alipay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = recharge_alipay.png; sourceTree = "<group>"; };
+		2995F2A1272907620000D90D /* recharge_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = recharge_normal.png; sourceTree = "<group>"; };
+		2995F2A2272907620000D90D /* KRechargeWayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KRechargeWayView.m; sourceTree = "<group>"; };
+		2995F2A3272907620000D90D /* recharge_wechat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = recharge_wechat.png; sourceTree = "<group>"; };
+		2995F2A4272907620000D90D /* recharge_select.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = recharge_select.png; sourceTree = "<group>"; };
+		2995F2A5272907620000D90D /* KBottomPopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KBottomPopView.m; sourceTree = "<group>"; };
+		2995F2A6272907620000D90D /* KPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPickerView.h; sourceTree = "<group>"; };
+		2995F2A7272907620000D90D /* KEvaluateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KEvaluateView.m; sourceTree = "<group>"; };
+		2995F2A8272907620000D90D /* KPopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPopView.h; sourceTree = "<group>"; };
+		2995F2A9272907620000D90D /* KTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTextView.h; sourceTree = "<group>"; };
+		2995F2AA272907620000D90D /* KBottomPopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KBottomPopView.h; sourceTree = "<group>"; };
+		2995F2AB272907620000D90D /* KEvaluateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KEvaluateView.h; sourceTree = "<group>"; };
+		2995F2AD272907620000D90D /* k_add_photo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = k_add_photo.png; sourceTree = "<group>"; };
+		2995F2AE272907620000D90D /* KPhotoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPhotoCell.h; sourceTree = "<group>"; };
+		2995F2AF272907620000D90D /* KPhotoCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPhotoCollectionView.m; sourceTree = "<group>"; };
+		2995F2B0272907620000D90D /* KPhotoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPhotoCell.m; sourceTree = "<group>"; };
+		2995F2B1272907620000D90D /* KPhotoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KPhotoCell.xib; sourceTree = "<group>"; };
+		2995F2B2272907620000D90D /* KPhotoCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPhotoCollectionView.h; sourceTree = "<group>"; };
+		2995F2B3272907620000D90D /* k_delete_photo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "k_delete_photo@2x.png"; sourceTree = "<group>"; };
+		2995F2B4272907620000D90D /* KPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPickerView.m; sourceTree = "<group>"; };
+		2995F2B5272907620000D90D /* KPopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPopView.m; sourceTree = "<group>"; };
+		2995F2BB272907620000D90D /* KTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTextView.m; sourceTree = "<group>"; };
+		2995F2D2272907660000D90D /* MBProgressHUD+Custom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+Custom.h"; sourceTree = "<group>"; };
+		2995F2D3272907660000D90D /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
+		2995F2D4272907660000D90D /* MBProgressHUD+Custom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+Custom.m"; sourceTree = "<group>"; };
+		2995F2D8272926EE0000D90D /* BMProgressHUDVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BMProgressHUDVC.h; sourceTree = "<group>"; };
+		2995F2D9272926EE0000D90D /* BMProgressHUDVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BMProgressHUDVC.m; sourceTree = "<group>"; };
+		29C3863E27293BC100E9933C /* SAMKeychainVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SAMKeychainVC.h; sourceTree = "<group>"; };
+		29C3863F27293BC100E9933C /* SAMKeychainVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SAMKeychainVC.m; sourceTree = "<group>"; };
 		85502B3BB602ECB193FD3C70 /* Pods-KZOC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KZOC.release.xcconfig"; path = "Target Support Files/Pods-KZOC/Pods-KZOC.release.xcconfig"; sourceTree = "<group>"; };
 		A472C9849EA18CE8268B5BB6 /* libPods-KZOC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KZOC.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -139,9 +203,10 @@
 		2995F1E327280E8B0000D90D /* KTools */ = {
 			isa = PBXGroup;
 			children = (
+				2995F2D0272907660000D90D /* category_third */,
+				2995F29B272907620000D90D /* subclass */,
+				2995F28E272907530000D90D /* category */,
 				2995F1E427280E8B0000D90D /* tools */,
-				2995F1E927280E8B0000D90D /* KZSelectView.m */,
-				2995F1EA27280E8B0000D90D /* KZSelectView.h */,
 			);
 			path = KTools;
 			sourceTree = "<group>";
@@ -204,7 +269,6 @@
 			isa = PBXGroup;
 			children = (
 				2995F2082728D5D50000D90D /* Cell选择器 */,
-				2995F21D2728E8200000D90D /* 图片水印 */,
 			);
 			path = "组件封装";
 			sourceTree = "<group>";
@@ -232,8 +296,10 @@
 		2995F2132728D5DE0000D90D /* 三方框架 */ = {
 			isa = PBXGroup;
 			children = (
-				2995F2142728D5DE0000D90D /* SPPageMenu */,
+				29C3863D27293B8E00E9933C /* SAMKeychain(钥匙串） */,
+				2995F2D7272926AA0000D90D /* BMProgressHUD */,
 				2995F2172728D5DE0000D90D /* LEEAlert */,
+				2995F2142728D5DE0000D90D /* SPPageMenu */,
 				2995F2212728ED3F0000D90D /* 时间选择器 */,
 			);
 			path = "三方框架";
@@ -261,6 +327,7 @@
 			isa = PBXGroup;
 			children = (
 				2995F20B2728D5D50000D90D /* 导航栏渐进色 */,
+				2995F21D2728E8200000D90D /* 图片水印 */,
 			);
 			path = "功能实验";
 			sourceTree = "<group>";
@@ -311,6 +378,107 @@
 				2995F1DB2728095C0000D90D /* main.m */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2995F28E272907530000D90D /* category */ = {
+			isa = PBXGroup;
+			children = (
+				2995F293272907530000D90D /* UIView+KView.h */,
+				2995F290272907530000D90D /* UIView+KView.m */,
+				2995F291272907530000D90D /* UIImage+KSize.h */,
+				2995F295272907530000D90D /* UIImage+KSize.m */,
+				2995F296272907530000D90D /* UIButton+KImageText.h */,
+				2995F292272907530000D90D /* UIButton+KImageText.m */,
+				2995F28F272907530000D90D /* UIColor+KCustomColor.h */,
+				2995F294272907530000D90D /* UIColor+KCustomColor.m */,
+			);
+			path = category;
+			sourceTree = "<group>";
+		};
+		2995F29B272907620000D90D /* subclass */ = {
+			isa = PBXGroup;
+			children = (
+				2995F29C272907620000D90D /* KRechargeWayView */,
+				2995F2AC272907620000D90D /* KImgeCollectionView */,
+				2995F2AA272907620000D90D /* KBottomPopView.h */,
+				2995F2A5272907620000D90D /* KBottomPopView.m */,
+				2995F2A6272907620000D90D /* KPickerView.h */,
+				2995F2B4272907620000D90D /* KPickerView.m */,
+				2995F2A9272907620000D90D /* KTextView.h */,
+				2995F2BB272907620000D90D /* KTextView.m */,
+				2995F2AB272907620000D90D /* KEvaluateView.h */,
+				2995F2A7272907620000D90D /* KEvaluateView.m */,
+				2995F2A8272907620000D90D /* KPopView.h */,
+				2995F2B5272907620000D90D /* KPopView.m */,
+				2995F1EA27280E8B0000D90D /* KSelectView.h */,
+				2995F1E927280E8B0000D90D /* KSelectView.m */,
+			);
+			path = subclass;
+			sourceTree = "<group>";
+		};
+		2995F29C272907620000D90D /* KRechargeWayView */ = {
+			isa = PBXGroup;
+			children = (
+				2995F29D272907620000D90D /* KRechargeModel.m */,
+				2995F29E272907620000D90D /* KRechargeWayView.h */,
+				2995F29F272907620000D90D /* KRechargeModel.h */,
+				2995F2A0272907620000D90D /* recharge_alipay.png */,
+				2995F2A1272907620000D90D /* recharge_normal.png */,
+				2995F2A2272907620000D90D /* KRechargeWayView.m */,
+				2995F2A3272907620000D90D /* recharge_wechat.png */,
+				2995F2A4272907620000D90D /* recharge_select.png */,
+			);
+			path = KRechargeWayView;
+			sourceTree = "<group>";
+		};
+		2995F2AC272907620000D90D /* KImgeCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				2995F2AD272907620000D90D /* k_add_photo.png */,
+				2995F2AE272907620000D90D /* KPhotoCell.h */,
+				2995F2AF272907620000D90D /* KPhotoCollectionView.m */,
+				2995F2B0272907620000D90D /* KPhotoCell.m */,
+				2995F2B1272907620000D90D /* KPhotoCell.xib */,
+				2995F2B2272907620000D90D /* KPhotoCollectionView.h */,
+				2995F2B3272907620000D90D /* k_delete_photo@2x.png */,
+			);
+			path = KImgeCollectionView;
+			sourceTree = "<group>";
+		};
+		2995F2D0272907660000D90D /* category_third */ = {
+			isa = PBXGroup;
+			children = (
+				2995F2D1272907660000D90D /* MBProgressHUD */,
+			);
+			path = category_third;
+			sourceTree = "<group>";
+		};
+		2995F2D1272907660000D90D /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				2995F2D3272907660000D90D /* MBProgressHUD.bundle */,
+				2995F2D2272907660000D90D /* MBProgressHUD+Custom.h */,
+				2995F2D4272907660000D90D /* MBProgressHUD+Custom.m */,
+			);
+			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
+		2995F2D7272926AA0000D90D /* BMProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				2995F2D8272926EE0000D90D /* BMProgressHUDVC.h */,
+				2995F2D9272926EE0000D90D /* BMProgressHUDVC.m */,
+			);
+			path = BMProgressHUD;
+			sourceTree = "<group>";
+		};
+		29C3863D27293B8E00E9933C /* SAMKeychain(钥匙串） */ = {
+			isa = PBXGroup;
+			children = (
+				29C3863E27293BC100E9933C /* SAMKeychainVC.h */,
+				29C3863F27293BC100E9933C /* SAMKeychainVC.m */,
+			);
+			path = "SAMKeychain(钥匙串）";
 			sourceTree = "<group>";
 		};
 		C1B7DFEFCC58543D575D076E /* Frameworks */ = {
@@ -389,8 +557,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				2995F1D92728095C0000D90D /* LaunchScreen.storyboard in Resources */,
+				2995F2D5272907670000D90D /* MBProgressHUD.bundle in Resources */,
+				2995F2BE272907620000D90D /* recharge_normal.png in Resources */,
+				2995F2C0272907620000D90D /* recharge_wechat.png in Resources */,
 				2995F1D62728095C0000D90D /* Assets.xcassets in Resources */,
+				2995F2BD272907620000D90D /* recharge_alipay.png in Resources */,
 				2995F1D42728095A0000D90D /* Main.storyboard in Resources */,
+				2995F2C8272907620000D90D /* k_delete_photo@2x.png in Resources */,
+				2995F2C4272907620000D90D /* k_add_photo.png in Resources */,
+				2995F2C1272907620000D90D /* recharge_select.png in Resources */,
+				2995F2C7272907620000D90D /* KPhotoCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,28 +619,44 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2995F298272907530000D90D /* UIButton+KImageText.m in Sources */,
+				2995F2C9272907620000D90D /* KPickerView.m in Sources */,
 				2995F1EB27280E8C0000D90D /* KUIViewExt.m in Sources */,
+				2995F29A272907530000D90D /* UIImage+KSize.m in Sources */,
+				2995F299272907530000D90D /* UIColor+KCustomColor.m in Sources */,
 				2995F2062728D5C50000D90D /* TableViewVC.m in Sources */,
 				2995F2122728D5D50000D90D /* NavigationVC.m in Sources */,
 				2995F2012728D5C50000D90D /* VCLifeCycle.m in Sources */,
+				2995F2D6272907670000D90D /* MBProgressHUD+Custom.m in Sources */,
 				2995F2052728D5C50000D90D /* CollectionVC.m in Sources */,
 				2995F2102728D5D50000D90D /* CellSelectVC.m in Sources */,
-				2995F1ED27280E8C0000D90D /* KZSelectView.m in Sources */,
+				2995F2CA272907620000D90D /* KPopView.m in Sources */,
+				2995F1ED27280E8C0000D90D /* KSelectView.m in Sources */,
 				2995F1D12728095A0000D90D /* ViewController.m in Sources */,
 				2995F21A2728D5DE0000D90D /* SPPageMenuVC.m in Sources */,
 				2995F1CB2728095A0000D90D /* AppDelegate.m in Sources */,
 				2995F1F02728D5B60000D90D /* SectionModel.m in Sources */,
 				2995F1DC2728095C0000D90D /* main.m in Sources */,
 				2995F2202728E8460000D90D /* ImageWatermarkVC.m in Sources */,
+				2995F297272907530000D90D /* UIView+KView.m in Sources */,
+				2995F2BF272907620000D90D /* KRechargeWayView.m in Sources */,
+				2995F2C5272907620000D90D /* KPhotoCollectionView.m in Sources */,
 				2995F2272728ED740000D90D /* NSDate+CXCategory.m in Sources */,
 				2995F22C2728EDF80000D90D /* DatePickerVC.m in Sources */,
 				2995F2282728ED740000D90D /* CXDatePickerView.m in Sources */,
+				2995F2C2272907620000D90D /* KBottomPopView.m in Sources */,
 				2995F2042728D5C50000D90D /* CollectionCell.m in Sources */,
 				2995F2112728D5D50000D90D /* NavCustomView.m in Sources */,
+				2995F2BC272907620000D90D /* KRechargeModel.m in Sources */,
+				2995F2C3272907620000D90D /* KEvaluateView.m in Sources */,
+				2995F2DA272926EE0000D90D /* BMProgressHUDVC.m in Sources */,
 				2995F2032728D5C50000D90D /* VCLifeCyclePresent.m in Sources */,
+				29C3864027293BC100E9933C /* SAMKeychainVC.m in Sources */,
+				2995F2C6272907620000D90D /* KPhotoCell.m in Sources */,
 				2995F1EC27280E8C0000D90D /* KTools.m in Sources */,
 				2995F21B2728D5DE0000D90D /* LeeAlertVC.m in Sources */,
 				2995F2022728D5C50000D90D /* VCLifeCyclePop.m in Sources */,
+				2995F2CF272907620000D90D /* KTextView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

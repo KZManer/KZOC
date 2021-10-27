@@ -13,18 +13,21 @@
     
     NSMutableArray *sectionArray = [NSMutableArray array];
     NSArray *sectionTitles = @[
-        @"系统组件",
-        @"自定义组件",
-        @"第三方框架",
+        @"系统相关",
+        @"功能实验",
+        @"组件封装",
+        @"三方框架",
     ];
     NSArray *rowTitles = @[
         @[@"ViewController生命周期",@"UITableView",@"UICollectionView"],
-        @[@"Cell选择器",@"导航栏渐进色"],
+        @[@"导航栏淡入淡出"],
+        @[@"Cell选择器"],
         @[@"LEEAlert",@"SPPageMenu"],
     ];
     NSArray *classNames = @[
         @[@"VCLifeCycle",@"TableViewVC",@"CollectionVC"],
-        @[@"CellSelectVC",@"NavigationVC"],
+        @[@"NavigationVC"],
+        @[@"CellSelectVC"],
         @[@"LeeAlertVC",@"SPPageMenuVC"],
     ];
     

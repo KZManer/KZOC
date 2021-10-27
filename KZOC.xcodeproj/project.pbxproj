@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -117,9 +117,10 @@
 				2995F1D02728095A0000D90D /* ViewController.m */,
 				2995F1EE2728D5B60000D90D /* SectionModel.h */,
 				2995F1EF2728D5B60000D90D /* SectionModel.m */,
-				2995F1F12728D5C50000D90D /* System */,
-				2995F2072728D5D50000D90D /* Custom */,
-				2995F2132728D5DE0000D90D /* third framework */,
+				2995F1F12728D5C50000D90D /* 系统相关 */,
+				2995F21C2728E69C0000D90D /* 功能实验 */,
+				2995F2072728D5D50000D90D /* 组件封装 */,
+				2995F2132728D5DE0000D90D /* 三方框架 */,
 				2995F1E327280E8B0000D90D /* KTools */,
 				2995F1E227280E720000D90D /* PrefixHeader.pch */,
 				2995F1D22728095A0000D90D /* Main.storyboard */,
@@ -152,14 +153,14 @@
 			path = tools;
 			sourceTree = "<group>";
 		};
-		2995F1F12728D5C50000D90D /* System */ = {
+		2995F1F12728D5C50000D90D /* 系统相关 */ = {
 			isa = PBXGroup;
 			children = (
 				2995F1F22728D5C50000D90D /* VCLifeCycle */,
 				2995F1F92728D5C50000D90D /* UICollectionView */,
 				2995F1FE2728D5C50000D90D /* UITableView */,
 			);
-			path = System;
+			path = "系统相关";
 			sourceTree = "<group>";
 		};
 		2995F1F22728D5C50000D90D /* VCLifeCycle */ = {
@@ -195,13 +196,12 @@
 			path = UITableView;
 			sourceTree = "<group>";
 		};
-		2995F2072728D5D50000D90D /* Custom */ = {
+		2995F2072728D5D50000D90D /* 组件封装 */ = {
 			isa = PBXGroup;
 			children = (
 				2995F2082728D5D50000D90D /* Cell选择器 */,
-				2995F20B2728D5D50000D90D /* 导航栏渐进色 */,
 			);
-			path = Custom;
+			path = "组件封装";
 			sourceTree = "<group>";
 		};
 		2995F2082728D5D50000D90D /* Cell选择器 */ = {
@@ -224,13 +224,13 @@
 			path = "导航栏渐进色";
 			sourceTree = "<group>";
 		};
-		2995F2132728D5DE0000D90D /* third framework */ = {
+		2995F2132728D5DE0000D90D /* 三方框架 */ = {
 			isa = PBXGroup;
 			children = (
 				2995F2142728D5DE0000D90D /* SPPageMenu */,
 				2995F2172728D5DE0000D90D /* LEEAlert */,
 			);
-			path = "third framework";
+			path = "三方框架";
 			sourceTree = "<group>";
 		};
 		2995F2142728D5DE0000D90D /* SPPageMenu */ = {
@@ -249,6 +249,14 @@
 				2995F2192728D5DE0000D90D /* LeeAlertVC.h */,
 			);
 			path = LEEAlert;
+			sourceTree = "<group>";
+		};
+		2995F21C2728E69C0000D90D /* 功能实验 */ = {
+			isa = PBXGroup;
+			children = (
+				2995F20B2728D5D50000D90D /* 导航栏渐进色 */,
+			);
+			path = "功能实验";
 			sourceTree = "<group>";
 		};
 		C1B7DFEFCC58543D575D076E /* Frameworks */ = {
@@ -279,6 +287,7 @@
 				2995F1C22728095A0000D90D /* Sources */,
 				2995F1C32728095A0000D90D /* Frameworks */,
 				2995F1C42728095A0000D90D /* Resources */,
+				0FC4DF4C5F56550A4F66CCBD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -334,6 +343,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0FC4DF4C5F56550A4F66CCBD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KZOC/Pods-KZOC-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KZOC/Pods-KZOC-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KZOC/Pods-KZOC-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		52D51E72B750E1351AA70190 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

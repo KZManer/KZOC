@@ -22,29 +22,27 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"日常记录";
     self.sectionInfos = [SectionModel allSectionInfos];
     [self.view addSubview:self.tableView];
 }
 - (void)viewWillLayoutSubviews {
     self.tableView.frame = self.view.frame;
+    UILabel *bottomLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, self.view.width, 30)];
+    bottomLabel.text = @"end";
+    bottomLabel.textAlignment = NSTextAlignmentCenter;
+    bottomLabel.backgroundColor = [[UIColor lightGrayColor]colorWithAlphaComponent:.3];
+    self.tableView.tableFooterView = bottomLabel;
 }
 #pragma mark - UITableViewDataSource & UITableViewDelegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 44;
 }
-
-/**自定义section header view*/
-- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-    UIView *sectionHeaderView = [[UIView alloc]init];
-    sectionHeaderView.backgroundColor = [UIColor lightGrayColor];
-    UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(10, 0, self.view.width, 30)];
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     SectionModel *model = self.sectionInfos[section];
-    label.text = model.name;
-    label.textColor = [UIColor blackColor];
-    label.font = [UIFont boldSystemFontOfSize:18];
-    [sectionHeaderView addSubview:label];
-    return sectionHeaderView;
+    return model.name;
 }
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return self.sectionInfos.count;
 }
@@ -61,12 +59,11 @@
     }
     SectionModel *model = self.sectionInfos[indexPath.section];
     cell.textLabel.text = model.rowNames[indexPath.row];
-    UIColor *bgColor = indexPath.section % 2 == 0 ? [[UIColor blueColor]colorWithAlphaComponent:.2] : [[UIColor greenColor]colorWithAlphaComponent:.2];
-    cell.contentView.backgroundColor = bgColor;
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
     SectionModel *model = self.sectionInfos[indexPath.section];
     NSString *className = model.classNames[indexPath.row];
     Class cls = NSClassFromString(className);

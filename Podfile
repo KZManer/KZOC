@@ -14,6 +14,7 @@ target 'KZOC' do
 pod 'LEEAlert','~>1.5.0'
 pod 'Masonry'
 pod 'SPPageMenu', '~> 3.5.0'
+pod 'TZImagePickerController','~>3.6.0' #图片框架
 
 end
 

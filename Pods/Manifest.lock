@@ -2,23 +2,27 @@ PODS:
   - LEEAlert (1.5.0)
   - Masonry (1.1.0)
   - SPPageMenu (3.5.0)
+  - TZImagePickerController (3.6.4)
 
 DEPENDENCIES:
   - LEEAlert (~> 1.5.0)
   - Masonry
   - SPPageMenu (~> 3.5.0)
+  - TZImagePickerController (~> 3.6.0)
 
 SPEC REPOS:
   https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git:
     - LEEAlert
     - Masonry
     - SPPageMenu
+    - TZImagePickerController
 
 SPEC CHECKSUMS:
   LEEAlert: 0f5157d83ddb6515fa5b9c99b29b4fb1ccf9c38e
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   SPPageMenu: da182aafcec55719d5c326103cc7716c1e48f311
+  TZImagePickerController: 1cc39ec0454d6e94d0397418953164d7aa631719
 
-PODFILE CHECKSUM: e46e70fb5db3c563ae576af28cd37a4a1986391a
+PODFILE CHECKSUM: da6a428a40cea99bb7588d67abf04639f56fffc3
 
 COCOAPODS: 1.10.2

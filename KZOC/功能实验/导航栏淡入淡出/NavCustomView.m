@@ -6,28 +6,38 @@
 //
 
 #import "NavCustomView.h"
-#import "SPPageMenu.h"
+#import "NavCustomViewCell.h"
 
-@interface NavCustomView ()<SPPageMenuDelegate>
+static int CollectionViewHeight = 40;
+
+@interface NavCustomView ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>
 
 @property (nonatomic, strong) UIButton *backButton;
 @property (nonatomic, strong) UIButton *shareButton;
-@property (nonatomic, strong) SPPageMenu *pageMenu;
 @property (nonatomic, assign) BOOL clickedPageMenu;
+
+@property (nonatomic, strong) NSArray *menuTitles;
+@property (nonatomic, strong) UICollectionView *collectionView;
+/**选中的菜单项下标*/
+@property (nonatomic, assign) NSInteger selectIndex;
 
 @end
 
 @implementation NavCustomView
 
-- (instancetype)initWithFrame:(CGRect)frame
-{
+- (instancetype)initWithFrame:(CGRect)frame menuTitles:(NSArray *)menuTitles {
     self = [super initWithFrame:frame];
     if (self) {
-        [self doViewUI];
+        self.menuTitles = [NSArray arrayWithArray:menuTitles];
+        self.selectIndex = 0;
+        [self doVVUI];
     }
     return self;
 }
-- (void)doViewUI {
+
+#pragma mark - private method
+- (void)doVVUI {
+    
     self.backButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [self.backButton addTarget:self action:@selector(backButtonPressedAction) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:self.backButton];
@@ -44,21 +54,20 @@
         make.width.height.centerY.mas_equalTo(self.backButton);
     }];
     
-    self.pageMenu = [SPPageMenu pageMenuWithFrame:CGRectZero trackerStyle:SPPageMenuTrackerStyleLineAttachment];
-    self.pageMenu.delegate = self;
-    [self.pageMenu setItems:@[@"宝贝",@"评论",@"详情"] selectedItemIndex:0];
-    self.pageMenu.alpha = 0;
-    self.pageMenu.backgroundColor = [UIColor clearColor];
-    UIColor *color = [UIColor colorWithRed:56/255.0 green:125/255.0 blue:252/255.0 alpha:1/1.0];
-    self.pageMenu.selectedItemTitleColor = color;
-    self.pageMenu.tracker.backgroundColor = color;
-    self.pageMenu.trackerWidth = 40;
-    [self.pageMenu setTrackerHeight:2 cornerRadius:0.2];
-    self.pageMenu.permutationWay = SPPageMenuPermutationWayNotScrollEqualWidths;
-    [self addSubview:self.pageMenu];
-    [self.pageMenu mas_makeConstraints:^(MASConstraintMaker *make) {
+    UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc]init];
+    flowLayout.minimumLineSpacing = 0;
+    flowLayout.minimumInteritemSpacing = 0;
+    self.collectionView = [[UICollectionView alloc]initWithFrame:CGRectZero collectionViewLayout:flowLayout];
+    self.collectionView.backgroundColor = [UIColor clearColor];
+    self.collectionView.alpha = 0;
+    self.collectionView.dataSource = self;
+    self.collectionView.delegate = self;
+    [self.collectionView registerClass:[NavCustomViewCell class] forCellWithReuseIdentifier:CellIdentifierNavCustomeView];
+    
+    [self addSubview:self.collectionView];
+    [self.collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.bottom.right.mas_equalTo(0);
-        make.height.mas_equalTo(40);
+        make.height.mas_equalTo(CollectionViewHeight);
     }];
 }
 
@@ -72,25 +81,60 @@
     [self.shareButton setImage:[UIImage imageNamed:@"share_hide"] forState:UIControlStateNormal];
 }
 
-- (void)pageMenuAlpha:(CGFloat)alpha {
-    self.pageMenu.alpha = alpha;
-}
-
 - (void)backButtonPressedAction {
     if (self.delegate && [self.delegate respondsToSelector:@selector(backButtonPressed)]) {
         [self.delegate backButtonPressed];
     }
 }
 
-#pragma mark - SPPageMenuDelegate
+#pragma mark public method
 
-- (void)pageMenu:(SPPageMenu *)pageMenu itemSelectedFromIndex:(NSInteger)fromIndex toIndex:(NSInteger)toIndex {
-//    if (!self.clickedPageMenu) {
-//        self.clickedPageMenu = true;
-//        return;
-//    }
-    if (self.delegate && [self.delegate respondsToSelector:@selector(pageEnumClicked:)]) {
-        [self.delegate pageEnumClicked:toIndex];
+- (void)pageMenuAlpha:(CGFloat)alpha {
+    self.collectionView.alpha = alpha;
+}
+
+- (void)updateCollectionViewCellStatus:(NSInteger)index {
+    if (self.selectIndex == index) return;
+    NavMenuModel *oldModel = self.menuTitles[self.selectIndex];
+    oldModel.active = false;
+    NavMenuModel *newModel = self.menuTitles[index];
+    newModel.active = true;
+    
+    self.selectIndex = index;
+    
+    [self.collectionView reloadData];
+}
+
+#pragma makr - UICollectionViewDataSource & UICollectionViewDelegate
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return self.menuTitles.count;
+}
+
+- (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    NavCustomViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifierNavCustomeView forIndexPath:indexPath];
+    [cell echoContent:self.menuTitles[indexPath.row]];
+    return cell;
+}
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    return CGSizeMake(self.width/3, CollectionViewHeight);
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.item == self.selectIndex) return;
+    
+    //更新标题的活跃态
+    NavMenuModel *oldModel = self.menuTitles[self.selectIndex];
+    oldModel.active = false;
+    NavMenuModel *newModel = self.menuTitles[indexPath.row];
+    newModel.active = true;
+    
+    self.selectIndex = indexPath.item;
+    
+    if (self.delegate && [self.delegate respondsToSelector:@selector(collectionViewCellDidSelect:)]) {
+        [self.delegate collectionViewCellDidSelect:indexPath.item];
+        [self.collectionView reloadData];
     }
 }
 

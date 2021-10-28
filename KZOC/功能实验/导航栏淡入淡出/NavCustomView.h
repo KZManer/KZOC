@@ -6,14 +6,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NavMenuModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @protocol NavCustomViewDelegate <NSObject>
 
-- (void)pageEnumClicked:(NSInteger)clickIndex;
-
 - (void)backButtonPressed;
+
+- (void)collectionViewCellDidSelect:(NSInteger)selectIndex;
 
 @end
 
@@ -21,11 +22,16 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, weak) id<NavCustomViewDelegate> delegate;
 
+- (instancetype)initWithFrame:(CGRect)frame menuTitles:(NSArray *)menuTitles;
+
 - (void)showModeImage;
 
 - (void)hideModeImage;
 
+/**菜单透明度*/
 - (void)pageMenuAlpha:(CGFloat)alpha;
+
+- (void)updateCollectionViewCellStatus:(NSInteger)index;
 
 @end
 

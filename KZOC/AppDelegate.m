@@ -6,6 +6,7 @@
 //
 
 #import "AppDelegate.h"
+#import "TabBarRootVC.h"
 
 @interface AppDelegate ()
 
@@ -20,7 +21,9 @@
     self.window.backgroundColor = [UIColor whiteColor];
     Class cl = NSClassFromString(@"ViewController");
     UIViewController *rootVC = [[cl alloc]init];
-    self.window.rootViewController = [[UINavigationController alloc]initWithRootViewController:rootVC];
+    TabBarRootVC *tabbarVC = [[TabBarRootVC alloc]init];
+    self.window.rootViewController = tabbarVC;
+//    self.window.rootViewController = [[UINavigationController alloc]initWithRootViewController:rootVC];
     [self.window makeKeyAndVisible];
     
     return YES;

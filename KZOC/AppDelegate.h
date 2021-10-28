@@ -13,3 +13,7 @@
 
 @end
 
+/**
+ - AppIcon RGB：rgb(63,113,154)
+           HEX：#3f719a
+ */

@@ -1,15 +1,15 @@
 //
-//  ViewController.m
+//  HomeVC.m
 //  KZOC
 //
-//  Created by KZ on 2021/10/26.
+//  Created by KZ on 2021/10/28.
 //
 
-#import "ViewController.h"
+#import "HomeVC.h"
 #import "SectionModel.h"
 #import "HomeHeaderView.h"
 
-@interface ViewController ()<UITableViewDataSource,UITableViewDelegate>
+@interface HomeVC ()<UITableViewDataSource,UITableViewDelegate>
 
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSArray *titles;
@@ -17,13 +17,12 @@
 
 @end
 
-@implementation ViewController
+@implementation HomeVC
 
 #pragma mark - override method
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"日常记录";
     self.sectionInfos = [SectionModel allSectionInfos];
     [self.view addSubview:self.tableView];
 }
@@ -89,6 +88,7 @@
     Class cls = NSClassFromString(className);
     UIViewController *vc = [cls new];
     vc.title = model.rowNames[indexPath.row];
+    vc.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:vc animated:YES];
 }
 

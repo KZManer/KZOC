@@ -76,7 +76,6 @@ static CGFloat topViewHeight = 120;
     } else {
         [self.topView showModeImage];
     }
-    [self.topView bridgeScrollView:self.scrollView];
 //    CGFloat scrollY = scrollView.contentOffset.y;
 //    if (scrollY >= height * 3 - topViewHeight) {
 //        [self.topView changePageMenuIndex:2];
@@ -96,6 +95,10 @@ static CGFloat topViewHeight = 120;
     CGFloat scrollMaxY = self.scrollView.contentSize.height - [KTools tools_heightOfScreen];
     CGFloat finalScrollToY = scrollToY > scrollMaxY ? scrollMaxY : scrollToY;
     [self.scrollView setContentOffset:CGPointMake(0, finalScrollToY) animated:YES];
+}
+
+- (void)backButtonPressed {
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 @end

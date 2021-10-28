@@ -7,6 +7,7 @@
 
 #import "ViewController.h"
 #import "SectionModel.h"
+#import "HomeHeaderView.h"
 
 @interface ViewController ()<UITableViewDataSource,UITableViewDelegate>
 
@@ -28,6 +29,25 @@
 }
 - (void)viewWillLayoutSubviews {
     self.tableView.frame = self.view.frame;
+    
+//    extern int HOMEHEADERVIEWCELLHEIGHT;
+//    extern int HOMEHEADERVIEWCELLCOLUMN;
+    
+    int headerViewCellRow = 1;
+    NSArray *sectionTitles = [SectionModel sectionTitles];
+    
+    headerViewCellRow = (int)sectionTitles.count / HOMEHEADERVIEWCELLCOLUMN;
+    if (sectionTitles.count % HOMEHEADERVIEWCELLCOLUMN != 0) {
+        headerViewCellRow++;
+    }
+    CGFloat headerViewHeight = HOMEHEADERVIEWCELLHEIGHT * headerViewCellRow;
+    
+    /**header view*/
+    UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc]init];
+    HomeHeaderView *headerView = [[HomeHeaderView alloc] initWithFrame:CGRectMake(0, 0, [KTools tools_widthOfScreen], headerViewHeight) collectionViewLayout:flowLayout titles:sectionTitles];
+    self.tableView.tableHeaderView = headerView;
+    
+    /**footer view*/
     UILabel *bottomLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, self.view.width, 30)];
     bottomLabel.text = @"end";
     bottomLabel.textAlignment = NSTextAlignmentCenter;

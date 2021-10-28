@@ -29,6 +29,7 @@
 }
 - (void)doViewUI {
     self.backButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self.backButton addTarget:self action:@selector(backButtonPressedAction) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:self.backButton];
     [self.backButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(10);
@@ -62,26 +63,23 @@
 }
 
 - (void)showModeImage {
-    [self.backButton setImage:[UIImage imageNamed:@"showBack"] forState:UIControlStateNormal];
-    [self.shareButton setImage:[UIImage imageNamed:@"showShare"] forState:UIControlStateNormal];
+    [self.backButton setImage:[UIImage imageNamed:@"back_show"] forState:UIControlStateNormal];
+    [self.shareButton setImage:[UIImage imageNamed:@"share_show"] forState:UIControlStateNormal];
 }
 
 - (void)hideModeImage {
-    [self.backButton setImage:[UIImage imageNamed:@"hideBack"] forState:UIControlStateNormal];
-    [self.shareButton setImage:[UIImage imageNamed:@"hideShare"] forState:UIControlStateNormal];
+    [self.backButton setImage:[UIImage imageNamed:@"back_hide"] forState:UIControlStateNormal];
+    [self.shareButton setImage:[UIImage imageNamed:@"share_hide"] forState:UIControlStateNormal];
 }
 
 - (void)pageMenuAlpha:(CGFloat)alpha {
     self.pageMenu.alpha = alpha;
 }
 
-//- (void)changePageMenuIndex:(NSInteger)index {
-//    self.clickedPageMenu = false;
-//    self.pageMenu.selectedItemIndex = index;
-//}
-- (void)bridgeScrollView:(UIScrollView *)scrollView {
-//    self.pageMenu.bridgeScrollView = scrollView;
-    [self.pageMenu moveTrackerFollowScrollView:scrollView];
+- (void)backButtonPressedAction {
+    if (self.delegate && [self.delegate respondsToSelector:@selector(backButtonPressed)]) {
+        [self.delegate backButtonPressed];
+    }
 }
 
 #pragma mark - SPPageMenuDelegate

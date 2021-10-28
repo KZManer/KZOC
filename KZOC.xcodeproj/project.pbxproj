@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		29946076272A379C009853CE /* HomeHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29946075272A379C009853CE /* HomeHeaderView.m */; };
+		2994607A272A3932009853CE /* HomeHeaderViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 29946079272A3932009853CE /* HomeHeaderViewCell.m */; };
 		2995F1CB2728095A0000D90D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2995F1CA2728095A0000D90D /* AppDelegate.m */; };
 		2995F1D12728095A0000D90D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2995F1D02728095A0000D90D /* ViewController.m */; };
 		2995F1D42728095A0000D90D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2995F1D22728095A0000D90D /* Main.storyboard */; };
@@ -61,6 +63,10 @@
 
 /* Begin PBXFileReference section */
 		0A58ED9FFA5AD146D30D45AD /* Pods-KZOC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KZOC.debug.xcconfig"; path = "Target Support Files/Pods-KZOC/Pods-KZOC.debug.xcconfig"; sourceTree = "<group>"; };
+		29946074272A379C009853CE /* HomeHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeHeaderView.h; sourceTree = "<group>"; };
+		29946075272A379C009853CE /* HomeHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeHeaderView.m; sourceTree = "<group>"; };
+		29946078272A3932009853CE /* HomeHeaderViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeHeaderViewCell.h; sourceTree = "<group>"; };
+		29946079272A3932009853CE /* HomeHeaderViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeHeaderViewCell.m; sourceTree = "<group>"; };
 		2995F1C62728095A0000D90D /* KZOC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KZOC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2995F1C92728095A0000D90D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2995F1CA2728095A0000D90D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -167,6 +173,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		29946077272A390A009853CE /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				2995F1CF2728095A0000D90D /* ViewController.h */,
+				2995F1D02728095A0000D90D /* ViewController.m */,
+				29946074272A379C009853CE /* HomeHeaderView.h */,
+				29946075272A379C009853CE /* HomeHeaderView.m */,
+				29946078272A3932009853CE /* HomeHeaderViewCell.h */,
+				29946079272A3932009853CE /* HomeHeaderViewCell.m */,
+				2995F1EE2728D5B60000D90D /* SectionModel.h */,
+				2995F1EF2728D5B60000D90D /* SectionModel.m */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		2995F1BD2728095A0000D90D = {
 			isa = PBXGroup;
 			children = (
@@ -190,6 +211,7 @@
 			children = (
 				2995F1C92728095A0000D90D /* AppDelegate.h */,
 				2995F1CA2728095A0000D90D /* AppDelegate.m */,
+				29946077272A390A009853CE /* Home */,
 				2995F1F12728D5C50000D90D /* 系统相关 */,
 				2995F21C2728E69C0000D90D /* 功能实验 */,
 				2995F2072728D5D50000D90D /* 组件封装 */,
@@ -235,11 +257,11 @@
 		2995F1F22728D5C50000D90D /* VCLifeCycle */ = {
 			isa = PBXGroup;
 			children = (
-				2995F1F32728D5C50000D90D /* VCLifeCycle.m */,
-				2995F1F42728D5C50000D90D /* VCLifeCyclePresent.h */,
-				2995F1F52728D5C50000D90D /* VCLifeCyclePop.h */,
 				2995F1F62728D5C50000D90D /* VCLifeCycle.h */,
+				2995F1F32728D5C50000D90D /* VCLifeCycle.m */,
+				2995F1F52728D5C50000D90D /* VCLifeCyclePop.h */,
 				2995F1F72728D5C50000D90D /* VCLifeCyclePop.m */,
+				2995F1F42728D5C50000D90D /* VCLifeCyclePresent.h */,
 				2995F1F82728D5C50000D90D /* VCLifeCyclePresent.m */,
 			);
 			path = VCLifeCycle;
@@ -282,15 +304,15 @@
 			path = "Cell选择器";
 			sourceTree = "<group>";
 		};
-		2995F20B2728D5D50000D90D /* 导航栏渐进色 */ = {
+		2995F20B2728D5D50000D90D /* 导航栏淡入淡出 */ = {
 			isa = PBXGroup;
 			children = (
+				2995F20E2728D5D50000D90D /* NavCustomView.h */,
 				2995F20C2728D5D50000D90D /* NavCustomView.m */,
 				2995F20D2728D5D50000D90D /* NavigationVC.h */,
-				2995F20E2728D5D50000D90D /* NavCustomView.h */,
 				2995F20F2728D5D50000D90D /* NavigationVC.m */,
 			);
-			path = "导航栏渐进色";
+			path = "导航栏淡入淡出";
 			sourceTree = "<group>";
 		};
 		2995F2132728D5DE0000D90D /* 三方框架 */ = {
@@ -326,7 +348,7 @@
 		2995F21C2728E69C0000D90D /* 功能实验 */ = {
 			isa = PBXGroup;
 			children = (
-				2995F20B2728D5D50000D90D /* 导航栏渐进色 */,
+				2995F20B2728D5D50000D90D /* 导航栏淡入淡出 */,
 				2995F21D2728E8200000D90D /* 图片水印 */,
 			);
 			path = "功能实验";
@@ -366,10 +388,6 @@
 		2995F28D272906330000D90D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				2995F1CF2728095A0000D90D /* ViewController.h */,
-				2995F1D02728095A0000D90D /* ViewController.m */,
-				2995F1EE2728D5B60000D90D /* SectionModel.h */,
-				2995F1EF2728D5B60000D90D /* SectionModel.m */,
 				2995F1D52728095C0000D90D /* Assets.xcassets */,
 				2995F1E227280E720000D90D /* PrefixHeader.pch */,
 				2995F1D22728095A0000D90D /* Main.storyboard */,
@@ -636,6 +654,7 @@
 				2995F21A2728D5DE0000D90D /* SPPageMenuVC.m in Sources */,
 				2995F1CB2728095A0000D90D /* AppDelegate.m in Sources */,
 				2995F1F02728D5B60000D90D /* SectionModel.m in Sources */,
+				29946076272A379C009853CE /* HomeHeaderView.m in Sources */,
 				2995F1DC2728095C0000D90D /* main.m in Sources */,
 				2995F2202728E8460000D90D /* ImageWatermarkVC.m in Sources */,
 				2995F297272907530000D90D /* UIView+KView.m in Sources */,
@@ -654,6 +673,7 @@
 				29C3864027293BC100E9933C /* SAMKeychainVC.m in Sources */,
 				2995F2C6272907620000D90D /* KPhotoCell.m in Sources */,
 				2995F1EC27280E8C0000D90D /* KTools.m in Sources */,
+				2994607A272A3932009853CE /* HomeHeaderViewCell.m in Sources */,
 				2995F21B2728D5DE0000D90D /* LeeAlertVC.m in Sources */,
 				2995F2022728D5C50000D90D /* VCLifeCyclePop.m in Sources */,
 				2995F2CF272907620000D90D /* KTextView.m in Sources */,

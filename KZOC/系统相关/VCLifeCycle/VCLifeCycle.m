@@ -25,6 +25,9 @@
     self.view.backgroundColor = [UIColor whiteColor];
     NSLog(@"%s",__func__);
     
+//    extern int HOMEHEADERVIEWCELLHEIGHT;
+//    NSLog(@"%d",HOMEHEADERVIEWCELLHEIGHT);
+    
     self.popButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [self.popButton setTitle:@"pop mode" forState:UIControlStateNormal];
     [self.popButton setBackgroundColor:[UIColor lightGrayColor]];

@@ -9,17 +9,27 @@
 
 @implementation SectionModel
 
-+ (NSArray<SectionModel *> *)allSectionInfos {
-    
-    NSMutableArray *sectionArray = [NSMutableArray array];
-    NSArray *sectionTitles = @[
++ (NSArray *)sectionTitles {
+    return @[
         @"系统相关",
         @"功能实验",
         @"组件封装",
         @"三方框架",
     ];
+}
+
++ (NSArray<SectionModel *> *)allSectionInfos {
+    
+    NSMutableArray *sectionArray = [NSMutableArray array];
+    NSArray *sectionTitles = [self sectionTitles];
+//    NSArray *sectionTitles = @[
+//        @"系统相关",
+//        @"功能实验",
+//        @"组件封装",
+//        @"三方框架",
+//    ];
     NSArray *rowTitles = @[
-        @[@"ViewController生命周期",@"UITableView",@"UICollectionView"],
+        @[@"VC生命周期",@"UITableView",@"UICollectionView"],
         @[@"导航栏淡入淡出",@"图片水印"],
         @[@"Cell选择器"],
         @[

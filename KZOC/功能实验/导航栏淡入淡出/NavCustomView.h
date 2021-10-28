@@ -13,6 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)pageEnumClicked:(NSInteger)clickIndex;
 
+- (void)backButtonPressed;
+
 @end
 
 @interface NavCustomView : UIView
@@ -24,10 +26,6 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)hideModeImage;
 
 - (void)pageMenuAlpha:(CGFloat)alpha;
-
-//- (void)changePageMenuIndex:(NSInteger)index;
-
-- (void)bridgeScrollView:(UIScrollView *)scrollView;
 
 @end
 

@@ -46,12 +46,6 @@
     HomeHeaderView *headerView = [[HomeHeaderView alloc] initWithFrame:CGRectMake(0, 0, [KTools tools_widthOfScreen], headerViewHeight) collectionViewLayout:flowLayout titles:sectionTitles];
     self.tableView.tableHeaderView = headerView;
     
-    /**footer view*/
-    UILabel *bottomLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, self.view.width, 30)];
-    bottomLabel.text = @"end";
-    bottomLabel.textAlignment = NSTextAlignmentCenter;
-    bottomLabel.backgroundColor = [[UIColor lightGrayColor]colorWithAlphaComponent:.3];
-    self.tableView.tableFooterView = bottomLabel;
 }
 #pragma mark - UITableViewDataSource & UITableViewDelegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {

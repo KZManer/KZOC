@@ -38,7 +38,8 @@
             @"SPPageMenu",
             @"时间选择器",
             @"SAMKeychain(钥匙串)",
-            @"TXScrollLabelView(跑马灯)"
+            @"TXScrollLabelView(跑马灯)",
+            @"DataGridComponent(类似Excel表格)",
         ],
     ];
     NSArray *classNames = @[
@@ -52,6 +53,7 @@
             @"DatePickerVC",
             @"SAMKeychainVC",
             @"TXScrollLabelViewVC",
+            @"DataGridComponentVC",
         ],
     ];
     

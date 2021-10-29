@@ -16,7 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    //首先构建数据，用户也可以自己从文件中读取
+    //首先构建数据，用户也可以自己从文件中读取 
     DataGridComponentDataSource *ds = [[DataGridComponentDataSource alloc] init];
     ds.columnWidth = (NSMutableArray *)[NSArray arrayWithObjects:@"80",@"80",@"80",@"80",@"80",nil];
     ds.titles = (NSMutableArray *)[NSArray  arrayWithObjects:@"姓名",@"性别",@"年龄",@"籍贯",@"婚姻", nil];

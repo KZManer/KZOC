@@ -18,6 +18,7 @@ pod 'MJExtension','~>3.3.0'             #字典转模型框架
 pod 'SAMKeychain','~>1.5.3'             #钥匙串存储框架
 pod 'SPPageMenu','~>3.5.0'              #分页菜单
 pod 'SVProgressHUD','~>2.2.5'           #提示器框架 --- 1
+pod 'TXScrollLabelView','~>1.3.2'       #跑马灯消息播报
 pod 'TZImagePickerController','~>3.6.0' #图片框架
 
 end

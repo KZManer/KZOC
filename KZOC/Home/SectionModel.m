@@ -37,7 +37,8 @@
             @"LEEAlert",
             @"SPPageMenu",
             @"时间选择器",
-            @"SAMKeychain(钥匙串)"
+            @"SAMKeychain(钥匙串)",
+            @"TXScrollLabelView(跑马灯)"
         ],
     ];
     NSArray *classNames = @[
@@ -50,6 +51,7 @@
             @"SPPageMenuVC",
             @"DatePickerVC",
             @"SAMKeychainVC",
+            @"TXScrollLabelViewVC",
         ],
     ];
     

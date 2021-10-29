@@ -6,16 +6,18 @@ PODS:
   - SAMKeychain (1.5.3)
   - SPPageMenu (3.5.0)
   - SVProgressHUD (2.2.5)
+  - TXScrollLabelView (1.3.2)
   - TZImagePickerController (3.6.4)
 
 DEPENDENCIES:
   - LEEAlert (~> 1.5.0)
   - Masonry (~> 1.1.0)
   - MBProgressHUD (~> 1.2.0)
-  - MJExtension
-  - SAMKeychain
+  - MJExtension (~> 3.3.0)
+  - SAMKeychain (~> 1.5.3)
   - SPPageMenu (~> 3.5.0)
-  - SVProgressHUD
+  - SVProgressHUD (~> 2.2.5)
+  - TXScrollLabelView (~> 1.3.2)
   - TZImagePickerController (~> 3.6.0)
 
 SPEC REPOS:
@@ -27,6 +29,7 @@ SPEC REPOS:
     - SAMKeychain
     - SPPageMenu
     - SVProgressHUD
+    - TXScrollLabelView
     - TZImagePickerController
 
 SPEC CHECKSUMS:
@@ -37,8 +40,9 @@ SPEC CHECKSUMS:
   SAMKeychain: 483e1c9f32984d50ca961e26818a534283b4cd5c
   SPPageMenu: da182aafcec55719d5c326103cc7716c1e48f311
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  TXScrollLabelView: 0e1650caf61198bf5dc0938ea6493254aeb80f90
   TZImagePickerController: 1cc39ec0454d6e94d0397418953164d7aa631719
 
-PODFILE CHECKSUM: c84d6f5ea7fd15b856bf2687991217ccc37e0413
+PODFILE CHECKSUM: f28ad9875b8e86a810ff31d9ce0823c05948553e
 
 COCOAPODS: 1.10.2

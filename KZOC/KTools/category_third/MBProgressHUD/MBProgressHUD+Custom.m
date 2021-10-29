@@ -11,7 +11,7 @@
 
 #pragma mark 显示信息
 + (MBProgressHUD *)show:(NSString *)text icon:(NSString *)icon view:(UIView *_Nullable)view {
-    if (view == nil) view = [[UIApplication sharedApplication].windows firstObject];
+    if (view == nil) view = [UIApplication sharedApplication].keyWindow;
     // 快速显示一个提示信息
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
     hud.label.text = text;
@@ -45,7 +45,7 @@
 
 #pragma mark 显示一些信息
 + (MBProgressHUD *)showMessage:(NSString *)message toView:(UIView *_Nullable)view {
-    if (view == nil) view = [[UIApplication sharedApplication].windows lastObject];
+    if (view == nil) view = [UIApplication sharedApplication].keyWindow;
     // 快速显示一个提示信息
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
     hud.label.text = message;
@@ -78,7 +78,7 @@
 
 + (MBProgressHUD *)showTheMessage:(NSString *)message {
     [self hideHUD];
-    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:[[UIApplication sharedApplication].windows lastObject] animated:YES];
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:[UIApplication sharedApplication].keyWindow animated:YES];
     hud.label.text = message;
     hud.mode = MBProgressHUDModeText;
     hud.removeFromSuperViewOnHide = YES;
@@ -89,7 +89,7 @@
 
 
 + (void)hideHUDForView:(UIView *_Nullable)view {
-    if (view == nil) view = [[UIApplication sharedApplication].windows lastObject];
+    if (view == nil) view = [UIApplication sharedApplication].keyWindow;
     [self hideHUDForView:view animated:YES];
 }
 
@@ -99,7 +99,7 @@
 
 + (void)showCustomAnimationHudToView:(UIView *_Nullable)view {
    
-    if (view == nil) view = [[UIApplication sharedApplication].windows lastObject];
+    if (view == nil) view = [UIApplication sharedApplication].keyWindow;
     // 快速显示一个提示信息
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
     // 设置图片
@@ -109,7 +109,7 @@
     hud.mode = MBProgressHUDModeCustomView;
 }
 + (void)showLoadingAnimationToView:(UIView *_Nullable)view {
-    if (view == nil) view = [[UIApplication sharedApplication].windows lastObject];
+    if (view == nil) view = [UIApplication sharedApplication].keyWindow;
     // 快速显示一个提示信息
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
     // 设置模式

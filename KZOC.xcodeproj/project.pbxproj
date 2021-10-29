@@ -14,6 +14,7 @@
 		29946083272A5104009853CE /* TestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 29946082272A5104009853CE /* TestVC.m */; };
 		2994608B272A83D2009853CE /* NavMenuModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2994608A272A83D2009853CE /* NavMenuModel.m */; };
 		2994608E272A8676009853CE /* NavCustomViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2994608D272A8676009853CE /* NavCustomViewCell.m */; };
+		29946092272AA58E009853CE /* TXScrollLabelViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 29946091272AA58E009853CE /* TXScrollLabelViewVC.m */; };
 		2995F1CB2728095A0000D90D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2995F1CA2728095A0000D90D /* AppDelegate.m */; };
 		2995F1D12728095A0000D90D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2995F1D02728095A0000D90D /* ViewController.m */; };
 		2995F1D42728095A0000D90D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2995F1D22728095A0000D90D /* Main.storyboard */; };
@@ -83,6 +84,8 @@
 		2994608A272A83D2009853CE /* NavMenuModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NavMenuModel.m; sourceTree = "<group>"; };
 		2994608C272A8676009853CE /* NavCustomViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NavCustomViewCell.h; sourceTree = "<group>"; };
 		2994608D272A8676009853CE /* NavCustomViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NavCustomViewCell.m; sourceTree = "<group>"; };
+		29946090272AA58E009853CE /* TXScrollLabelViewVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TXScrollLabelViewVC.h; sourceTree = "<group>"; };
+		29946091272AA58E009853CE /* TXScrollLabelViewVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TXScrollLabelViewVC.m; sourceTree = "<group>"; };
 		2995F1C62728095A0000D90D /* KZOC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KZOC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2995F1C92728095A0000D90D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2995F1CA2728095A0000D90D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -213,6 +216,15 @@
 				29946082272A5104009853CE /* TestVC.m */,
 			);
 			path = Test;
+			sourceTree = "<group>";
+		};
+		2994608F272AA53B009853CE /* TXScrollLabelView(跑马灯) */ = {
+			isa = PBXGroup;
+			children = (
+				29946090272AA58E009853CE /* TXScrollLabelViewVC.h */,
+				29946091272AA58E009853CE /* TXScrollLabelViewVC.m */,
+			);
+			path = "TXScrollLabelView(跑马灯)";
 			sourceTree = "<group>";
 		};
 		2995F1BD2728095A0000D90D = {
@@ -350,6 +362,7 @@
 		2995F2132728D5DE0000D90D /* 三方框架 */ = {
 			isa = PBXGroup;
 			children = (
+				2994608F272AA53B009853CE /* TXScrollLabelView(跑马灯) */,
 				29C3863D27293B8E00E9933C /* SAMKeychain(钥匙串） */,
 				2995F2D7272926AA0000D90D /* BMProgressHUD */,
 				2995F2172728D5DE0000D90D /* LEEAlert */,
@@ -687,6 +700,7 @@
 				2994608E272A8676009853CE /* NavCustomViewCell.m in Sources */,
 				2995F2CA272907620000D90D /* KPopView.m in Sources */,
 				2995F1ED27280E8C0000D90D /* KSelectView.m in Sources */,
+				29946092272AA58E009853CE /* TXScrollLabelViewVC.m in Sources */,
 				2995F1D12728095A0000D90D /* ViewController.m in Sources */,
 				2995F21A2728D5DE0000D90D /* SPPageMenuVC.m in Sources */,
 				2995F1CB2728095A0000D90D /* AppDelegate.m in Sources */,
@@ -864,6 +878,7 @@
 				DEVELOPMENT_TEAM = GDHLWE42T5;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/KZOC/Supporting Files/PrefixHeader.pch";
 				INFOPLIST_FILE = "KZOC/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -884,6 +899,7 @@
 				DEVELOPMENT_TEAM = GDHLWE42T5;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/KZOC/Supporting Files/PrefixHeader.pch";
 				INFOPLIST_FILE = "KZOC/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

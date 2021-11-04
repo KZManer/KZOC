@@ -7,6 +7,7 @@
 
 #import "LeeAlertVC.h"
 #import "LEEAlert.h"
+#import "CaptchaAlertView.h"
 
 @interface LeeAlertVC ()
 
@@ -31,9 +32,9 @@
     .kBackgroundColor([[UIColor redColor]colorWithAlphaComponent:.4])
     .kDatasource(nil)
     .kShow(self.view)
-    .kSelectCell(^NSString * _Nullable(NSString * _Nonnull cellName, NSInteger cellIndex) {
+    .kSelectCell(^(NSString * _Nonnull cellName, NSInteger cellIndex) {
         switch (cellIndex) {
-            case 0:{
+            case 0: {
                 [LEEAlert alert].config
                 .LeeCustomView(button)
                 .LeeItemInsets(UIEdgeInsetsMake(0, 0, 0, 0))
@@ -60,11 +61,38 @@
                     }
                 })
                 .LeeShow();
-                return @"顶部下滑整页覆盖";
+            }break;
+            case 1: {
+                CaptchaAlertView *alertView = [[CaptchaAlertView alloc]initWithFrame:CGRectMake(0, 0, width, height)];
+                alertView.closeBlock = ^{
+                    [LEEAlert closeWithCompletionBlock:nil];
+                };
+                [LEEAlert alert].config
+                .LeeCustomView(alertView)
+                .LeeHeaderInsets(UIEdgeInsetsMake(0, 0, 0, 0))
+                .LeeHeaderColor([UIColor clearColor])
+                .LeeClickBackgroundClose(YES)
+                #ifdef __IPHONE_13_0
+                .LeeUserInterfaceStyle(UIUserInterfaceStyleLight)
+                #endif
+                .LeeConfigMaxWidth(^CGFloat(LEEScreenOrientationType type, CGSize size) {
+                    if (type == LEEScreenOrientationTypeVertical) {
+                        return CGRectGetWidth([[UIScreen mainScreen] bounds]);
+                    } else {
+                        return 0.0f;
+                    }
+                })
+                .LeeConfigMaxHeight(^CGFloat(LEEScreenOrientationType type, CGSize size) {
+                    if (type == LEEScreenOrientationTypeVertical) {
+                        return CGRectGetHeight([[UIScreen mainScreen] bounds]);
+                    }else{
+                        return 0.0f;
+                    }
+                })
+                .LeeShow();
             }break;
             default:break;
         }
-        return nil;
     });
 }
 

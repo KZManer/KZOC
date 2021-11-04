@@ -16,7 +16,9 @@
 #import "KTools.h"
 #import "KUIViewExt.h"
 #import "UIView+KView.h"
+#import "UIFont+KFont.h"
 #import "MBProgressHUD+Custom.h"
 #import "UIColor+KCustomColor.h"
+#import "UITextField+KTextField.h"
 
 #endif /* PrefixHeader_pch */

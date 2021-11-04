@@ -11,6 +11,9 @@
 
 @property (nonatomic, strong) UIWindow *window;
 
+/**用于分类(AppDelegate+KTextField)中使用*/
+@property (nonatomic, copy) NSString *tempTextFieldString;
+
 @end
 
 /**

@@ -22,8 +22,7 @@
     .kFrame(self.view.frame)
     .kDatasource(@[@"showText",@"showError",@"showMessage",@"showSuccess",@"showTheMessage"])
     .kShow(self.view)
-    .kSelectCell(^NSString * _Nullable(NSString * _Nonnull cellName, NSInteger cellIndex) {
-        
+    .kSelectCell(^(NSString * _Nonnull cellName, NSInteger cellIndex) {
         NSString *selString = [NSString stringWithFormat:@"%@:",cellName];
         SEL sel = NSSelectorFromString(selString);
         if ([MBProgressHUD respondsToSelector:sel]) {
@@ -38,7 +37,6 @@
                 [MBProgressHUD hideHUD];
             });
         }
-        return nil;
     });
 }
 

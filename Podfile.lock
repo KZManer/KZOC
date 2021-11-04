@@ -1,4 +1,7 @@
 PODS:
+  - CRBoxInputView (1.2.1):
+    - Masonry
+  - IQKeyboardManager (6.5.6)
   - LEEAlert (1.5.0)
   - Masonry (1.1.0)
   - MBProgressHUD (1.2.0)
@@ -10,6 +13,8 @@ PODS:
   - TZImagePickerController (3.6.4)
 
 DEPENDENCIES:
+  - CRBoxInputView (= 1.2.1)
+  - IQKeyboardManager
   - LEEAlert (~> 1.5.0)
   - Masonry (~> 1.1.0)
   - MBProgressHUD (~> 1.2.0)
@@ -22,6 +27,8 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git:
+    - CRBoxInputView
+    - IQKeyboardManager
     - LEEAlert
     - Masonry
     - MBProgressHUD
@@ -33,6 +40,8 @@ SPEC REPOS:
     - TZImagePickerController
 
 SPEC CHECKSUMS:
+  CRBoxInputView: d73a630e5326ee70487b4a56d09daebf915d82fd
+  IQKeyboardManager: 2a6e97afdafc7becf0cb17a9a8d795e3a980717f
   LEEAlert: 0f5157d83ddb6515fa5b9c99b29b4fb1ccf9c38e
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
@@ -43,6 +52,6 @@ SPEC CHECKSUMS:
   TXScrollLabelView: 0e1650caf61198bf5dc0938ea6493254aeb80f90
   TZImagePickerController: 1cc39ec0454d6e94d0397418953164d7aa631719
 
-PODFILE CHECKSUM: f28ad9875b8e86a810ff31d9ce0823c05948553e
+PODFILE CHECKSUM: 6dff73de66f5dac64f88167f0d28c9beccd37a51
 
 COCOAPODS: 1.10.2

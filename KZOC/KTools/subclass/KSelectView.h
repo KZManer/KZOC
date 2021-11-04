@@ -9,7 +9,7 @@
 NS_ASSUME_NONNULL_BEGIN
 @class KSelectView;
 
-typedef NSString *_Nullable(^KSelectAction)(NSString *cellName, NSInteger cellIndex);
+typedef void (^KSelectAction)(NSString *cellName, NSInteger cellIndex);
 
 typedef KSelectView *_Nonnull(^KFrame)(CGRect);
 typedef KSelectView *_Nonnull(^KBackgroundColor)(UIColor *);

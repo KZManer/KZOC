@@ -31,15 +31,24 @@ static NSString *cellIdentifier = @"CollectionCellIdentifier";
         NSLog(@"%d",random);
         [self.datasource addObject:[NSString stringWithFormat:@"https://randomuser.me/api/portraits/lego/%d.jpg",random]];
     }
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(nothing)];
+    tap.cancelsTouchesInView = false;
+    [self.view addGestureRecognizer:tap];
     
-    
-    self.collectionView = [[UICollectionView alloc]initWithFrame:self.view.frame collectionViewLayout:[UICollectionViewFlowLayout new]];
+    self.collectionView = [[UICollectionView alloc]initWithFrame:CGRectZero collectionViewLayout:[UICollectionViewFlowLayout new]];
     self.collectionView.dataSource = self;
     self.collectionView.delegate = self;
     self.collectionView.backgroundColor = [UIColor whiteColor];
     [self.collectionView registerClass:[CollectionCell class] forCellWithReuseIdentifier:cellIdentifier];
     [self.view addSubview:self.collectionView];
+    [self.collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self.view);
+    }];
 }
+- (void)nothing {
+    NSLog(@"%s",__func__);
+}
+
 #pragma mark UICollectionViewDataSource
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
     return 2;
@@ -68,7 +77,7 @@ static NSString *cellIdentifier = @"CollectionCellIdentifier";
 }
 #pragma mark UICollectionViewDelegate
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    
+    NSLog(@"come in");
 }
 #pragma mark UICollectionViewDelegateFlowLayout
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {

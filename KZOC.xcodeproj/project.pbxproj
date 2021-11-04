@@ -7,8 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		292CE380272F95C0006FA8D9 /* CRBoxVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 292CE37F272F95C0006FA8D9 /* CRBoxVC.m */; };
+		292CE396272FC47E006FA8D9 /* CaptchaAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 292CE395272FC47D006FA8D9 /* CaptchaAlertView.m */; };
+		2959A14F272BEB4C00972EE3 /* UIViewController+KNavigation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2959A14E272BEB4C00972EE3 /* UIViewController+KNavigation.m */; };
+		2959A152272BED4400972EE3 /* UIFont+KFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 2959A151272BED4400972EE3 /* UIFont+KFont.m */; };
 		29639B39272B9F56001C693C /* DataGridComponentVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 29639B38272B9F56001C693C /* DataGridComponentVC.m */; };
 		29639B3D272BA010001C693C /* DataGridComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 29639B3C272BA010001C693C /* DataGridComponent.m */; };
+		29639B41272BA863001C693C /* RuntimeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 29639B40272BA863001C693C /* RuntimeVC.m */; };
+		29693D0B2730F2EF00475428 /* TimeCountVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 29693D0A2730F2EF00475428 /* TimeCountVC.m */; };
+		29693D0E2730F32C00475428 /* SNSCodeCountdownButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 29693D0C2730F32B00475428 /* SNSCodeCountdownButton.m */; };
+		29693D19273106E600475428 /* UIButton+CountDown.m in Sources */ = {isa = PBXBuildFile; fileRef = 29693D13273106E600475428 /* UIButton+CountDown.m */; };
+		29693D1A273106E600475428 /* UIImage+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = 29693D17273106E600475428 /* UIImage+Color.m */; };
+		29693D1B273106E600475428 /* MJCountDownButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 29693D18273106E600475428 /* MJCountDownButton.m */; };
+		29693D4F2731673400475428 /* TextFieldVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 29693D4E2731673400475428 /* TextFieldVC.m */; };
+		29693D522731676100475428 /* AppDelegate+KTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 29693D512731676100475428 /* AppDelegate+KTextField.m */; };
+		29693D552732220300475428 /* UITextField+KTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 29693D542732220300475428 /* UITextField+KTextField.m */; };
 		29946076272A379C009853CE /* HomeHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29946075272A379C009853CE /* HomeHeaderView.m */; };
 		2994607A272A3932009853CE /* HomeHeaderViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 29946079272A3932009853CE /* HomeHeaderViewCell.m */; };
 		2994607D272A50D3009853CE /* TabBarRootVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2994607C272A50D3009853CE /* TabBarRootVC.m */; };
@@ -71,10 +84,36 @@
 
 /* Begin PBXFileReference section */
 		0A58ED9FFA5AD146D30D45AD /* Pods-KZOC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KZOC.debug.xcconfig"; path = "Target Support Files/Pods-KZOC/Pods-KZOC.debug.xcconfig"; sourceTree = "<group>"; };
+		292CE37E272F95C0006FA8D9 /* CRBoxVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CRBoxVC.h; sourceTree = "<group>"; };
+		292CE37F272F95C0006FA8D9 /* CRBoxVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CRBoxVC.m; sourceTree = "<group>"; };
+		292CE394272FC47D006FA8D9 /* CaptchaAlertView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CaptchaAlertView.h; sourceTree = "<group>"; };
+		292CE395272FC47D006FA8D9 /* CaptchaAlertView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CaptchaAlertView.m; sourceTree = "<group>"; };
+		2959A14D272BEB4C00972EE3 /* UIViewController+KNavigation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+KNavigation.h"; sourceTree = "<group>"; };
+		2959A14E272BEB4C00972EE3 /* UIViewController+KNavigation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+KNavigation.m"; sourceTree = "<group>"; };
+		2959A150272BED4400972EE3 /* UIFont+KFont.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIFont+KFont.h"; sourceTree = "<group>"; };
+		2959A151272BED4400972EE3 /* UIFont+KFont.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIFont+KFont.m"; sourceTree = "<group>"; };
 		29639B37272B9F56001C693C /* DataGridComponentVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataGridComponentVC.h; sourceTree = "<group>"; };
 		29639B38272B9F56001C693C /* DataGridComponentVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataGridComponentVC.m; sourceTree = "<group>"; };
 		29639B3B272BA010001C693C /* DataGridComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataGridComponent.h; sourceTree = "<group>"; };
 		29639B3C272BA010001C693C /* DataGridComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataGridComponent.m; sourceTree = "<group>"; };
+		29639B3F272BA863001C693C /* RuntimeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RuntimeVC.h; sourceTree = "<group>"; };
+		29639B40272BA863001C693C /* RuntimeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RuntimeVC.m; sourceTree = "<group>"; };
+		29693D092730F2EF00475428 /* TimeCountVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimeCountVC.h; sourceTree = "<group>"; };
+		29693D0A2730F2EF00475428 /* TimeCountVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimeCountVC.m; sourceTree = "<group>"; };
+		29693D0C2730F32B00475428 /* SNSCodeCountdownButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNSCodeCountdownButton.m; sourceTree = "<group>"; };
+		29693D0D2730F32B00475428 /* SNSCodeCountdownButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNSCodeCountdownButton.h; sourceTree = "<group>"; };
+		29693D13273106E600475428 /* UIButton+CountDown.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+CountDown.m"; sourceTree = "<group>"; };
+		29693D14273106E600475428 /* UIImage+Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Color.h"; sourceTree = "<group>"; };
+		29693D15273106E600475428 /* MJCountDownButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJCountDownButton.h; sourceTree = "<group>"; };
+		29693D16273106E600475428 /* UIButton+CountDown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+CountDown.h"; sourceTree = "<group>"; };
+		29693D17273106E600475428 /* UIImage+Color.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Color.m"; sourceTree = "<group>"; };
+		29693D18273106E600475428 /* MJCountDownButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJCountDownButton.m; sourceTree = "<group>"; };
+		29693D4D2731673400475428 /* TextFieldVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextFieldVC.h; sourceTree = "<group>"; };
+		29693D4E2731673400475428 /* TextFieldVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextFieldVC.m; sourceTree = "<group>"; };
+		29693D502731676100475428 /* AppDelegate+KTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+KTextField.h"; sourceTree = "<group>"; };
+		29693D512731676100475428 /* AppDelegate+KTextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+KTextField.m"; sourceTree = "<group>"; };
+		29693D532732220300475428 /* UITextField+KTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextField+KTextField.h"; sourceTree = "<group>"; };
+		29693D542732220300475428 /* UITextField+KTextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextField+KTextField.m"; sourceTree = "<group>"; };
 		29946074272A379C009853CE /* HomeHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeHeaderView.h; sourceTree = "<group>"; };
 		29946075272A379C009853CE /* HomeHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeHeaderView.m; sourceTree = "<group>"; };
 		29946078272A3932009853CE /* HomeHeaderViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeHeaderViewCell.h; sourceTree = "<group>"; };
@@ -198,6 +237,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		292CE381272F95C7006FA8D9 /* 验证码输入框 */ = {
+			isa = PBXGroup;
+			children = (
+				292CE37E272F95C0006FA8D9 /* CRBoxVC.h */,
+				292CE37F272F95C0006FA8D9 /* CRBoxVC.m */,
+			);
+			path = "验证码输入框";
+			sourceTree = "<group>";
+		};
 		29639B36272B9F3C001C693C /* DataGridComponent(类似Excel表格) */ = {
 			isa = PBXGroup;
 			children = (
@@ -215,6 +263,49 @@
 				29639B3C272BA010001C693C /* DataGridComponent.m */,
 			);
 			path = DataGridComponent;
+			sourceTree = "<group>";
+		};
+		29639B3E272BA855001C693C /* Runtime */ = {
+			isa = PBXGroup;
+			children = (
+				29639B3F272BA863001C693C /* RuntimeVC.h */,
+				29639B40272BA863001C693C /* RuntimeVC.m */,
+			);
+			path = Runtime;
+			sourceTree = "<group>";
+		};
+		29693D082730F2D600475428 /* 倒计时 */ = {
+			isa = PBXGroup;
+			children = (
+				29693D12273106E600475428 /* MJCountDownButton */,
+				29693D0D2730F32B00475428 /* SNSCodeCountdownButton.h */,
+				29693D0C2730F32B00475428 /* SNSCodeCountdownButton.m */,
+				29693D092730F2EF00475428 /* TimeCountVC.h */,
+				29693D0A2730F2EF00475428 /* TimeCountVC.m */,
+			);
+			path = "倒计时";
+			sourceTree = "<group>";
+		};
+		29693D12273106E600475428 /* MJCountDownButton */ = {
+			isa = PBXGroup;
+			children = (
+				29693D14273106E600475428 /* UIImage+Color.h */,
+				29693D17273106E600475428 /* UIImage+Color.m */,
+				29693D16273106E600475428 /* UIButton+CountDown.h */,
+				29693D13273106E600475428 /* UIButton+CountDown.m */,
+				29693D15273106E600475428 /* MJCountDownButton.h */,
+				29693D18273106E600475428 /* MJCountDownButton.m */,
+			);
+			path = MJCountDownButton;
+			sourceTree = "<group>";
+		};
+		29693D4C2731671E00475428 /* UITextField */ = {
+			isa = PBXGroup;
+			children = (
+				29693D4D2731673400475428 /* TextFieldVC.h */,
+				29693D4E2731673400475428 /* TextFieldVC.m */,
+			);
+			path = UITextField;
 			sourceTree = "<group>";
 		};
 		29946077272A390A009853CE /* Home */ = {
@@ -275,14 +366,18 @@
 			children = (
 				2995F1C92728095A0000D90D /* AppDelegate.h */,
 				2995F1CA2728095A0000D90D /* AppDelegate.m */,
+				29693D502731676100475428 /* AppDelegate+KTextField.h */,
+				29693D512731676100475428 /* AppDelegate+KTextField.m */,
+				29693D532732220300475428 /* UITextField+KTextField.h */,
+				29693D542732220300475428 /* UITextField+KTextField.m */,
 				29946077272A390A009853CE /* Home */,
 				2995F1F12728D5C50000D90D /* 系统相关 */,
 				2995F21C2728E69C0000D90D /* 功能实验 */,
 				2995F2072728D5D50000D90D /* 组件封装 */,
 				2995F2132728D5DE0000D90D /* 三方框架 */,
 				2995F1E327280E8B0000D90D /* KTools */,
-				2995F28D272906330000D90D /* Supporting Files */,
 				29946085272A7A93009853CE /* Test */,
+				2995F28D272906330000D90D /* Supporting Files */,
 			);
 			path = KZOC;
 			sourceTree = "<group>";
@@ -312,6 +407,8 @@
 		2995F1F12728D5C50000D90D /* 系统相关 */ = {
 			isa = PBXGroup;
 			children = (
+				29693D4C2731671E00475428 /* UITextField */,
+				29639B3E272BA855001C693C /* Runtime */,
 				2995F1F22728D5C50000D90D /* VCLifeCycle */,
 				2995F1F92728D5C50000D90D /* UICollectionView */,
 				2995F1FE2728D5C50000D90D /* UITableView */,
@@ -336,8 +433,8 @@
 			isa = PBXGroup;
 			children = (
 				2995F1FA2728D5C50000D90D /* CollectionCell.h */,
-				2995F1FB2728D5C50000D90D /* CollectionVC.h */,
 				2995F1FC2728D5C50000D90D /* CollectionCell.m */,
+				2995F1FB2728D5C50000D90D /* CollectionVC.h */,
 				2995F1FD2728D5C50000D90D /* CollectionVC.m */,
 			);
 			path = UICollectionView;
@@ -387,6 +484,8 @@
 		2995F2132728D5DE0000D90D /* 三方框架 */ = {
 			isa = PBXGroup;
 			children = (
+				29693D082730F2D600475428 /* 倒计时 */,
+				292CE381272F95C7006FA8D9 /* 验证码输入框 */,
 				29639B36272B9F3C001C693C /* DataGridComponent(类似Excel表格) */,
 				2994608F272AA53B009853CE /* TXScrollLabelView(跑马灯) */,
 				29C3863D27293B8E00E9933C /* SAMKeychain(钥匙串） */,
@@ -410,8 +509,10 @@
 		2995F2172728D5DE0000D90D /* LEEAlert */ = {
 			isa = PBXGroup;
 			children = (
-				2995F2182728D5DE0000D90D /* LeeAlertVC.m */,
 				2995F2192728D5DE0000D90D /* LeeAlertVC.h */,
+				2995F2182728D5DE0000D90D /* LeeAlertVC.m */,
+				292CE394272FC47D006FA8D9 /* CaptchaAlertView.h */,
+				292CE395272FC47D006FA8D9 /* CaptchaAlertView.m */,
 			);
 			path = LEEAlert;
 			sourceTree = "<group>";
@@ -475,6 +576,8 @@
 		2995F28E272907530000D90D /* category */ = {
 			isa = PBXGroup;
 			children = (
+				2959A150272BED4400972EE3 /* UIFont+KFont.h */,
+				2959A151272BED4400972EE3 /* UIFont+KFont.m */,
 				2995F293272907530000D90D /* UIView+KView.h */,
 				2995F290272907530000D90D /* UIView+KView.m */,
 				2995F291272907530000D90D /* UIImage+KSize.h */,
@@ -483,6 +586,8 @@
 				2995F292272907530000D90D /* UIButton+KImageText.m */,
 				2995F28F272907530000D90D /* UIColor+KCustomColor.h */,
 				2995F294272907530000D90D /* UIColor+KCustomColor.m */,
+				2959A14D272BEB4C00972EE3 /* UIViewController+KNavigation.h */,
+				2959A14E272BEB4C00972EE3 /* UIViewController+KNavigation.m */,
 			);
 			path = category;
 			sourceTree = "<group>";
@@ -720,12 +825,16 @@
 				2995F299272907530000D90D /* UIColor+KCustomColor.m in Sources */,
 				2995F2062728D5C50000D90D /* TableViewVC.m in Sources */,
 				2995F2122728D5D50000D90D /* NavigationVC.m in Sources */,
+				29693D4F2731673400475428 /* TextFieldVC.m in Sources */,
 				2995F2012728D5C50000D90D /* VCLifeCycle.m in Sources */,
 				2995F2D6272907670000D90D /* MBProgressHUD+Custom.m in Sources */,
+				2959A152272BED4400972EE3 /* UIFont+KFont.m in Sources */,
 				2995F2052728D5C50000D90D /* CollectionVC.m in Sources */,
+				292CE380272F95C0006FA8D9 /* CRBoxVC.m in Sources */,
 				2995F2102728D5D50000D90D /* CellSelectVC.m in Sources */,
 				29639B39272B9F56001C693C /* DataGridComponentVC.m in Sources */,
 				2994608E272A8676009853CE /* NavCustomViewCell.m in Sources */,
+				29693D0E2730F32C00475428 /* SNSCodeCountdownButton.m in Sources */,
 				2995F2CA272907620000D90D /* KPopView.m in Sources */,
 				2995F1ED27280E8C0000D90D /* KSelectView.m in Sources */,
 				29946092272AA58E009853CE /* TXScrollLabelViewVC.m in Sources */,
@@ -733,12 +842,16 @@
 				2995F21A2728D5DE0000D90D /* SPPageMenuVC.m in Sources */,
 				2995F1CB2728095A0000D90D /* AppDelegate.m in Sources */,
 				2995F1F02728D5B60000D90D /* SectionModel.m in Sources */,
+				29693D552732220300475428 /* UITextField+KTextField.m in Sources */,
 				29946076272A379C009853CE /* HomeHeaderView.m in Sources */,
 				29946083272A5104009853CE /* TestVC.m in Sources */,
 				2994608B272A83D2009853CE /* NavMenuModel.m in Sources */,
 				2995F1DC2728095C0000D90D /* main.m in Sources */,
+				29693D522731676100475428 /* AppDelegate+KTextField.m in Sources */,
 				2995F2202728E8460000D90D /* ImageWatermarkVC.m in Sources */,
+				29693D1A273106E600475428 /* UIImage+Color.m in Sources */,
 				2995F297272907530000D90D /* UIView+KView.m in Sources */,
+				29693D19273106E600475428 /* UIButton+CountDown.m in Sources */,
 				2995F2BF272907620000D90D /* KRechargeWayView.m in Sources */,
 				2994607D272A50D3009853CE /* TabBarRootVC.m in Sources */,
 				2995F2C5272907620000D90D /* KPhotoCollectionView.m in Sources */,
@@ -747,8 +860,13 @@
 				2995F2282728ED740000D90D /* CXDatePickerView.m in Sources */,
 				2995F2C2272907620000D90D /* KBottomPopView.m in Sources */,
 				2995F2042728D5C50000D90D /* CollectionCell.m in Sources */,
+				2959A14F272BEB4C00972EE3 /* UIViewController+KNavigation.m in Sources */,
+				29693D0B2730F2EF00475428 /* TimeCountVC.m in Sources */,
+				29639B41272BA863001C693C /* RuntimeVC.m in Sources */,
 				2995F2112728D5D50000D90D /* NavCustomView.m in Sources */,
 				2995F2BC272907620000D90D /* KRechargeModel.m in Sources */,
+				292CE396272FC47E006FA8D9 /* CaptchaAlertView.m in Sources */,
+				29693D1B273106E600475428 /* MJCountDownButton.m in Sources */,
 				2995F2C3272907620000D90D /* KEvaluateView.m in Sources */,
 				2995F2DA272926EE0000D90D /* BMProgressHUDVC.m in Sources */,
 				2995F2032728D5C50000D90D /* VCLifeCyclePresent.m in Sources */,

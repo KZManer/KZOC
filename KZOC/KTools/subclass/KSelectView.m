@@ -97,11 +97,7 @@
     NSString *rowName = self.datasource[indexPath.row];
     NSInteger rowIndex = indexPath.row;
     if (self.selectAction) {
-        NSString *str = self.selectAction(rowName, rowIndex);
-        if (str && ![str isEqualToString:rowName]) {
-            [self.datasource replaceObjectAtIndex:rowIndex withObject:str];
-            [self.tableView reloadData];
-        }
+        self.selectAction(rowName, rowIndex);
     }
 }
 

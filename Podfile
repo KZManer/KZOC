@@ -11,6 +11,8 @@ platform :ios,'11.0'
 
 target 'KZOC' do
 
+pod 'CRBoxInputView', '1.2.1'
+pod 'IQKeyboardManager'                 #键盘管理框架
 pod 'LEEAlert','~>1.5.0'                #Alert ActionSheet
 pod 'Masonry','~>1.1.0'                 #布局框架
 pod 'MBProgressHUD','~>1.2.0'           #提示器框架 --- 1
@@ -20,6 +22,7 @@ pod 'SPPageMenu','~>3.5.0'              #分页菜单
 pod 'SVProgressHUD','~>2.2.5'           #提示器框架 --- 1
 pod 'TXScrollLabelView','~>1.3.2'       #跑马灯消息播报
 pod 'TZImagePickerController','~>3.6.0' #图片框架
+# pod 'YYText'                            #富文本框架
 
 end
 

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		292893E027362EAC00B7C8D6 /* ArrowPopVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 292893DF27362EAC00B7C8D6 /* ArrowPopVC.m */; };
+		292893E627364F7A00B7C8D6 /* CountdownTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 292893E427364F7A00B7C8D6 /* CountdownTimer.m */; };
 		292CE380272F95C0006FA8D9 /* CRBoxVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 292CE37F272F95C0006FA8D9 /* CRBoxVC.m */; };
 		292CE396272FC47E006FA8D9 /* CaptchaAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 292CE395272FC47D006FA8D9 /* CaptchaAlertView.m */; };
 		2959A14F272BEB4C00972EE3 /* UIViewController+KNavigation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2959A14E272BEB4C00972EE3 /* UIViewController+KNavigation.m */; };
@@ -22,6 +24,7 @@
 		29693D4F2731673400475428 /* TextFieldVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 29693D4E2731673400475428 /* TextFieldVC.m */; };
 		29693D522731676100475428 /* AppDelegate+KTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 29693D512731676100475428 /* AppDelegate+KTextField.m */; };
 		29693D552732220300475428 /* UITextField+KTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 29693D542732220300475428 /* UITextField+KTextField.m */; };
+		29769E782735522900265409 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 29769E772735522900265409 /* Person.m */; };
 		29946076272A379C009853CE /* HomeHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29946075272A379C009853CE /* HomeHeaderView.m */; };
 		2994607A272A3932009853CE /* HomeHeaderViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 29946079272A3932009853CE /* HomeHeaderViewCell.m */; };
 		2994607D272A50D3009853CE /* TabBarRootVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2994607C272A50D3009853CE /* TabBarRootVC.m */; };
@@ -78,12 +81,20 @@
 		2995F2D5272907670000D90D /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2995F2D3272907660000D90D /* MBProgressHUD.bundle */; };
 		2995F2D6272907670000D90D /* MBProgressHUD+Custom.m in Sources */ = {isa = PBXBuildFile; fileRef = 2995F2D4272907660000D90D /* MBProgressHUD+Custom.m */; };
 		2995F2DA272926EE0000D90D /* BMProgressHUDVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2995F2D9272926EE0000D90D /* BMProgressHUDVC.m */; };
+		29AF602E2738D288006F5ABB /* PrivacyProtocolView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29AF602D2738D288006F5ABB /* PrivacyProtocolView.m */; };
+		29AF60312738F14C006F5ABB /* PrivacyProtocolVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 29AF60302738F14C006F5ABB /* PrivacyProtocolVC.m */; };
 		29C3864027293BC100E9933C /* SAMKeychainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 29C3863F27293BC100E9933C /* SAMKeychainVC.m */; };
+		29CE7355273921CD0063612F /* ShearVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 29CE7354273921CD0063612F /* ShearVC.m */; };
+		29CE735827392D080063612F /* CRBoxInputView+Paste.m in Sources */ = {isa = PBXBuildFile; fileRef = 29CE735727392D080063612F /* CRBoxInputView+Paste.m */; };
 		426D6BC799EB2889F77E9B6A /* libPods-KZOC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A472C9849EA18CE8268B5BB6 /* libPods-KZOC.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0A58ED9FFA5AD146D30D45AD /* Pods-KZOC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KZOC.debug.xcconfig"; path = "Target Support Files/Pods-KZOC/Pods-KZOC.debug.xcconfig"; sourceTree = "<group>"; };
+		292893DE27362EAC00B7C8D6 /* ArrowPopVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArrowPopVC.h; sourceTree = "<group>"; };
+		292893DF27362EAC00B7C8D6 /* ArrowPopVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArrowPopVC.m; sourceTree = "<group>"; };
+		292893E427364F7A00B7C8D6 /* CountdownTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountdownTimer.m; sourceTree = "<group>"; };
+		292893E527364F7A00B7C8D6 /* CountdownTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountdownTimer.h; sourceTree = "<group>"; };
 		292CE37E272F95C0006FA8D9 /* CRBoxVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CRBoxVC.h; sourceTree = "<group>"; };
 		292CE37F272F95C0006FA8D9 /* CRBoxVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CRBoxVC.m; sourceTree = "<group>"; };
 		292CE394272FC47D006FA8D9 /* CaptchaAlertView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CaptchaAlertView.h; sourceTree = "<group>"; };
@@ -114,6 +125,8 @@
 		29693D512731676100475428 /* AppDelegate+KTextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+KTextField.m"; sourceTree = "<group>"; };
 		29693D532732220300475428 /* UITextField+KTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextField+KTextField.h"; sourceTree = "<group>"; };
 		29693D542732220300475428 /* UITextField+KTextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextField+KTextField.m"; sourceTree = "<group>"; };
+		29769E762735522900265409 /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		29769E772735522900265409 /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		29946074272A379C009853CE /* HomeHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeHeaderView.h; sourceTree = "<group>"; };
 		29946075272A379C009853CE /* HomeHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeHeaderView.m; sourceTree = "<group>"; };
 		29946078272A3932009853CE /* HomeHeaderViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeHeaderViewCell.h; sourceTree = "<group>"; };
@@ -219,8 +232,16 @@
 		2995F2D4272907660000D90D /* MBProgressHUD+Custom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+Custom.m"; sourceTree = "<group>"; };
 		2995F2D8272926EE0000D90D /* BMProgressHUDVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BMProgressHUDVC.h; sourceTree = "<group>"; };
 		2995F2D9272926EE0000D90D /* BMProgressHUDVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BMProgressHUDVC.m; sourceTree = "<group>"; };
+		29AF602C2738D288006F5ABB /* PrivacyProtocolView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrivacyProtocolView.h; sourceTree = "<group>"; };
+		29AF602D2738D288006F5ABB /* PrivacyProtocolView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PrivacyProtocolView.m; sourceTree = "<group>"; };
+		29AF602F2738F14C006F5ABB /* PrivacyProtocolVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrivacyProtocolVC.h; sourceTree = "<group>"; };
+		29AF60302738F14C006F5ABB /* PrivacyProtocolVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PrivacyProtocolVC.m; sourceTree = "<group>"; };
 		29C3863E27293BC100E9933C /* SAMKeychainVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SAMKeychainVC.h; sourceTree = "<group>"; };
 		29C3863F27293BC100E9933C /* SAMKeychainVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SAMKeychainVC.m; sourceTree = "<group>"; };
+		29CE7353273921CD0063612F /* ShearVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShearVC.h; sourceTree = "<group>"; };
+		29CE7354273921CD0063612F /* ShearVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShearVC.m; sourceTree = "<group>"; };
+		29CE735627392D080063612F /* CRBoxInputView+Paste.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CRBoxInputView+Paste.h"; sourceTree = "<group>"; };
+		29CE735727392D080063612F /* CRBoxInputView+Paste.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CRBoxInputView+Paste.m"; sourceTree = "<group>"; };
 		85502B3BB602ECB193FD3C70 /* Pods-KZOC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KZOC.release.xcconfig"; path = "Target Support Files/Pods-KZOC/Pods-KZOC.release.xcconfig"; sourceTree = "<group>"; };
 		A472C9849EA18CE8268B5BB6 /* libPods-KZOC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KZOC.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -237,11 +258,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		292893DD27362E3E00B7C8D6 /* 箭头弹窗 */ = {
+			isa = PBXGroup;
+			children = (
+				292893DE27362EAC00B7C8D6 /* ArrowPopVC.h */,
+				292893DF27362EAC00B7C8D6 /* ArrowPopVC.m */,
+				292893E527364F7A00B7C8D6 /* CountdownTimer.h */,
+				292893E427364F7A00B7C8D6 /* CountdownTimer.m */,
+			);
+			path = "箭头弹窗";
+			sourceTree = "<group>";
+		};
 		292CE381272F95C7006FA8D9 /* 验证码输入框 */ = {
 			isa = PBXGroup;
 			children = (
 				292CE37E272F95C0006FA8D9 /* CRBoxVC.h */,
 				292CE37F272F95C0006FA8D9 /* CRBoxVC.m */,
+				29CE735627392D080063612F /* CRBoxInputView+Paste.h */,
+				29CE735727392D080063612F /* CRBoxInputView+Paste.m */,
 			);
 			path = "验证码输入框";
 			sourceTree = "<group>";
@@ -330,6 +364,8 @@
 			children = (
 				29946081272A5104009853CE /* TestVC.h */,
 				29946082272A5104009853CE /* TestVC.m */,
+				29769E762735522900265409 /* Person.h */,
+				29769E772735522900265409 /* Person.m */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -452,6 +488,7 @@
 		2995F2072728D5D50000D90D /* 组件封装 */ = {
 			isa = PBXGroup;
 			children = (
+				292893DD27362E3E00B7C8D6 /* 箭头弹窗 */,
 				2995F2082728D5D50000D90D /* Cell选择器 */,
 			);
 			path = "组件封装";
@@ -511,6 +548,10 @@
 			children = (
 				2995F2192728D5DE0000D90D /* LeeAlertVC.h */,
 				2995F2182728D5DE0000D90D /* LeeAlertVC.m */,
+				29AF602F2738F14C006F5ABB /* PrivacyProtocolVC.h */,
+				29AF60302738F14C006F5ABB /* PrivacyProtocolVC.m */,
+				29AF602C2738D288006F5ABB /* PrivacyProtocolView.h */,
+				29AF602D2738D288006F5ABB /* PrivacyProtocolView.m */,
 				292CE394272FC47D006FA8D9 /* CaptchaAlertView.h */,
 				292CE395272FC47D006FA8D9 /* CaptchaAlertView.m */,
 			);
@@ -520,6 +561,7 @@
 		2995F21C2728E69C0000D90D /* 功能实验 */ = {
 			isa = PBXGroup;
 			children = (
+				29CE73522739216D0063612F /* 读取剪切板内容 */,
 				2995F20B2728D5D50000D90D /* 导航栏淡入淡出 */,
 				2995F21D2728E8200000D90D /* 图片水印 */,
 			);
@@ -678,6 +720,15 @@
 			path = "SAMKeychain(钥匙串）";
 			sourceTree = "<group>";
 		};
+		29CE73522739216D0063612F /* 读取剪切板内容 */ = {
+			isa = PBXGroup;
+			children = (
+				29CE7353273921CD0063612F /* ShearVC.h */,
+				29CE7354273921CD0063612F /* ShearVC.m */,
+			);
+			path = "读取剪切板内容";
+			sourceTree = "<group>";
+		};
 		C1B7DFEFCC58543D575D076E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -823,7 +874,9 @@
 				29946080272A50ED009853CE /* HomeVC.m in Sources */,
 				2995F29A272907530000D90D /* UIImage+KSize.m in Sources */,
 				2995F299272907530000D90D /* UIColor+KCustomColor.m in Sources */,
+				29CE7355273921CD0063612F /* ShearVC.m in Sources */,
 				2995F2062728D5C50000D90D /* TableViewVC.m in Sources */,
+				29AF602E2738D288006F5ABB /* PrivacyProtocolView.m in Sources */,
 				2995F2122728D5D50000D90D /* NavigationVC.m in Sources */,
 				29693D4F2731673400475428 /* TextFieldVC.m in Sources */,
 				2995F2012728D5C50000D90D /* VCLifeCycle.m in Sources */,
@@ -838,6 +891,7 @@
 				2995F2CA272907620000D90D /* KPopView.m in Sources */,
 				2995F1ED27280E8C0000D90D /* KSelectView.m in Sources */,
 				29946092272AA58E009853CE /* TXScrollLabelViewVC.m in Sources */,
+				29AF60312738F14C006F5ABB /* PrivacyProtocolVC.m in Sources */,
 				2995F1D12728095A0000D90D /* ViewController.m in Sources */,
 				2995F21A2728D5DE0000D90D /* SPPageMenuVC.m in Sources */,
 				2995F1CB2728095A0000D90D /* AppDelegate.m in Sources */,
@@ -856,10 +910,12 @@
 				2994607D272A50D3009853CE /* TabBarRootVC.m in Sources */,
 				2995F2C5272907620000D90D /* KPhotoCollectionView.m in Sources */,
 				2995F2272728ED740000D90D /* NSDate+CXCategory.m in Sources */,
+				29769E782735522900265409 /* Person.m in Sources */,
 				2995F22C2728EDF80000D90D /* DatePickerVC.m in Sources */,
 				2995F2282728ED740000D90D /* CXDatePickerView.m in Sources */,
 				2995F2C2272907620000D90D /* KBottomPopView.m in Sources */,
 				2995F2042728D5C50000D90D /* CollectionCell.m in Sources */,
+				292893E627364F7A00B7C8D6 /* CountdownTimer.m in Sources */,
 				2959A14F272BEB4C00972EE3 /* UIViewController+KNavigation.m in Sources */,
 				29693D0B2730F2EF00475428 /* TimeCountVC.m in Sources */,
 				29639B41272BA863001C693C /* RuntimeVC.m in Sources */,
@@ -867,7 +923,9 @@
 				2995F2BC272907620000D90D /* KRechargeModel.m in Sources */,
 				292CE396272FC47E006FA8D9 /* CaptchaAlertView.m in Sources */,
 				29693D1B273106E600475428 /* MJCountDownButton.m in Sources */,
+				292893E027362EAC00B7C8D6 /* ArrowPopVC.m in Sources */,
 				2995F2C3272907620000D90D /* KEvaluateView.m in Sources */,
+				29CE735827392D080063612F /* CRBoxInputView+Paste.m in Sources */,
 				2995F2DA272926EE0000D90D /* BMProgressHUDVC.m in Sources */,
 				2995F2032728D5C50000D90D /* VCLifeCyclePresent.m in Sources */,
 				29C3864027293BC100E9933C /* SAMKeychainVC.m in Sources */,

@@ -10,6 +10,8 @@
 #import "AppDelegate+KTextField.h"
 #import "IQKeyboardManager.h"
 
+#import "PrivacyProtocolVC.h"
+
 @interface AppDelegate ()
 
 @end

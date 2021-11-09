@@ -3,6 +3,7 @@ PODS:
     - Masonry
   - IQKeyboardManager (6.5.6)
   - LEEAlert (1.5.0)
+  - LFKit/Component/LFPopupMenu (1.2.0)
   - Masonry (1.1.0)
   - MBProgressHUD (1.2.0)
   - MJExtension (3.3.0)
@@ -16,6 +17,7 @@ DEPENDENCIES:
   - CRBoxInputView (= 1.2.1)
   - IQKeyboardManager
   - LEEAlert (~> 1.5.0)
+  - LFKit/Component/LFPopupMenu
   - Masonry (~> 1.1.0)
   - MBProgressHUD (~> 1.2.0)
   - MJExtension (~> 3.3.0)
@@ -30,6 +32,7 @@ SPEC REPOS:
     - CRBoxInputView
     - IQKeyboardManager
     - LEEAlert
+    - LFKit
     - Masonry
     - MBProgressHUD
     - MJExtension
@@ -43,6 +46,7 @@ SPEC CHECKSUMS:
   CRBoxInputView: d73a630e5326ee70487b4a56d09daebf915d82fd
   IQKeyboardManager: 2a6e97afdafc7becf0cb17a9a8d795e3a980717f
   LEEAlert: 0f5157d83ddb6515fa5b9c99b29b4fb1ccf9c38e
+  LFKit: ad4817aba7b1593b7d0e29d31a80b2c5d0e5ad06
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
   MJExtension: 01704cca2b60a214c10761b6491eab74069d68a9
@@ -52,6 +56,6 @@ SPEC CHECKSUMS:
   TXScrollLabelView: 0e1650caf61198bf5dc0938ea6493254aeb80f90
   TZImagePickerController: 1cc39ec0454d6e94d0397418953164d7aa631719
 
-PODFILE CHECKSUM: 6dff73de66f5dac64f88167f0d28c9beccd37a51
+PODFILE CHECKSUM: 9ee1697f603c8a88dbdbcfcbd0be593a8f05dd0e
 
 COCOAPODS: 1.10.2

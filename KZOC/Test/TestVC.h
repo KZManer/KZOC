@@ -11,6 +11,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface TestVC : UIViewController
 
+//@property (nonatomic, copy) NSString *name;
+
 @end
 
 NS_ASSUME_NONNULL_END

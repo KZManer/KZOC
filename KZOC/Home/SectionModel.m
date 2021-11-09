@@ -29,8 +29,8 @@
           @"Runtime",
           @"UITextField(正则表达式)"
         ],
-        @[@"导航栏淡入淡出",@"图片水印"],
-        @[@"Cell选择器"],
+        @[@"导航栏淡入淡出",@"图片水印",@"读取剪切板内容"],
+        @[@"Cell选择器",@"箭头弹窗"],
         @[
             @"MBProgressHUD",
             @"LEEAlert",
@@ -50,8 +50,8 @@
           @"RuntimeVC",
           @"TextFieldVC"
         ],
-        @[@"NavigationVC",@"ImageWatermarkVC"],
-        @[@"CellSelectVC"],
+        @[@"NavigationVC",@"ImageWatermarkVC",@"ShearVC"],
+        @[@"CellSelectVC",@"ArrowPopVC"],
         @[
             @"BMProgressHUDVC",
             @"LeeAlertVC",

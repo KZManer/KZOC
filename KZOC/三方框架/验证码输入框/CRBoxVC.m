@@ -12,6 +12,8 @@
 
 @property (nonatomic, strong) UITextField *textField;
 
+@property (nonatomic, strong) CRBoxInputView *boxInputView;
+
 @end
 
 @implementation CRBoxVC
@@ -35,6 +37,7 @@
     };
     
     CRBoxInputView *boxInputView = [[CRBoxInputView alloc]initWithCodeLength:6];
+    self.boxInputView = boxInputView;
     boxInputView.customCellProperty = property1;
     boxInputView.textContentType = UITextContentTypeOneTimeCode;
 //    boxInputView.backgroundColor = [UIColor lightGrayColor];
@@ -46,6 +49,7 @@
     boxInputView.textEditStatusChangeblock = ^(CRTextEditStatus editStatus) {
         NSLog(@"%ld",(long)editStatus);
     };
+    [boxInputView addGestureRecognizer:[[UILongPressGestureRecognizer alloc]initWithTarget:self action:@selector(popupMenu:)]];
     [self.view addSubview:boxInputView];
     
     [boxInputView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -54,9 +58,27 @@
         make.right.mas_equalTo(-20);
         make.height.mas_equalTo(50);
     }];
-    
-    
-    
 }
-
+- (void)popupMenu:(UILongPressGestureRecognizer *)gesture {
+    CGPoint point = [gesture locationInView:self.view];
+    UIMenuController *menuController = [[UIMenuController alloc]init];
+    menuController.menuItems = @[
+        [[UIMenuItem alloc]initWithTitle:@"粘贴" action:@selector(kPaste)],
+    ];
+    [menuController setTargetRect:CGRectMake(point.x,point.y, 50, 24) inView:self.view];
+    // 显示
+    [menuController setMenuVisible:YES animated:YES];
+}
+- (void)kPaste {
+    NSString *string = [UIPasteboard generalPasteboard].string;
+    NSLog(@"%@",string);
+    [self.boxInputView reloadInputString:string];
+}
 @end
+
+
+// MARK:MARK（标记）
+// FIXME:FIXME（待修正）
+// TODO:TODO（待编写）
+// ???:???（此处代码有疑问）
+// !!!:!!!（此处代码需要注意）

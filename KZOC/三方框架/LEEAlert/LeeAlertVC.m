@@ -8,6 +8,7 @@
 #import "LeeAlertVC.h"
 #import "LEEAlert.h"
 #import "CaptchaAlertView.h"
+#import "PrivacyProtocolView.h"
 
 @interface LeeAlertVC ()
 
@@ -75,6 +76,30 @@
                 #ifdef __IPHONE_13_0
                 .LeeUserInterfaceStyle(UIUserInterfaceStyleLight)
                 #endif
+                .LeeConfigMaxWidth(^CGFloat(LEEScreenOrientationType type, CGSize size) {
+                    if (type == LEEScreenOrientationTypeVertical) {
+                        return CGRectGetWidth([[UIScreen mainScreen] bounds]);
+                    } else {
+                        return 0.0f;
+                    }
+                })
+                .LeeConfigMaxHeight(^CGFloat(LEEScreenOrientationType type, CGSize size) {
+                    if (type == LEEScreenOrientationTypeVertical) {
+                        return CGRectGetHeight([[UIScreen mainScreen] bounds]);
+                    }else{
+                        return 0.0f;
+                    }
+                })
+                .LeeShow();
+            }break;
+            case 2:{
+                PrivacyProtocolView *view = [[PrivacyProtocolView alloc]initWithFrame:CGRectMake(0, 0, 200, 100)];
+                
+                [LEEAlert alert].config
+                .LeeCustomView(view)
+                .LeeHeaderInsets(UIEdgeInsetsMake(0, 0, 0, 0))
+                .LeeHeaderColor([UIColor clearColor])
+                .LeeClickBackgroundClose(YES)
                 .LeeConfigMaxWidth(^CGFloat(LEEScreenOrientationType type, CGSize size) {
                     if (type == LEEScreenOrientationTypeVertical) {
                         return CGRectGetWidth([[UIScreen mainScreen] bounds]);

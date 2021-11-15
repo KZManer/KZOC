@@ -11,6 +11,11 @@
 		292893E627364F7A00B7C8D6 /* CountdownTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 292893E427364F7A00B7C8D6 /* CountdownTimer.m */; };
 		292CE380272F95C0006FA8D9 /* CRBoxVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 292CE37F272F95C0006FA8D9 /* CRBoxVC.m */; };
 		292CE396272FC47E006FA8D9 /* CaptchaAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 292CE395272FC47D006FA8D9 /* CaptchaAlertView.m */; };
+		29367B9D2741FF4E0017712F /* KTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 29367B9C2741FF4D0017712F /* KTextField.m */; };
+		29367BA02741FFF20017712F /* ShearView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29367B9F2741FFF20017712F /* ShearView.m */; };
+		29367BA327420CA90017712F /* TestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29367BA227420CA90017712F /* TestView.m */; };
+		29367BA627420CBB0017712F /* Test2VC.m in Sources */ = {isa = PBXBuildFile; fileRef = 29367BA527420CBB0017712F /* Test2VC.m */; };
+		29367BA927422CFB0017712F /* TwoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 29367BA827422CFB0017712F /* TwoVC.m */; };
 		2959A14F272BEB4C00972EE3 /* UIViewController+KNavigation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2959A14E272BEB4C00972EE3 /* UIViewController+KNavigation.m */; };
 		2959A152272BED4400972EE3 /* UIFont+KFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 2959A151272BED4400972EE3 /* UIFont+KFont.m */; };
 		29639B39272B9F56001C693C /* DataGridComponentVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 29639B38272B9F56001C693C /* DataGridComponentVC.m */; };
@@ -24,7 +29,6 @@
 		29693D4F2731673400475428 /* TextFieldVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 29693D4E2731673400475428 /* TextFieldVC.m */; };
 		29693D522731676100475428 /* AppDelegate+KTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 29693D512731676100475428 /* AppDelegate+KTextField.m */; };
 		29693D552732220300475428 /* UITextField+KTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 29693D542732220300475428 /* UITextField+KTextField.m */; };
-		29769E782735522900265409 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 29769E772735522900265409 /* Person.m */; };
 		29946076272A379C009853CE /* HomeHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29946075272A379C009853CE /* HomeHeaderView.m */; };
 		2994607A272A3932009853CE /* HomeHeaderViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 29946079272A3932009853CE /* HomeHeaderViewCell.m */; };
 		2994607D272A50D3009853CE /* TabBarRootVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2994607C272A50D3009853CE /* TabBarRootVC.m */; };
@@ -84,6 +88,9 @@
 		29AF602E2738D288006F5ABB /* PrivacyProtocolView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29AF602D2738D288006F5ABB /* PrivacyProtocolView.m */; };
 		29AF60312738F14C006F5ABB /* PrivacyProtocolVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 29AF60302738F14C006F5ABB /* PrivacyProtocolVC.m */; };
 		29C3864027293BC100E9933C /* SAMKeychainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 29C3863F27293BC100E9933C /* SAMKeychainVC.m */; };
+		29CC433E273A232D0031B0DB /* SVProgressHUD+Custom.m in Sources */ = {isa = PBXBuildFile; fileRef = 29CC433D273A232D0031B0DB /* SVProgressHUD+Custom.m */; };
+		29CD2C85273B7CDE00C0028B /* TableViewVC1.m in Sources */ = {isa = PBXBuildFile; fileRef = 29CD2C84273B7CDE00C0028B /* TableViewVC1.m */; };
+		29CD2C89273B7D1D00C0028B /* TableViewCell1.m in Sources */ = {isa = PBXBuildFile; fileRef = 29CD2C88273B7D1D00C0028B /* TableViewCell1.m */; };
 		29CE7355273921CD0063612F /* ShearVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 29CE7354273921CD0063612F /* ShearVC.m */; };
 		29CE735827392D080063612F /* CRBoxInputView+Paste.m in Sources */ = {isa = PBXBuildFile; fileRef = 29CE735727392D080063612F /* CRBoxInputView+Paste.m */; };
 		426D6BC799EB2889F77E9B6A /* libPods-KZOC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A472C9849EA18CE8268B5BB6 /* libPods-KZOC.a */; };
@@ -99,6 +106,16 @@
 		292CE37F272F95C0006FA8D9 /* CRBoxVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CRBoxVC.m; sourceTree = "<group>"; };
 		292CE394272FC47D006FA8D9 /* CaptchaAlertView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CaptchaAlertView.h; sourceTree = "<group>"; };
 		292CE395272FC47D006FA8D9 /* CaptchaAlertView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CaptchaAlertView.m; sourceTree = "<group>"; };
+		29367B9B2741FF4D0017712F /* KTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KTextField.h; sourceTree = "<group>"; };
+		29367B9C2741FF4D0017712F /* KTextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KTextField.m; sourceTree = "<group>"; };
+		29367B9E2741FFF20017712F /* ShearView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShearView.h; sourceTree = "<group>"; };
+		29367B9F2741FFF20017712F /* ShearView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShearView.m; sourceTree = "<group>"; };
+		29367BA127420CA90017712F /* TestView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestView.h; sourceTree = "<group>"; };
+		29367BA227420CA90017712F /* TestView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestView.m; sourceTree = "<group>"; };
+		29367BA427420CBB0017712F /* Test2VC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Test2VC.h; sourceTree = "<group>"; };
+		29367BA527420CBB0017712F /* Test2VC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Test2VC.m; sourceTree = "<group>"; };
+		29367BA727422CFB0017712F /* TwoVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TwoVC.h; sourceTree = "<group>"; };
+		29367BA827422CFB0017712F /* TwoVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TwoVC.m; sourceTree = "<group>"; };
 		2959A14D272BEB4C00972EE3 /* UIViewController+KNavigation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+KNavigation.h"; sourceTree = "<group>"; };
 		2959A14E272BEB4C00972EE3 /* UIViewController+KNavigation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+KNavigation.m"; sourceTree = "<group>"; };
 		2959A150272BED4400972EE3 /* UIFont+KFont.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIFont+KFont.h"; sourceTree = "<group>"; };
@@ -125,8 +142,6 @@
 		29693D512731676100475428 /* AppDelegate+KTextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+KTextField.m"; sourceTree = "<group>"; };
 		29693D532732220300475428 /* UITextField+KTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextField+KTextField.h"; sourceTree = "<group>"; };
 		29693D542732220300475428 /* UITextField+KTextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextField+KTextField.m"; sourceTree = "<group>"; };
-		29769E762735522900265409 /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
-		29769E772735522900265409 /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		29946074272A379C009853CE /* HomeHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeHeaderView.h; sourceTree = "<group>"; };
 		29946075272A379C009853CE /* HomeHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeHeaderView.m; sourceTree = "<group>"; };
 		29946078272A3932009853CE /* HomeHeaderViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeHeaderViewCell.h; sourceTree = "<group>"; };
@@ -238,6 +253,12 @@
 		29AF60302738F14C006F5ABB /* PrivacyProtocolVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PrivacyProtocolVC.m; sourceTree = "<group>"; };
 		29C3863E27293BC100E9933C /* SAMKeychainVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SAMKeychainVC.h; sourceTree = "<group>"; };
 		29C3863F27293BC100E9933C /* SAMKeychainVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SAMKeychainVC.m; sourceTree = "<group>"; };
+		29CC433C273A232D0031B0DB /* SVProgressHUD+Custom.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD+Custom.h"; sourceTree = "<group>"; };
+		29CC433D273A232D0031B0DB /* SVProgressHUD+Custom.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SVProgressHUD+Custom.m"; sourceTree = "<group>"; };
+		29CD2C83273B7CDE00C0028B /* TableViewVC1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewVC1.h; sourceTree = "<group>"; };
+		29CD2C84273B7CDE00C0028B /* TableViewVC1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewVC1.m; sourceTree = "<group>"; };
+		29CD2C87273B7D1D00C0028B /* TableViewCell1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewCell1.h; sourceTree = "<group>"; };
+		29CD2C88273B7D1D00C0028B /* TableViewCell1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewCell1.m; sourceTree = "<group>"; };
 		29CE7353273921CD0063612F /* ShearVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShearVC.h; sourceTree = "<group>"; };
 		29CE7354273921CD0063612F /* ShearVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShearVC.m; sourceTree = "<group>"; };
 		29CE735627392D080063612F /* CRBoxInputView+Paste.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CRBoxInputView+Paste.h"; sourceTree = "<group>"; };
@@ -364,8 +385,10 @@
 			children = (
 				29946081272A5104009853CE /* TestVC.h */,
 				29946082272A5104009853CE /* TestVC.m */,
-				29769E762735522900265409 /* Person.h */,
-				29769E772735522900265409 /* Person.m */,
+				29367BA127420CA90017712F /* TestView.h */,
+				29367BA227420CA90017712F /* TestView.m */,
+				29367BA427420CBB0017712F /* Test2VC.h */,
+				29367BA527420CBB0017712F /* Test2VC.m */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -421,10 +444,10 @@
 		2995F1E327280E8B0000D90D /* KTools */ = {
 			isa = PBXGroup;
 			children = (
-				2995F2D0272907660000D90D /* category_third */,
+				2995F1E427280E8B0000D90D /* tools */,
 				2995F29B272907620000D90D /* subclass */,
 				2995F28E272907530000D90D /* category */,
-				2995F1E427280E8B0000D90D /* tools */,
+				2995F2D0272907660000D90D /* category_third */,
 			);
 			path = KTools;
 			sourceTree = "<group>";
@@ -472,6 +495,8 @@
 				2995F1FC2728D5C50000D90D /* CollectionCell.m */,
 				2995F1FB2728D5C50000D90D /* CollectionVC.h */,
 				2995F1FD2728D5C50000D90D /* CollectionVC.m */,
+				29367BA727422CFB0017712F /* TwoVC.h */,
+				29367BA827422CFB0017712F /* TwoVC.m */,
 			);
 			path = UICollectionView;
 			sourceTree = "<group>";
@@ -481,6 +506,7 @@
 			children = (
 				2995F2002728D5C50000D90D /* TableViewVC.h */,
 				2995F1FF2728D5C50000D90D /* TableViewVC.m */,
+				29CD2C86273B7CEF00C0028B /* 高度自适应 */,
 			);
 			path = UITableView;
 			sourceTree = "<group>";
@@ -687,6 +713,7 @@
 		2995F2D0272907660000D90D /* category_third */ = {
 			isa = PBXGroup;
 			children = (
+				29CC433B273A230F0031B0DB /* SVProgressHUD */,
 				2995F2D1272907660000D90D /* MBProgressHUD */,
 			);
 			path = category_third;
@@ -720,11 +747,35 @@
 			path = "SAMKeychain(钥匙串）";
 			sourceTree = "<group>";
 		};
+		29CC433B273A230F0031B0DB /* SVProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				29CC433C273A232D0031B0DB /* SVProgressHUD+Custom.h */,
+				29CC433D273A232D0031B0DB /* SVProgressHUD+Custom.m */,
+			);
+			path = SVProgressHUD;
+			sourceTree = "<group>";
+		};
+		29CD2C86273B7CEF00C0028B /* 高度自适应 */ = {
+			isa = PBXGroup;
+			children = (
+				29CD2C87273B7D1D00C0028B /* TableViewCell1.h */,
+				29CD2C88273B7D1D00C0028B /* TableViewCell1.m */,
+				29CD2C83273B7CDE00C0028B /* TableViewVC1.h */,
+				29CD2C84273B7CDE00C0028B /* TableViewVC1.m */,
+			);
+			path = "高度自适应";
+			sourceTree = "<group>";
+		};
 		29CE73522739216D0063612F /* 读取剪切板内容 */ = {
 			isa = PBXGroup;
 			children = (
 				29CE7353273921CD0063612F /* ShearVC.h */,
 				29CE7354273921CD0063612F /* ShearVC.m */,
+				29367B9B2741FF4D0017712F /* KTextField.h */,
+				29367B9C2741FF4D0017712F /* KTextField.m */,
+				29367B9E2741FFF20017712F /* ShearView.h */,
+				29367B9F2741FFF20017712F /* ShearView.m */,
 			);
 			path = "读取剪切板内容";
 			sourceTree = "<group>";
@@ -871,14 +922,17 @@
 				29639B3D272BA010001C693C /* DataGridComponent.m in Sources */,
 				2995F2C9272907620000D90D /* KPickerView.m in Sources */,
 				2995F1EB27280E8C0000D90D /* KUIViewExt.m in Sources */,
+				29367BA02741FFF20017712F /* ShearView.m in Sources */,
 				29946080272A50ED009853CE /* HomeVC.m in Sources */,
 				2995F29A272907530000D90D /* UIImage+KSize.m in Sources */,
+				29CC433E273A232D0031B0DB /* SVProgressHUD+Custom.m in Sources */,
 				2995F299272907530000D90D /* UIColor+KCustomColor.m in Sources */,
 				29CE7355273921CD0063612F /* ShearVC.m in Sources */,
 				2995F2062728D5C50000D90D /* TableViewVC.m in Sources */,
 				29AF602E2738D288006F5ABB /* PrivacyProtocolView.m in Sources */,
 				2995F2122728D5D50000D90D /* NavigationVC.m in Sources */,
 				29693D4F2731673400475428 /* TextFieldVC.m in Sources */,
+				29367BA327420CA90017712F /* TestView.m in Sources */,
 				2995F2012728D5C50000D90D /* VCLifeCycle.m in Sources */,
 				2995F2D6272907670000D90D /* MBProgressHUD+Custom.m in Sources */,
 				2959A152272BED4400972EE3 /* UIFont+KFont.m in Sources */,
@@ -897,20 +951,23 @@
 				2995F1CB2728095A0000D90D /* AppDelegate.m in Sources */,
 				2995F1F02728D5B60000D90D /* SectionModel.m in Sources */,
 				29693D552732220300475428 /* UITextField+KTextField.m in Sources */,
+				29367BA927422CFB0017712F /* TwoVC.m in Sources */,
 				29946076272A379C009853CE /* HomeHeaderView.m in Sources */,
 				29946083272A5104009853CE /* TestVC.m in Sources */,
 				2994608B272A83D2009853CE /* NavMenuModel.m in Sources */,
 				2995F1DC2728095C0000D90D /* main.m in Sources */,
+				29367B9D2741FF4E0017712F /* KTextField.m in Sources */,
 				29693D522731676100475428 /* AppDelegate+KTextField.m in Sources */,
+				29367BA627420CBB0017712F /* Test2VC.m in Sources */,
 				2995F2202728E8460000D90D /* ImageWatermarkVC.m in Sources */,
 				29693D1A273106E600475428 /* UIImage+Color.m in Sources */,
+				29CD2C85273B7CDE00C0028B /* TableViewVC1.m in Sources */,
 				2995F297272907530000D90D /* UIView+KView.m in Sources */,
 				29693D19273106E600475428 /* UIButton+CountDown.m in Sources */,
 				2995F2BF272907620000D90D /* KRechargeWayView.m in Sources */,
 				2994607D272A50D3009853CE /* TabBarRootVC.m in Sources */,
 				2995F2C5272907620000D90D /* KPhotoCollectionView.m in Sources */,
 				2995F2272728ED740000D90D /* NSDate+CXCategory.m in Sources */,
-				29769E782735522900265409 /* Person.m in Sources */,
 				2995F22C2728EDF80000D90D /* DatePickerVC.m in Sources */,
 				2995F2282728ED740000D90D /* CXDatePickerView.m in Sources */,
 				2995F2C2272907620000D90D /* KBottomPopView.m in Sources */,
@@ -927,6 +984,7 @@
 				2995F2C3272907620000D90D /* KEvaluateView.m in Sources */,
 				29CE735827392D080063612F /* CRBoxInputView+Paste.m in Sources */,
 				2995F2DA272926EE0000D90D /* BMProgressHUDVC.m in Sources */,
+				29CD2C89273B7D1D00C0028B /* TableViewCell1.m in Sources */,
 				2995F2032728D5C50000D90D /* VCLifeCyclePresent.m in Sources */,
 				29C3864027293BC100E9933C /* SAMKeychainVC.m in Sources */,
 				2995F2C6272907620000D90D /* KPhotoCell.m in Sources */,

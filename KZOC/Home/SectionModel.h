@@ -12,14 +12,11 @@ NS_ASSUME_NONNULL_BEGIN
 @interface SectionModel : NSObject
 
 @property (nonatomic, copy) NSString *name;
-
-@property (nonatomic, strong) NSArray *rowNames;
-
-@property (nonatomic, strong) NSArray *classNames;
+@property (nonatomic, copy) NSString *className;
 
 + (NSArray *)sectionTitles;
 
-+ (NSArray <SectionModel *> *)allSectionInfos;
++ (NSArray *)sectionModels;
 
 @end
 

@@ -27,6 +27,8 @@
     self.showLabel.textColor = [UIColor blackColor];
     self.showLabel.textAlignment = NSTextAlignmentCenter;
     self.showLabel.backgroundColor = Color_RGB_Same(240);
+    self.showLabel.adjustsFontSizeToFitWidth = true;
+    self.showLabel.minimumScaleFactor = 0.5;
     [self.contentView addSubview:self.showLabel];
     [self.showLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.left.mas_equalTo(5);

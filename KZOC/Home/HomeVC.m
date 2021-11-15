@@ -12,8 +12,7 @@
 @interface HomeVC ()<UITableViewDataSource,UITableViewDelegate>
 
 @property (nonatomic, strong) UITableView *tableView;
-@property (nonatomic, strong) NSArray *titles;
-@property (nonatomic, strong) NSArray <SectionModel *> *sectionInfos;
+@property (nonatomic, strong) NSArray *sectionInfos;
 
 @end
 
@@ -23,7 +22,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.sectionInfos = [SectionModel allSectionInfos];
+//    self.sectionInfos = [SectionModel allSectionInfos];
+    self.sectionInfos = [SectionModel sectionModels];
     [self.view addSubview:self.tableView];
 }
 - (void)viewWillLayoutSubviews {
@@ -52,17 +52,17 @@
     return 44;
 }
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    SectionModel *model = self.sectionInfos[section];
-    return model.name;
+    NSString *title = [SectionModel sectionTitles][section];
+    return title;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return self.sectionInfos.count;
+    return [SectionModel sectionTitles].count;
 }
 //cell的个数
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    SectionModel *model = self.sectionInfos[section];
-    return model.rowNames.count;
+    NSArray<SectionModel *> *rowArray = self.sectionInfos[section];
+    return rowArray.count;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *cellIdentifier = @"cellIdentifier";
@@ -70,18 +70,18 @@
     if (!cell) {
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
-    SectionModel *model = self.sectionInfos[indexPath.section];
-    cell.textLabel.text = model.rowNames[indexPath.row];
+    SectionModel *model = self.sectionInfos[indexPath.section][indexPath.row];
+    cell.textLabel.text = model.name;
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    SectionModel *model = self.sectionInfos[indexPath.section];
-    NSString *className = model.classNames[indexPath.row];
+    SectionModel *model = self.sectionInfos[indexPath.section][indexPath.row];
+    NSString *className = model.className;
     Class cls = NSClassFromString(className);
     UIViewController *vc = [cls new];
-    vc.title = model.rowNames[indexPath.row];
+    vc.title = model.name;
     vc.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:vc animated:YES];
 }

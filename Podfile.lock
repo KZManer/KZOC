@@ -8,6 +8,9 @@ PODS:
   - MBProgressHUD (1.2.0)
   - MJExtension (3.3.0)
   - SAMKeychain (1.5.3)
+  - SDWebImage (5.11.1):
+    - SDWebImage/Core (= 5.11.1)
+  - SDWebImage/Core (5.11.1)
   - SPPageMenu (3.5.0)
   - SVProgressHUD (2.2.5)
   - TXScrollLabelView (1.3.2)
@@ -22,6 +25,7 @@ DEPENDENCIES:
   - MBProgressHUD (~> 1.2.0)
   - MJExtension (~> 3.3.0)
   - SAMKeychain (~> 1.5.3)
+  - SDWebImage (~> 5.0)
   - SPPageMenu (~> 3.5.0)
   - SVProgressHUD (~> 2.2.5)
   - TXScrollLabelView (~> 1.3.2)
@@ -37,6 +41,7 @@ SPEC REPOS:
     - MBProgressHUD
     - MJExtension
     - SAMKeychain
+    - SDWebImage
     - SPPageMenu
     - SVProgressHUD
     - TXScrollLabelView
@@ -51,11 +56,12 @@ SPEC CHECKSUMS:
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
   MJExtension: 01704cca2b60a214c10761b6491eab74069d68a9
   SAMKeychain: 483e1c9f32984d50ca961e26818a534283b4cd5c
+  SDWebImage: a7f831e1a65eb5e285e3fb046a23fcfbf08e696d
   SPPageMenu: da182aafcec55719d5c326103cc7716c1e48f311
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   TXScrollLabelView: 0e1650caf61198bf5dc0938ea6493254aeb80f90
   TZImagePickerController: 1cc39ec0454d6e94d0397418953164d7aa631719
 
-PODFILE CHECKSUM: 9ee1697f603c8a88dbdbcfcbd0be593a8f05dd0e
+PODFILE CHECKSUM: 8c90f1ffafbd57920322b823d17218878fb0d358
 
 COCOAPODS: 1.10.2

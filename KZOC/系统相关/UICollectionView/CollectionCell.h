@@ -11,6 +11,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface CollectionCell : UICollectionViewCell
 
+- (void)echoContent:(NSString *)imageLink indexPath:(NSIndexPath *)indexPath;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -8,6 +8,7 @@
 
 #import "CollectionVC.h"
 #import "CollectionCell.h"
+#import "TwoVC.h"
 
 static NSString *cellIdentifier = @"CollectionCellIdentifier";
 
@@ -23,14 +24,22 @@ static NSString *cellIdentifier = @"CollectionCellIdentifier";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor = [UIColor lightGrayColor];
     
     self.datasource = [NSMutableArray array];
-    for (int i = 0; i < 5; i++) {
-        int random = arc4random_uniform(10);
-        NSLog(@"%d",random);
-        [self.datasource addObject:[NSString stringWithFormat:@"https://randomuser.me/api/portraits/lego/%d.jpg",random]];
+    for (int i = 0; i < 8; i++) {
+        if (i < 4) {
+            [self.datasource addObject:@"https://randomuser.me/api/portraits/men/75.jpg"];
+        } else {
+            [self.datasource addObject:@"https://randomuser.me/api/portraits/thumb/men/75.jpg"];
+        }
+//        int random = arc4random_uniform(10);
+//        NSLog(@"%d",random);
+//        [self.datasource addObject:[NSString stringWithFormat:@"https://randomuser.me/api/portraits/lego/%d.jpg",random]];
     }
+    
+    
+    
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(nothing)];
     tap.cancelsTouchesInView = false;
     [self.view addGestureRecognizer:tap];
@@ -42,8 +51,12 @@ static NSString *cellIdentifier = @"CollectionCellIdentifier";
     [self.collectionView registerClass:[CollectionCell class] forCellWithReuseIdentifier:cellIdentifier];
     [self.view addSubview:self.collectionView];
     [self.collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.equalTo(self.view);
+        make.top.mas_equalTo(100);
+        make.left.mas_equalTo(0);
+        make.right.mas_equalTo(-0);
+        make.bottom.mas_equalTo(-200);
     }];
+    self.collectionView.backgroundColor = [UIColor orangeColor];
 }
 - (void)nothing {
     NSLog(@"%s",__func__);
@@ -51,7 +64,7 @@ static NSString *cellIdentifier = @"CollectionCellIdentifier";
 
 #pragma mark UICollectionViewDataSource
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-    return 2;
+    return 1;
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
@@ -59,39 +72,32 @@ static NSString *cellIdentifier = @"CollectionCellIdentifier";
 }
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     CollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellIdentifier forIndexPath:indexPath];
-    
-    CGFloat redRandom =0.0, greenRandom =0.0, blueRandom = 0.0;
-    for (int i = 0; i<3; i++) {
-        int random = arc4random_uniform(255);
-        if (i == 0) {
-            redRandom = random * 1.0 / 255.0;
-        } else if (i == 1) {
-            greenRandom = random * 1.0 / 255.0;
-        } else {
-            blueRandom = random * 1.0 / 255.0;
-        }
-    }
-    cell.contentView.backgroundColor = [UIColor colorWithRed:redRandom green:greenRandom blue:blueRandom alpha:0.6];
-    
+    cell.contentView.backgroundColor = [KTools tools_colorRandom];
+    [cell echoContent:self.datasource[indexPath.row] indexPath:indexPath];
     return cell;
 }
 #pragma mark UICollectionViewDelegate
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     NSLog(@"come in");
+    TwoVC *twoVC = [[TwoVC alloc]init];
+    [self.navigationController pushViewController:twoVC animated:true];
 }
 #pragma mark UICollectionViewDelegateFlowLayout
+
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    int rowNum = 2;//每行4个cell
-    return CGSizeMake((self.view.frame.size.width - 30)/2, (self.view.frame.size.width - 30)/2);
+    CGFloat width = self.view.width / 4;
+    CGFloat height = width;
+    return CGSizeMake(width, height);
 }
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
     //上 左 下 右
-    return UIEdgeInsetsMake(10, 10, 10, 10);
+    return UIEdgeInsetsMake(0, 0, 0, 0);
 }
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section {
-    return 10;
+    return 0;
 }
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section {
     return 10;
 }
+
 @end

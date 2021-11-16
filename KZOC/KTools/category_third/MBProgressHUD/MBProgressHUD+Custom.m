@@ -55,36 +55,43 @@ typedef enum : NSUInteger {
 }
 
 /**隐藏*/
-+ (void)cg_dismiss {
++ (void)cg_hide {
     UIView *view = [UIApplication sharedApplication].keyWindow;
     [self hideHUDForView:view animated:true];
 }
 /**延迟隐藏*/
-+ (void)cg_dismissWithDelay:(NSTimeInterval)delay {
++ (void)cg_hideWithDelay:(NSTimeInterval)delay {
+    [self cg_hideWithDelay:delay completion:nil];
+}
+/**延迟隐藏+回调*/
++ (void)cg_hideWithDelay:(NSTimeInterval)delay completion:(nullable void(^)(void))completion {
     dispatch_time_t time = dispatch_time(DISPATCH_TIME_NOW, NSEC_PER_SEC * delay);
     dispatch_after(time, dispatch_get_main_queue(), ^{
-        [self cg_dismiss];
+        [self cg_hide];
+        if (completion) {
+            completion();
+        }
     });
 }
 
 // MARK: success
 /**成功*/
 + (void)cg_success:(NSString *)hintText {
-    [self cg_dismiss];
+    [self cg_hide];
     [self showText:hintText type:MBHUDTypeSuccess];
 }
 
 // MARK: error
 /**失败*/
 + (void)cg_error:(NSString *)hintText {
-    [self cg_dismiss];
+    [self cg_hide];
     [self showText:hintText type:MBHUDTypeError];
 }
 
 // MARK: text
 /** text only */
 + (void)cg_textOnly:(NSString *)hintText {
-    [self cg_dismiss];
+    [self cg_hide];
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:[UIApplication sharedApplication].keyWindow animated:YES];
     hud.label.text = hintText;
     hud.mode = MBProgressHUDModeText;

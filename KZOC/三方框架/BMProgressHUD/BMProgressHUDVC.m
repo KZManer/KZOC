@@ -20,23 +20,46 @@
     self.view.backgroundColor = [UIColor whiteColor];
     [KSelectView view]
     .kFrame(self.view.frame)
-    .kDatasource(@[@"cg_textOnly",@"cg_textLoading",@"cg_success",@"cg_error",@"cg_showLoadingOnly",@"SV_showOnly"])
+    .kDatasource(@[@"cg_textOnly",@"cg_textLoading",@"cg_success",@"cg_error",@"cg_showLoadingOnly",@"cg_hide",@"cg_hideHanlder",@"SV_showLoadingOnly",@"SV_textLoading",@"SV_success",@"SV_error"])
     .kShow(self.view)
     .kSelectCell(^(NSString * _Nonnull cellName, NSInteger cellIndex) {
         
         if ([cellName isEqualToString:@"cg_showLoadingOnly"]) {
             [MBProgressHUD cg_showLoadingOnly];
-            [MBProgressHUD cg_dismissWithDelay:2];
+            [MBProgressHUD cg_hideWithDelay:2];
             return;
         }
         if ([cellName isEqualToString:@"cg_textLoading"]) {
             [MBProgressHUD cg_textLoading:cellName];
-            [MBProgressHUD cg_dismissWithDelay:2];
+            [MBProgressHUD cg_hideWithDelay:2];
             return;
         }
-        if ([cellName isEqualToString:@"SV_showOnly"]) {
-            [SVProgressHUD cg_showOnly];
+        if ([cellName isEqualToString:@"SV_showLoadingOnly"]) {
+            [SVProgressHUD cg_showLoadingOnly];
             [SVProgressHUD dismissWithDelay:2];
+            return;
+        }
+        if ([cellName isEqualToString:@"SV_textLoading"]) {
+            [SVProgressHUD cg_textLoading:cellName];
+            [SVProgressHUD dismissWithDelay:2];
+            return;
+        }
+        if ([cellName isEqualToString:@"SV_success"]) {
+            [SVProgressHUD cg_success:cellName];return;
+        }
+        if ([cellName isEqualToString:@"SV_error"]) {
+            [SVProgressHUD cg_error:cellName];return;
+        }
+        if ([cellName isEqualToString:@"cg_hide"]) {
+            [MBProgressHUD cg_showLoadingOnly];
+            [MBProgressHUD cg_hideWithDelay:3];
+            return;
+        }
+        if ([cellName isEqualToString:@"cg_hideHanlder"]) {
+            [MBProgressHUD cg_showLoadingOnly];
+            [MBProgressHUD cg_hideWithDelay:5 completion:^{
+                NSLog(@"隐藏了");
+            }];
             return;
         }
        

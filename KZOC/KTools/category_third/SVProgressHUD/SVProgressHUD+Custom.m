@@ -9,25 +9,25 @@
 
 @implementation SVProgressHUD (Custom)
 
-+ (void)cg_showOnly {
++ (void)cg_showLoadingOnly {
     [self show];
-    [self setDefaultAnimationType:SVProgressHUDAnimationTypeNative];
-    [self setDefaultMaskType:SVProgressHUDMaskTypeClear];
     [self setDefaultStyle:SVProgressHUDStyleDark];
-}
-+ (void)cg_showText:(NSString *)text {
-    [self showWithStatus:text];
-    [self setDefaultAnimationType:SVProgressHUDAnimationTypeNative];
     [self setDefaultMaskType:SVProgressHUDMaskTypeClear];
+    [self setDefaultAnimationType:SVProgressHUDAnimationTypeNative];
+}
++ (void)cg_textLoading:(NSString *)hintText {
+    [self showWithStatus:hintText];
     [self setDefaultStyle:SVProgressHUDStyleDark];
+    [self setDefaultMaskType:SVProgressHUDMaskTypeClear];
+    [self setDefaultAnimationType:SVProgressHUDAnimationTypeNative];
 }
-+ (void)cg_showSuccess:(NSString *)text {
-    [self showSuccessWithStatus:text];
-    [self dismissWithDelay:1.2f];
++ (void)cg_success:(NSString *)hintText {
+    [self showSuccessWithStatus:hintText];
+    [self dismissWithDelay:1.3f];
 }
-+ (void)cg_showError:(NSString *)text {
-    [self showErrorWithStatus:text];
-    [self dismissWithDelay:1.2f];
++ (void)cg_error:(NSString *)hintText {
+    [self showErrorWithStatus:hintText];
+    [self dismissWithDelay:1.3f];
 }
 
 @end

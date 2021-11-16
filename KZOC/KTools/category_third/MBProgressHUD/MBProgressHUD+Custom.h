@@ -14,9 +14,11 @@ NS_ASSUME_NONNULL_BEGIN
 /**加载动画，无文字*/
 + (void)cg_showLoadingOnly;
 /**隐藏*/
-+ (void)cg_dismiss;
++ (void)cg_hide;
 /**延迟隐藏*/
-+ (void)cg_dismissWithDelay:(NSTimeInterval)delay;
++ (void)cg_hideWithDelay:(NSTimeInterval)delay;
+/**延迟隐藏+回调*/
++ (void)cg_hideWithDelay:(NSTimeInterval)delay completion:(nullable void(^)(void))completion;
 /**成功*/
 + (void)cg_success:(NSString *)hintText;
 /**失败*/

@@ -11,14 +11,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface SVProgressHUD (Custom)
 
-/**展示加载中，无文字*/
-+ (void)cg_showOnly;
+/**加载动画，无文字*/
++ (void)cg_showLoadingOnly;
 /**展示加载中+文字*/
-+ (void)cg_showText:(NSString *)text;
++ (void)cg_textLoading:(NSString *)hintText;
 
-+ (void)cg_showSuccess:(NSString *)text;
++ (void)cg_success:(NSString *)hintText;
 
-+ (void)cg_showError:(NSString *)text;
++ (void)cg_error:(NSString *)hintText;
 
 @end
 

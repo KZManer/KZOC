@@ -13,6 +13,7 @@ PODS:
   - SDWebImage/Core (5.11.1)
   - SPPageMenu (3.5.0)
   - SVProgressHUD (2.2.5)
+  - TABAnimated (2.5.9)
   - TXScrollLabelView (1.3.2)
   - TZImagePickerController (3.6.4)
 
@@ -28,6 +29,7 @@ DEPENDENCIES:
   - SDWebImage (~> 5.0)
   - SPPageMenu (~> 3.5.0)
   - SVProgressHUD (~> 2.2.5)
+  - TABAnimated
   - TXScrollLabelView (~> 1.3.2)
   - TZImagePickerController (~> 3.6.0)
 
@@ -44,6 +46,7 @@ SPEC REPOS:
     - SDWebImage
     - SPPageMenu
     - SVProgressHUD
+    - TABAnimated
     - TXScrollLabelView
     - TZImagePickerController
 
@@ -59,9 +62,10 @@ SPEC CHECKSUMS:
   SDWebImage: a7f831e1a65eb5e285e3fb046a23fcfbf08e696d
   SPPageMenu: da182aafcec55719d5c326103cc7716c1e48f311
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  TABAnimated: 8d077a20de46de0c7744c665cd56aae28c49d397
   TXScrollLabelView: 0e1650caf61198bf5dc0938ea6493254aeb80f90
   TZImagePickerController: 1cc39ec0454d6e94d0397418953164d7aa631719
 
-PODFILE CHECKSUM: 8c90f1ffafbd57920322b823d17218878fb0d358
+PODFILE CHECKSUM: d1793ff7435d82e1eac2227221da8447c3048402
 
 COCOAPODS: 1.10.2

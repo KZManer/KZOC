@@ -17,7 +17,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     NSArray *titles = @[@"日常记录",@"实验"];
-    NSArray *vcNames = @[@"HomeVC",@"TestVC"];
+    NSArray *vcNames = @[@"HomeeVC",@"TestVC"];
     NSArray *images = @[@"home",@"test"];
     for (int i = 0; i < titles.count; i++) {
         Class cls = NSClassFromString(vcNames[i]);

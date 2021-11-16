@@ -9,6 +9,7 @@
 #import "TabBarRootVC.h"
 #import "AppDelegate+KTextField.h"
 #import "IQKeyboardManager.h"
+#import "TABAnimated.h"
 
 #import "PrivacyProtocolVC.h"
 
@@ -28,6 +29,9 @@
     self.window.rootViewController = tabbarVC;
 
     [IQKeyboardManager sharedManager].shouldResignOnTouchOutside = true;
+    
+    [[TABAnimated sharedAnimated] initWithShimmerAnimated];
+    [[TABAnimated sharedAnimated] openLog];
     
     [self monitorTextFieldInputAction];
     [self.window makeKeyAndVisible];

@@ -1,5 +1,5 @@
 //
-//  Test2VC.h
+//  ScrollView.h
 //  KZOC
 //
 //  Created by KZ on 2021/11/15.
@@ -9,7 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface Test2VC : UIViewController
+@interface ScrollView : UIView
 
 @end
 

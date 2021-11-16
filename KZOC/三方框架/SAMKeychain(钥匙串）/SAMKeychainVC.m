@@ -41,7 +41,7 @@ static NSString *PASSWORD = @"com.kz.passsword";
 /**save button pressed*/
 - (void)saveButtonPressed {
     if ([KTools tools_isBlankString:self.nameTF.text] || [KTools tools_isBlankString:self.pwTF.text]) {
-        [MBProgressHUD showText:@"用户名或密码不能为空"];
+        [MBProgressHUD cg_textOnly:@"用户名或密码不能为空"];
         return;
     }
     [SAMKeychain setPassword:self.nameTF.text forService:KEYCHAINSERVICE account:USERNAME];

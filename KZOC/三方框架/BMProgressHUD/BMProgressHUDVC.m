@@ -7,7 +7,7 @@
 
 #import "BMProgressHUDVC.h"
 #import "MBProgressHUD+Custom.h"
-#import "SVProgressHUD.h"
+#import "SVProgressHUD+Custom.h"
 
 @interface BMProgressHUDVC ()
 
@@ -20,22 +20,32 @@
     self.view.backgroundColor = [UIColor whiteColor];
     [KSelectView view]
     .kFrame(self.view.frame)
-    .kDatasource(@[@"showText",@"showError",@"showMessage",@"showSuccess",@"showTheMessage"])
+    .kDatasource(@[@"cg_textOnly",@"cg_textLoading",@"cg_success",@"cg_error",@"cg_showLoadingOnly",@"SV_showOnly"])
     .kShow(self.view)
     .kSelectCell(^(NSString * _Nonnull cellName, NSInteger cellIndex) {
+        
+        if ([cellName isEqualToString:@"cg_showLoadingOnly"]) {
+            [MBProgressHUD cg_showLoadingOnly];
+            [MBProgressHUD cg_dismissWithDelay:2];
+            return;
+        }
+        if ([cellName isEqualToString:@"cg_textLoading"]) {
+            [MBProgressHUD cg_textLoading:cellName];
+            [MBProgressHUD cg_dismissWithDelay:2];
+            return;
+        }
+        if ([cellName isEqualToString:@"SV_showOnly"]) {
+            [SVProgressHUD cg_showOnly];
+            [SVProgressHUD dismissWithDelay:2];
+            return;
+        }
+       
         NSString *selString = [NSString stringWithFormat:@"%@:",cellName];
         SEL sel = NSSelectorFromString(selString);
         if ([MBProgressHUD respondsToSelector:sel]) {
             [MBProgressHUD performSelector:sel withObject:cellName];
         } else {
-            [MBProgressHUD showError: [NSString stringWithFormat:@"没有找到<%@>方法",cellName]];
-        }
-        //showMessage方法需要手动关闭提示框
-        if ([cellName isEqualToString:@"showMessage"]) {
-            dispatch_time_t time = dispatch_time(DISPATCH_TIME_NOW, NSEC_PER_SEC * 2);
-            dispatch_after(time, dispatch_get_main_queue(), ^{
-                [MBProgressHUD hideHUD];
-            });
+            [MBProgressHUD cg_error:[NSString stringWithFormat:@"没有找到<%@>方法",cellName]];
         }
     });
 }

@@ -13,9 +13,14 @@
 		292CE396272FC47E006FA8D9 /* CaptchaAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 292CE395272FC47D006FA8D9 /* CaptchaAlertView.m */; };
 		29367B9D2741FF4E0017712F /* KTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 29367B9C2741FF4D0017712F /* KTextField.m */; };
 		29367BA02741FFF20017712F /* ShearView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29367B9F2741FFF20017712F /* ShearView.m */; };
-		29367BA327420CA90017712F /* TestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29367BA227420CA90017712F /* TestView.m */; };
-		29367BA627420CBB0017712F /* Test2VC.m in Sources */ = {isa = PBXBuildFile; fileRef = 29367BA527420CBB0017712F /* Test2VC.m */; };
 		29367BA927422CFB0017712F /* TwoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 29367BA827422CFB0017712F /* TwoVC.m */; };
+		29367BAF27424CE50017712F /* ScrollVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 29367BAE27424CE50017712F /* ScrollVC.m */; };
+		29367BB22742521C0017712F /* ScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29367BB12742521C0017712F /* ScrollView.m */; };
+		29367BB92742558B0017712F /* TabAnimatedVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 29367BB82742558B0017712F /* TabAnimatedVC.m */; };
+		29367BBC2742571B0017712F /* TabAnimatedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 29367BBB2742571B0017712F /* TabAnimatedCell.m */; };
+		29367BC527428A750017712F /* BreakthroughVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 29367BC427428A750017712F /* BreakthroughVC.m */; };
+		29367BC827428ACD0017712F /* CourseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 29367BC727428ACD0017712F /* CourseVC.m */; };
+		29367BCB27428AFA0017712F /* SquareVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 29367BCA27428AFA0017712F /* SquareVC.m */; };
 		2959A14F272BEB4C00972EE3 /* UIViewController+KNavigation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2959A14E272BEB4C00972EE3 /* UIViewController+KNavigation.m */; };
 		2959A152272BED4400972EE3 /* UIFont+KFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 2959A151272BED4400972EE3 /* UIFont+KFont.m */; };
 		29639B39272B9F56001C693C /* DataGridComponentVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 29639B38272B9F56001C693C /* DataGridComponentVC.m */; };
@@ -32,7 +37,7 @@
 		29946076272A379C009853CE /* HomeHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29946075272A379C009853CE /* HomeHeaderView.m */; };
 		2994607A272A3932009853CE /* HomeHeaderViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 29946079272A3932009853CE /* HomeHeaderViewCell.m */; };
 		2994607D272A50D3009853CE /* TabBarRootVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2994607C272A50D3009853CE /* TabBarRootVC.m */; };
-		29946080272A50ED009853CE /* HomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2994607F272A50ED009853CE /* HomeVC.m */; };
+		29946080272A50ED009853CE /* HomeeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2994607F272A50ED009853CE /* HomeeVC.m */; };
 		29946083272A5104009853CE /* TestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 29946082272A5104009853CE /* TestVC.m */; };
 		2994608B272A83D2009853CE /* NavMenuModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2994608A272A83D2009853CE /* NavMenuModel.m */; };
 		2994608E272A8676009853CE /* NavCustomViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2994608D272A8676009853CE /* NavCustomViewCell.m */; };
@@ -110,12 +115,22 @@
 		29367B9C2741FF4D0017712F /* KTextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KTextField.m; sourceTree = "<group>"; };
 		29367B9E2741FFF20017712F /* ShearView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShearView.h; sourceTree = "<group>"; };
 		29367B9F2741FFF20017712F /* ShearView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShearView.m; sourceTree = "<group>"; };
-		29367BA127420CA90017712F /* TestView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestView.h; sourceTree = "<group>"; };
-		29367BA227420CA90017712F /* TestView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestView.m; sourceTree = "<group>"; };
-		29367BA427420CBB0017712F /* Test2VC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Test2VC.h; sourceTree = "<group>"; };
-		29367BA527420CBB0017712F /* Test2VC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Test2VC.m; sourceTree = "<group>"; };
 		29367BA727422CFB0017712F /* TwoVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TwoVC.h; sourceTree = "<group>"; };
 		29367BA827422CFB0017712F /* TwoVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TwoVC.m; sourceTree = "<group>"; };
+		29367BAD27424CE50017712F /* ScrollVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScrollVC.h; sourceTree = "<group>"; };
+		29367BAE27424CE50017712F /* ScrollVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScrollVC.m; sourceTree = "<group>"; };
+		29367BB02742521C0017712F /* ScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScrollView.h; sourceTree = "<group>"; };
+		29367BB12742521C0017712F /* ScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScrollView.m; sourceTree = "<group>"; };
+		29367BB72742558B0017712F /* TabAnimatedVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabAnimatedVC.h; sourceTree = "<group>"; };
+		29367BB82742558B0017712F /* TabAnimatedVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabAnimatedVC.m; sourceTree = "<group>"; };
+		29367BBA2742571B0017712F /* TabAnimatedCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabAnimatedCell.h; sourceTree = "<group>"; };
+		29367BBB2742571B0017712F /* TabAnimatedCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabAnimatedCell.m; sourceTree = "<group>"; };
+		29367BC327428A750017712F /* BreakthroughVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BreakthroughVC.h; sourceTree = "<group>"; };
+		29367BC427428A750017712F /* BreakthroughVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BreakthroughVC.m; sourceTree = "<group>"; };
+		29367BC627428ACD0017712F /* CourseVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CourseVC.h; sourceTree = "<group>"; };
+		29367BC727428ACD0017712F /* CourseVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CourseVC.m; sourceTree = "<group>"; };
+		29367BC927428AFA0017712F /* SquareVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SquareVC.h; sourceTree = "<group>"; };
+		29367BCA27428AFA0017712F /* SquareVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SquareVC.m; sourceTree = "<group>"; };
 		2959A14D272BEB4C00972EE3 /* UIViewController+KNavigation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+KNavigation.h"; sourceTree = "<group>"; };
 		2959A14E272BEB4C00972EE3 /* UIViewController+KNavigation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+KNavigation.m"; sourceTree = "<group>"; };
 		2959A150272BED4400972EE3 /* UIFont+KFont.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIFont+KFont.h"; sourceTree = "<group>"; };
@@ -148,8 +163,8 @@
 		29946079272A3932009853CE /* HomeHeaderViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeHeaderViewCell.m; sourceTree = "<group>"; };
 		2994607B272A50D3009853CE /* TabBarRootVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabBarRootVC.h; sourceTree = "<group>"; };
 		2994607C272A50D3009853CE /* TabBarRootVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabBarRootVC.m; sourceTree = "<group>"; };
-		2994607E272A50ED009853CE /* HomeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeVC.h; sourceTree = "<group>"; };
-		2994607F272A50ED009853CE /* HomeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeVC.m; sourceTree = "<group>"; };
+		2994607E272A50ED009853CE /* HomeeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeeVC.h; sourceTree = "<group>"; };
+		2994607F272A50ED009853CE /* HomeeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeeVC.m; sourceTree = "<group>"; };
 		29946081272A5104009853CE /* TestVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestVC.h; sourceTree = "<group>"; };
 		29946082272A5104009853CE /* TestVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestVC.m; sourceTree = "<group>"; };
 		29946084272A5ACF009853CE /* KHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KHeader.h; sourceTree = "<group>"; };
@@ -301,6 +316,51 @@
 			path = "验证码输入框";
 			sourceTree = "<group>";
 		};
+		29367BAA27424BF20017712F /* UITableView */ = {
+			isa = PBXGroup;
+			children = (
+				2995F1FE2728D5C50000D90D /* cell类型 */,
+				29CD2C86273B7CEF00C0028B /* 高度自适应 */,
+			);
+			path = UITableView;
+			sourceTree = "<group>";
+		};
+		29367BAB27424BFD0017712F /* UICollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				2995F1F92728D5C50000D90D /* cell边距问题 */,
+			);
+			path = UICollectionView;
+			sourceTree = "<group>";
+		};
+		29367BAC27424CD10017712F /* UIScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				29367BAD27424CE50017712F /* ScrollVC.h */,
+				29367BAE27424CE50017712F /* ScrollVC.m */,
+				29367BB02742521C0017712F /* ScrollView.h */,
+				29367BB12742521C0017712F /* ScrollView.m */,
+				29367BC327428A750017712F /* BreakthroughVC.h */,
+				29367BC427428A750017712F /* BreakthroughVC.m */,
+				29367BC627428ACD0017712F /* CourseVC.h */,
+				29367BC727428ACD0017712F /* CourseVC.m */,
+				29367BC927428AFA0017712F /* SquareVC.h */,
+				29367BCA27428AFA0017712F /* SquareVC.m */,
+			);
+			path = UIScrollView;
+			sourceTree = "<group>";
+		};
+		29367BB32742551D0017712F /* TABAnimated(骨架屏) */ = {
+			isa = PBXGroup;
+			children = (
+				29367BB72742558B0017712F /* TabAnimatedVC.h */,
+				29367BB82742558B0017712F /* TabAnimatedVC.m */,
+				29367BBA2742571B0017712F /* TabAnimatedCell.h */,
+				29367BBB2742571B0017712F /* TabAnimatedCell.m */,
+			);
+			path = "TABAnimated(骨架屏)";
+			sourceTree = "<group>";
+		};
 		29639B36272B9F3C001C693C /* DataGridComponent(类似Excel表格) */ = {
 			isa = PBXGroup;
 			children = (
@@ -368,8 +428,8 @@
 			children = (
 				2994607B272A50D3009853CE /* TabBarRootVC.h */,
 				2994607C272A50D3009853CE /* TabBarRootVC.m */,
-				2994607E272A50ED009853CE /* HomeVC.h */,
-				2994607F272A50ED009853CE /* HomeVC.m */,
+				2994607E272A50ED009853CE /* HomeeVC.h */,
+				2994607F272A50ED009853CE /* HomeeVC.m */,
 				29946074272A379C009853CE /* HomeHeaderView.h */,
 				29946075272A379C009853CE /* HomeHeaderView.m */,
 				29946078272A3932009853CE /* HomeHeaderViewCell.h */,
@@ -385,10 +445,6 @@
 			children = (
 				29946081272A5104009853CE /* TestVC.h */,
 				29946082272A5104009853CE /* TestVC.m */,
-				29367BA127420CA90017712F /* TestView.h */,
-				29367BA227420CA90017712F /* TestView.m */,
-				29367BA427420CBB0017712F /* Test2VC.h */,
-				29367BA527420CBB0017712F /* Test2VC.m */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -430,6 +486,8 @@
 				29693D532732220300475428 /* UITextField+KTextField.h */,
 				29693D542732220300475428 /* UITextField+KTextField.m */,
 				29946077272A390A009853CE /* Home */,
+				29367BAA27424BF20017712F /* UITableView */,
+				29367BAB27424BFD0017712F /* UICollectionView */,
 				2995F1F12728D5C50000D90D /* 系统相关 */,
 				2995F21C2728E69C0000D90D /* 功能实验 */,
 				2995F2072728D5D50000D90D /* 组件封装 */,
@@ -466,11 +524,10 @@
 		2995F1F12728D5C50000D90D /* 系统相关 */ = {
 			isa = PBXGroup;
 			children = (
+				29367BAC27424CD10017712F /* UIScrollView */,
 				29693D4C2731671E00475428 /* UITextField */,
 				29639B3E272BA855001C693C /* Runtime */,
 				2995F1F22728D5C50000D90D /* VCLifeCycle */,
-				2995F1F92728D5C50000D90D /* UICollectionView */,
-				2995F1FE2728D5C50000D90D /* UITableView */,
 			);
 			path = "系统相关";
 			sourceTree = "<group>";
@@ -488,7 +545,7 @@
 			path = VCLifeCycle;
 			sourceTree = "<group>";
 		};
-		2995F1F92728D5C50000D90D /* UICollectionView */ = {
+		2995F1F92728D5C50000D90D /* cell边距问题 */ = {
 			isa = PBXGroup;
 			children = (
 				2995F1FA2728D5C50000D90D /* CollectionCell.h */,
@@ -498,17 +555,16 @@
 				29367BA727422CFB0017712F /* TwoVC.h */,
 				29367BA827422CFB0017712F /* TwoVC.m */,
 			);
-			path = UICollectionView;
+			path = "cell边距问题";
 			sourceTree = "<group>";
 		};
-		2995F1FE2728D5C50000D90D /* UITableView */ = {
+		2995F1FE2728D5C50000D90D /* cell类型 */ = {
 			isa = PBXGroup;
 			children = (
 				2995F2002728D5C50000D90D /* TableViewVC.h */,
 				2995F1FF2728D5C50000D90D /* TableViewVC.m */,
-				29CD2C86273B7CEF00C0028B /* 高度自适应 */,
 			);
-			path = UITableView;
+			path = "cell类型";
 			sourceTree = "<group>";
 		};
 		2995F2072728D5D50000D90D /* 组件封装 */ = {
@@ -547,6 +603,7 @@
 		2995F2132728D5DE0000D90D /* 三方框架 */ = {
 			isa = PBXGroup;
 			children = (
+				29367BB32742551D0017712F /* TABAnimated(骨架屏) */,
 				29693D082730F2D600475428 /* 倒计时 */,
 				292CE381272F95C7006FA8D9 /* 验证码输入框 */,
 				29639B36272B9F3C001C693C /* DataGridComponent(类似Excel表格) */,
@@ -923,7 +980,7 @@
 				2995F2C9272907620000D90D /* KPickerView.m in Sources */,
 				2995F1EB27280E8C0000D90D /* KUIViewExt.m in Sources */,
 				29367BA02741FFF20017712F /* ShearView.m in Sources */,
-				29946080272A50ED009853CE /* HomeVC.m in Sources */,
+				29946080272A50ED009853CE /* HomeeVC.m in Sources */,
 				2995F29A272907530000D90D /* UIImage+KSize.m in Sources */,
 				29CC433E273A232D0031B0DB /* SVProgressHUD+Custom.m in Sources */,
 				2995F299272907530000D90D /* UIColor+KCustomColor.m in Sources */,
@@ -932,7 +989,7 @@
 				29AF602E2738D288006F5ABB /* PrivacyProtocolView.m in Sources */,
 				2995F2122728D5D50000D90D /* NavigationVC.m in Sources */,
 				29693D4F2731673400475428 /* TextFieldVC.m in Sources */,
-				29367BA327420CA90017712F /* TestView.m in Sources */,
+				29367BB22742521C0017712F /* ScrollView.m in Sources */,
 				2995F2012728D5C50000D90D /* VCLifeCycle.m in Sources */,
 				2995F2D6272907670000D90D /* MBProgressHUD+Custom.m in Sources */,
 				2959A152272BED4400972EE3 /* UIFont+KFont.m in Sources */,
@@ -958,9 +1015,9 @@
 				2995F1DC2728095C0000D90D /* main.m in Sources */,
 				29367B9D2741FF4E0017712F /* KTextField.m in Sources */,
 				29693D522731676100475428 /* AppDelegate+KTextField.m in Sources */,
-				29367BA627420CBB0017712F /* Test2VC.m in Sources */,
 				2995F2202728E8460000D90D /* ImageWatermarkVC.m in Sources */,
 				29693D1A273106E600475428 /* UIImage+Color.m in Sources */,
+				29367BC827428ACD0017712F /* CourseVC.m in Sources */,
 				29CD2C85273B7CDE00C0028B /* TableViewVC1.m in Sources */,
 				2995F297272907530000D90D /* UIView+KView.m in Sources */,
 				29693D19273106E600475428 /* UIButton+CountDown.m in Sources */,
@@ -970,15 +1027,18 @@
 				2995F2272728ED740000D90D /* NSDate+CXCategory.m in Sources */,
 				2995F22C2728EDF80000D90D /* DatePickerVC.m in Sources */,
 				2995F2282728ED740000D90D /* CXDatePickerView.m in Sources */,
+				29367BB92742558B0017712F /* TabAnimatedVC.m in Sources */,
 				2995F2C2272907620000D90D /* KBottomPopView.m in Sources */,
 				2995F2042728D5C50000D90D /* CollectionCell.m in Sources */,
 				292893E627364F7A00B7C8D6 /* CountdownTimer.m in Sources */,
 				2959A14F272BEB4C00972EE3 /* UIViewController+KNavigation.m in Sources */,
+				29367BBC2742571B0017712F /* TabAnimatedCell.m in Sources */,
 				29693D0B2730F2EF00475428 /* TimeCountVC.m in Sources */,
 				29639B41272BA863001C693C /* RuntimeVC.m in Sources */,
 				2995F2112728D5D50000D90D /* NavCustomView.m in Sources */,
 				2995F2BC272907620000D90D /* KRechargeModel.m in Sources */,
 				292CE396272FC47E006FA8D9 /* CaptchaAlertView.m in Sources */,
+				29367BAF27424CE50017712F /* ScrollVC.m in Sources */,
 				29693D1B273106E600475428 /* MJCountDownButton.m in Sources */,
 				292893E027362EAC00B7C8D6 /* ArrowPopVC.m in Sources */,
 				2995F2C3272907620000D90D /* KEvaluateView.m in Sources */,
@@ -988,7 +1048,9 @@
 				2995F2032728D5C50000D90D /* VCLifeCyclePresent.m in Sources */,
 				29C3864027293BC100E9933C /* SAMKeychainVC.m in Sources */,
 				2995F2C6272907620000D90D /* KPhotoCell.m in Sources */,
+				29367BC527428A750017712F /* BreakthroughVC.m in Sources */,
 				2995F1EC27280E8C0000D90D /* KTools.m in Sources */,
+				29367BCB27428AFA0017712F /* SquareVC.m in Sources */,
 				2994607A272A3932009853CE /* HomeHeaderViewCell.m in Sources */,
 				2995F21B2728D5DE0000D90D /* LeeAlertVC.m in Sources */,
 				2995F2022728D5C50000D90D /* VCLifeCyclePop.m in Sources */,

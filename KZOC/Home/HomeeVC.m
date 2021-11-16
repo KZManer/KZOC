@@ -1,28 +1,27 @@
 //
-//  HomeVC.m
+//  HomeeVC.m
 //  KZOC
 //
 //  Created by KZ on 2021/10/28.
 //
 
-#import "HomeVC.h"
+#import "HomeeVC.h"
 #import "SectionModel.h"
 #import "HomeHeaderView.h"
 
-@interface HomeVC ()<UITableViewDataSource,UITableViewDelegate>
+@interface HomeeVC ()<UITableViewDataSource,UITableViewDelegate>
 
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSArray *sectionInfos;
 
 @end
 
-@implementation HomeVC
+@implementation HomeeVC
 
 #pragma mark - override method
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    self.sectionInfos = [SectionModel allSectionInfos];
     self.sectionInfos = [SectionModel sectionModels];
     [self.view addSubview:self.tableView];
 }

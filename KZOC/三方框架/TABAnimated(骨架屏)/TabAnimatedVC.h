@@ -1,15 +1,15 @@
 //
-//  HomeVC.h
+//  TabAnimatedVC.h
 //  KZOC
 //
-//  Created by KZ on 2021/10/28.
+//  Created by KZ on 2021/11/15.
 //
 
 #import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface HomeVC : UIViewController
+@interface TabAnimatedVC : UIViewController
 
 @end
 

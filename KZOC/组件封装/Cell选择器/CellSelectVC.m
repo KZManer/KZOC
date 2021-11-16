@@ -26,7 +26,7 @@
     .kShow(self.view)
     .kSelectCell(^(NSString * _Nonnull cellName, NSInteger cellIndex) {
         NSString *text = [NSString stringWithFormat:@"cell name:%@ index:%ld",cellName,(long)cellIndex];
-        [MBProgressHUD showText:text];
+        [MBProgressHUD cg_textOnly:text];
         NSLog(@"cell name : %@ cell index : %lu",cellName,cellIndex);
     });
 }

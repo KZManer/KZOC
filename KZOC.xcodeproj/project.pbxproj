@@ -98,6 +98,8 @@
 		29CD2C89273B7D1D00C0028B /* TableViewCell1.m in Sources */ = {isa = PBXBuildFile; fileRef = 29CD2C88273B7D1D00C0028B /* TableViewCell1.m */; };
 		29CE7355273921CD0063612F /* ShearVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 29CE7354273921CD0063612F /* ShearVC.m */; };
 		29CE735827392D080063612F /* CRBoxInputView+Paste.m in Sources */ = {isa = PBXBuildFile; fileRef = 29CE735727392D080063612F /* CRBoxInputView+Paste.m */; };
+		29D41C0927449C6F00728B4E /* MyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29D41C0627449C6F00728B4E /* MyView.m */; };
+		29D41C0A27449C7000728B4E /* MyVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 29D41C0827449C6F00728B4E /* MyVC.m */; };
 		426D6BC799EB2889F77E9B6A /* libPods-KZOC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A472C9849EA18CE8268B5BB6 /* libPods-KZOC.a */; };
 /* End PBXBuildFile section */
 
@@ -278,6 +280,10 @@
 		29CE7354273921CD0063612F /* ShearVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShearVC.m; sourceTree = "<group>"; };
 		29CE735627392D080063612F /* CRBoxInputView+Paste.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CRBoxInputView+Paste.h"; sourceTree = "<group>"; };
 		29CE735727392D080063612F /* CRBoxInputView+Paste.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CRBoxInputView+Paste.m"; sourceTree = "<group>"; };
+		29D41C0527449C6F00728B4E /* MyVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyVC.h; sourceTree = "<group>"; };
+		29D41C0627449C6F00728B4E /* MyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyView.m; sourceTree = "<group>"; };
+		29D41C0727449C6F00728B4E /* MyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyView.h; sourceTree = "<group>"; };
+		29D41C0827449C6F00728B4E /* MyVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyVC.m; sourceTree = "<group>"; };
 		85502B3BB602ECB193FD3C70 /* Pods-KZOC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KZOC.release.xcconfig"; path = "Target Support Files/Pods-KZOC/Pods-KZOC.release.xcconfig"; sourceTree = "<group>"; };
 		A472C9849EA18CE8268B5BB6 /* libPods-KZOC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KZOC.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -445,6 +451,10 @@
 			children = (
 				29946081272A5104009853CE /* TestVC.h */,
 				29946082272A5104009853CE /* TestVC.m */,
+				29D41C0527449C6F00728B4E /* MyVC.h */,
+				29D41C0827449C6F00728B4E /* MyVC.m */,
+				29D41C0727449C6F00728B4E /* MyView.h */,
+				29D41C0627449C6F00728B4E /* MyView.m */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -991,10 +1001,12 @@
 				29693D4F2731673400475428 /* TextFieldVC.m in Sources */,
 				29367BB22742521C0017712F /* ScrollView.m in Sources */,
 				2995F2012728D5C50000D90D /* VCLifeCycle.m in Sources */,
+				29D41C0A27449C7000728B4E /* MyVC.m in Sources */,
 				2995F2D6272907670000D90D /* MBProgressHUD+Custom.m in Sources */,
 				2959A152272BED4400972EE3 /* UIFont+KFont.m in Sources */,
 				2995F2052728D5C50000D90D /* CollectionVC.m in Sources */,
 				292CE380272F95C0006FA8D9 /* CRBoxVC.m in Sources */,
+				29D41C0927449C6F00728B4E /* MyView.m in Sources */,
 				2995F2102728D5D50000D90D /* CellSelectVC.m in Sources */,
 				29639B39272B9F56001C693C /* DataGridComponentVC.m in Sources */,
 				2994608E272A8676009853CE /* NavCustomViewCell.m in Sources */,

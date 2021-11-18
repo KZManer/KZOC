@@ -20,7 +20,7 @@
     self.view.backgroundColor = [UIColor whiteColor];
     [KSelectView view]
     .kFrame(self.view.frame)
-    .kDatasource(@[@"cg_textOnly",@"cg_textLoading",@"cg_success",@"cg_error",@"cg_showLoadingOnly",@"cg_hide",@"cg_hideHanlder",@"SV_showLoadingOnly",@"SV_textLoading",@"SV_success",@"SV_error"])
+    .kDatasource(@[@"cg_textOnly",@"cg_textLoading",@"cg_success",@"cg_error",@"cg_showLoadingOnly",@"cg_hide",@"cg_hideHanlder",@"cg_hideAfterDelay",@"SV_showLoadingOnly",@"SV_textLoading",@"SV_success",@"SV_error"])
     .kShow(self.view)
     .kSelectCell(^(NSString * _Nonnull cellName, NSInteger cellIndex) {
         
@@ -52,14 +52,18 @@
         }
         if ([cellName isEqualToString:@"cg_hide"]) {
             [MBProgressHUD cg_showLoadingOnly];
-            [MBProgressHUD cg_hideWithDelay:3];
+            [MBProgressHUD cg_hideWithDelay:2];
             return;
         }
         if ([cellName isEqualToString:@"cg_hideHanlder"]) {
             [MBProgressHUD cg_showLoadingOnly];
-            [MBProgressHUD cg_hideWithDelay:5 completion:^{
+            [MBProgressHUD cg_hideWithDelay:2 completion:^{
                 NSLog(@"隐藏了");
             }];
+            return;
+        }
+        if ([cellName isEqualToString:@"cg_hideAfterDelay"]) {
+            [MBProgressHUD cg_hideAfterDelay:2 completion:nil];
             return;
         }
        

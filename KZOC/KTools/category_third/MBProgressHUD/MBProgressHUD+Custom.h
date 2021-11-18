@@ -19,6 +19,8 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)cg_hideWithDelay:(NSTimeInterval)delay;
 /**延迟隐藏+回调*/
 + (void)cg_hideWithDelay:(NSTimeInterval)delay completion:(nullable void(^)(void))completion;
+/**先展示再隐藏*/
++ (void)cg_hideAfterDelay:(NSTimeInterval)delay completion:(nullable void(^)(void))completion;
 /**成功*/
 + (void)cg_success:(NSString *)hintText;
 /**失败*/

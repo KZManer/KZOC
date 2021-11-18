@@ -51,7 +51,11 @@ typedef enum : NSUInteger {
     hud.animationType = MBProgressHUDAnimationFade;
     hud.removeFromSuperViewOnHide = true;
     hud.contentColor = UIColor.whiteColor;
-    hud.bezelView.blurEffectStyle = UIBlurEffectStyleDark;
+    /**自定义hud背景色和前景色*/
+    hud.bezelView.color = [UIColor colorWithWhite:0.4 alpha:0.8];
+    hud.bezelView.style = MBProgressHUDBackgroundStyleSolidColor;
+    /**使用系统的hud样式*/
+//    hud.bezelView.blurEffectStyle = UIBlurEffectStyleDark;
 }
 
 /**隐藏*/
@@ -72,6 +76,11 @@ typedef enum : NSUInteger {
             completion();
         }
     });
+}
+/**先展示再隐藏*/
++ (void)cg_hideAfterDelay:(NSTimeInterval)delay completion:(nullable void(^)(void))completion {
+    [self cg_showLoadingOnly];
+    [self cg_hideWithDelay:delay completion:completion];
 }
 
 // MARK: success

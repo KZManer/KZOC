@@ -26,7 +26,11 @@
     self.window.backgroundColor = [UIColor whiteColor];
     
     TabBarRootVC *tabbarVC = [[TabBarRootVC alloc]init];
-    self.window.rootViewController = tabbarVC;
+    
+    Class cls = NSClassFromString(@"MyVC");
+    UIViewController *vc = [cls new];
+    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:vc];
+    self.window.rootViewController = nav;
 
     [IQKeyboardManager sharedManager].shouldResignOnTouchOutside = true;
     

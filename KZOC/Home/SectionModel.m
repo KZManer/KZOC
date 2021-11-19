@@ -41,6 +41,7 @@
         ],
         //功能实验
         @[
+            [self sectionWithName:@"整屏横向滑动八按钮" className:@"SlideFullScreenVC"],
             [self sectionWithName:@"导航栏淡入淡出" className:@"NavigationVC"],
             [self sectionWithName:@"图片水印" className:@"ImageWatermarkVC"],
             [self sectionWithName:@"读取剪切板内容" className:@"ShearVC"],

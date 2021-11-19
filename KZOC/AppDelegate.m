@@ -30,7 +30,7 @@
     Class cls = NSClassFromString(@"MyVC");
     UIViewController *vc = [cls new];
     UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:vc];
-    self.window.rootViewController = nav;
+    self.window.rootViewController = tabbarVC;
 
     [IQKeyboardManager sharedManager].shouldResignOnTouchOutside = true;
     

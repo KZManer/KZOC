@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04DD0275274656ED00B397F1 /* SlideFullScreenVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DD0274274656ED00B397F1 /* SlideFullScreenVC.m */; };
+		04DD027B2746576800B397F1 /* SlideFullScreenView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DD027A2746576800B397F1 /* SlideFullScreenView.m */; };
+		04DD027E2746596300B397F1 /* EightBtnModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DD027D2746596300B397F1 /* EightBtnModel.m */; };
+		04DD028127465ECA00B397F1 /* EightBtnCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DD028027465ECA00B397F1 /* EightBtnCell.m */; };
 		292893E027362EAC00B7C8D6 /* ArrowPopVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 292893DF27362EAC00B7C8D6 /* ArrowPopVC.m */; };
 		292893E627364F7A00B7C8D6 /* CountdownTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 292893E427364F7A00B7C8D6 /* CountdownTimer.m */; };
 		292CE380272F95C0006FA8D9 /* CRBoxVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 292CE37F272F95C0006FA8D9 /* CRBoxVC.m */; };
@@ -104,6 +108,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04DD0273274656ED00B397F1 /* SlideFullScreenVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SlideFullScreenVC.h; sourceTree = "<group>"; };
+		04DD0274274656ED00B397F1 /* SlideFullScreenVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SlideFullScreenVC.m; sourceTree = "<group>"; };
+		04DD02792746576800B397F1 /* SlideFullScreenView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SlideFullScreenView.h; sourceTree = "<group>"; };
+		04DD027A2746576800B397F1 /* SlideFullScreenView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SlideFullScreenView.m; sourceTree = "<group>"; };
+		04DD027C2746596300B397F1 /* EightBtnModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EightBtnModel.h; sourceTree = "<group>"; };
+		04DD027D2746596300B397F1 /* EightBtnModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EightBtnModel.m; sourceTree = "<group>"; };
+		04DD027F27465ECA00B397F1 /* EightBtnCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EightBtnCell.h; sourceTree = "<group>"; };
+		04DD028027465ECA00B397F1 /* EightBtnCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EightBtnCell.m; sourceTree = "<group>"; };
 		0A58ED9FFA5AD146D30D45AD /* Pods-KZOC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KZOC.debug.xcconfig"; path = "Target Support Files/Pods-KZOC/Pods-KZOC.debug.xcconfig"; sourceTree = "<group>"; };
 		292893DE27362EAC00B7C8D6 /* ArrowPopVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArrowPopVC.h; sourceTree = "<group>"; };
 		292893DF27362EAC00B7C8D6 /* ArrowPopVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArrowPopVC.m; sourceTree = "<group>"; };
@@ -300,6 +312,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04DD02722746569900B397F1 /* 整屏滑动八按钮 */ = {
+			isa = PBXGroup;
+			children = (
+				04DD02792746576800B397F1 /* SlideFullScreenView.h */,
+				04DD027A2746576800B397F1 /* SlideFullScreenView.m */,
+				04DD0273274656ED00B397F1 /* SlideFullScreenVC.h */,
+				04DD0274274656ED00B397F1 /* SlideFullScreenVC.m */,
+				04DD027C2746596300B397F1 /* EightBtnModel.h */,
+				04DD027D2746596300B397F1 /* EightBtnModel.m */,
+				04DD027F27465ECA00B397F1 /* EightBtnCell.h */,
+				04DD028027465ECA00B397F1 /* EightBtnCell.m */,
+			);
+			path = "整屏滑动八按钮";
+			sourceTree = "<group>";
+		};
 		292893DD27362E3E00B7C8D6 /* 箭头弹窗 */ = {
 			isa = PBXGroup;
 			children = (
@@ -654,6 +681,7 @@
 		2995F21C2728E69C0000D90D /* 功能实验 */ = {
 			isa = PBXGroup;
 			children = (
+				04DD02722746569900B397F1 /* 整屏滑动八按钮 */,
 				29CE73522739216D0063612F /* 读取剪切板内容 */,
 				2995F20B2728D5D50000D90D /* 导航栏淡入淡出 */,
 				2995F21D2728E8200000D90D /* 图片水印 */,
@@ -1008,12 +1036,14 @@
 				292CE380272F95C0006FA8D9 /* CRBoxVC.m in Sources */,
 				29D41C0927449C6F00728B4E /* MyView.m in Sources */,
 				2995F2102728D5D50000D90D /* CellSelectVC.m in Sources */,
+				04DD027B2746576800B397F1 /* SlideFullScreenView.m in Sources */,
 				29639B39272B9F56001C693C /* DataGridComponentVC.m in Sources */,
 				2994608E272A8676009853CE /* NavCustomViewCell.m in Sources */,
 				29693D0E2730F32C00475428 /* SNSCodeCountdownButton.m in Sources */,
 				2995F2CA272907620000D90D /* KPopView.m in Sources */,
 				2995F1ED27280E8C0000D90D /* KSelectView.m in Sources */,
 				29946092272AA58E009853CE /* TXScrollLabelViewVC.m in Sources */,
+				04DD027E2746596300B397F1 /* EightBtnModel.m in Sources */,
 				29AF60312738F14C006F5ABB /* PrivacyProtocolVC.m in Sources */,
 				2995F1D12728095A0000D90D /* ViewController.m in Sources */,
 				2995F21A2728D5DE0000D90D /* SPPageMenuVC.m in Sources */,
@@ -1022,6 +1052,7 @@
 				29693D552732220300475428 /* UITextField+KTextField.m in Sources */,
 				29367BA927422CFB0017712F /* TwoVC.m in Sources */,
 				29946076272A379C009853CE /* HomeHeaderView.m in Sources */,
+				04DD0275274656ED00B397F1 /* SlideFullScreenVC.m in Sources */,
 				29946083272A5104009853CE /* TestVC.m in Sources */,
 				2994608B272A83D2009853CE /* NavMenuModel.m in Sources */,
 				2995F1DC2728095C0000D90D /* main.m in Sources */,
@@ -1040,6 +1071,7 @@
 				2995F22C2728EDF80000D90D /* DatePickerVC.m in Sources */,
 				2995F2282728ED740000D90D /* CXDatePickerView.m in Sources */,
 				29367BB92742558B0017712F /* TabAnimatedVC.m in Sources */,
+				04DD028127465ECA00B397F1 /* EightBtnCell.m in Sources */,
 				2995F2C2272907620000D90D /* KBottomPopView.m in Sources */,
 				2995F2042728D5C50000D90D /* CollectionCell.m in Sources */,
 				292893E627364F7A00B7C8D6 /* CountdownTimer.m in Sources */,
@@ -1211,7 +1243,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = GDHLWE42T5;
+				DEVELOPMENT_TEAM = 2WD2BG8F8Y;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/KZOC/Supporting Files/PrefixHeader.pch";
 				INFOPLIST_FILE = "KZOC/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.3;
@@ -1232,7 +1264,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = GDHLWE42T5;
+				DEVELOPMENT_TEAM = 2WD2BG8F8Y;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/KZOC/Supporting Files/PrefixHeader.pch";
 				INFOPLIST_FILE = "KZOC/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.3;

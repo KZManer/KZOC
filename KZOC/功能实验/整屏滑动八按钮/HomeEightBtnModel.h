@@ -1,5 +1,5 @@
 //
-//  EightBtnModel.h
+//  HomeEightBtnModel.h
 //  KZOC
 //
 //  Created by Zzz... on 2021/11/18.
@@ -9,7 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface EightBtnModel : NSObject
+@interface HomeEightBtnModel : NSObject
 
 @property (nonatomic, copy) NSString *title;
 @property (nonatomic, copy) NSString *imageLink;

@@ -30,12 +30,16 @@
     Class cls = NSClassFromString(@"MyVC");
     UIViewController *vc = [cls new];
     UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:vc];
+    
     self.window.rootViewController = tabbarVC;
+//    self.window.rootViewController = nav;
 
     [IQKeyboardManager sharedManager].shouldResignOnTouchOutside = true;
     
+    /**骨架*/
     [[TABAnimated sharedAnimated] initWithShimmerAnimated];
     [[TABAnimated sharedAnimated] openLog];
+    
     
     [self monitorTextFieldInputAction];
     [self.window makeKeyAndVisible];

@@ -7,10 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04A7E97A274CB57A003B8616 /* FoldVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A7E979274CB57A003B8616 /* FoldVC.m */; };
 		04DD0275274656ED00B397F1 /* SlideFullScreenVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DD0274274656ED00B397F1 /* SlideFullScreenVC.m */; };
-		04DD027B2746576800B397F1 /* SlideFullScreenView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DD027A2746576800B397F1 /* SlideFullScreenView.m */; };
-		04DD027E2746596300B397F1 /* EightBtnModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DD027D2746596300B397F1 /* EightBtnModel.m */; };
-		04DD028127465ECA00B397F1 /* EightBtnCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DD028027465ECA00B397F1 /* EightBtnCell.m */; };
+		04DD027B2746576800B397F1 /* HomeEightBtnView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DD027A2746576800B397F1 /* HomeEightBtnView.m */; };
+		04DD027E2746596300B397F1 /* HomeEightBtnModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DD027D2746596300B397F1 /* HomeEightBtnModel.m */; };
+		04DD028127465ECA00B397F1 /* HomeEightBtnCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DD028027465ECA00B397F1 /* HomeEightBtnCell.m */; };
 		292893E027362EAC00B7C8D6 /* ArrowPopVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 292893DF27362EAC00B7C8D6 /* ArrowPopVC.m */; };
 		292893E627364F7A00B7C8D6 /* CountdownTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 292893E427364F7A00B7C8D6 /* CountdownTimer.m */; };
 		292CE380272F95C0006FA8D9 /* CRBoxVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 292CE37F272F95C0006FA8D9 /* CRBoxVC.m */; };
@@ -102,20 +103,20 @@
 		29CD2C89273B7D1D00C0028B /* TableViewCell1.m in Sources */ = {isa = PBXBuildFile; fileRef = 29CD2C88273B7D1D00C0028B /* TableViewCell1.m */; };
 		29CE7355273921CD0063612F /* ShearVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 29CE7354273921CD0063612F /* ShearVC.m */; };
 		29CE735827392D080063612F /* CRBoxInputView+Paste.m in Sources */ = {isa = PBXBuildFile; fileRef = 29CE735727392D080063612F /* CRBoxInputView+Paste.m */; };
-		29D41C0927449C6F00728B4E /* MyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29D41C0627449C6F00728B4E /* MyView.m */; };
-		29D41C0A27449C7000728B4E /* MyVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 29D41C0827449C6F00728B4E /* MyVC.m */; };
 		426D6BC799EB2889F77E9B6A /* libPods-KZOC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A472C9849EA18CE8268B5BB6 /* libPods-KZOC.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04A7E978274CB57A003B8616 /* FoldVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FoldVC.h; sourceTree = "<group>"; };
+		04A7E979274CB57A003B8616 /* FoldVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FoldVC.m; sourceTree = "<group>"; };
 		04DD0273274656ED00B397F1 /* SlideFullScreenVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SlideFullScreenVC.h; sourceTree = "<group>"; };
 		04DD0274274656ED00B397F1 /* SlideFullScreenVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SlideFullScreenVC.m; sourceTree = "<group>"; };
-		04DD02792746576800B397F1 /* SlideFullScreenView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SlideFullScreenView.h; sourceTree = "<group>"; };
-		04DD027A2746576800B397F1 /* SlideFullScreenView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SlideFullScreenView.m; sourceTree = "<group>"; };
-		04DD027C2746596300B397F1 /* EightBtnModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EightBtnModel.h; sourceTree = "<group>"; };
-		04DD027D2746596300B397F1 /* EightBtnModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EightBtnModel.m; sourceTree = "<group>"; };
-		04DD027F27465ECA00B397F1 /* EightBtnCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EightBtnCell.h; sourceTree = "<group>"; };
-		04DD028027465ECA00B397F1 /* EightBtnCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EightBtnCell.m; sourceTree = "<group>"; };
+		04DD02792746576800B397F1 /* HomeEightBtnView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeEightBtnView.h; sourceTree = "<group>"; };
+		04DD027A2746576800B397F1 /* HomeEightBtnView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeEightBtnView.m; sourceTree = "<group>"; };
+		04DD027C2746596300B397F1 /* HomeEightBtnModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeEightBtnModel.h; sourceTree = "<group>"; };
+		04DD027D2746596300B397F1 /* HomeEightBtnModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeEightBtnModel.m; sourceTree = "<group>"; };
+		04DD027F27465ECA00B397F1 /* HomeEightBtnCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeEightBtnCell.h; sourceTree = "<group>"; };
+		04DD028027465ECA00B397F1 /* HomeEightBtnCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeEightBtnCell.m; sourceTree = "<group>"; };
 		0A58ED9FFA5AD146D30D45AD /* Pods-KZOC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KZOC.debug.xcconfig"; path = "Target Support Files/Pods-KZOC/Pods-KZOC.debug.xcconfig"; sourceTree = "<group>"; };
 		292893DE27362EAC00B7C8D6 /* ArrowPopVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArrowPopVC.h; sourceTree = "<group>"; };
 		292893DF27362EAC00B7C8D6 /* ArrowPopVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArrowPopVC.m; sourceTree = "<group>"; };
@@ -292,10 +293,6 @@
 		29CE7354273921CD0063612F /* ShearVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShearVC.m; sourceTree = "<group>"; };
 		29CE735627392D080063612F /* CRBoxInputView+Paste.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CRBoxInputView+Paste.h"; sourceTree = "<group>"; };
 		29CE735727392D080063612F /* CRBoxInputView+Paste.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CRBoxInputView+Paste.m"; sourceTree = "<group>"; };
-		29D41C0527449C6F00728B4E /* MyVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyVC.h; sourceTree = "<group>"; };
-		29D41C0627449C6F00728B4E /* MyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyView.m; sourceTree = "<group>"; };
-		29D41C0727449C6F00728B4E /* MyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyView.h; sourceTree = "<group>"; };
-		29D41C0827449C6F00728B4E /* MyVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyVC.m; sourceTree = "<group>"; };
 		85502B3BB602ECB193FD3C70 /* Pods-KZOC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KZOC.release.xcconfig"; path = "Target Support Files/Pods-KZOC/Pods-KZOC.release.xcconfig"; sourceTree = "<group>"; };
 		A472C9849EA18CE8268B5BB6 /* libPods-KZOC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KZOC.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -312,17 +309,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04A7E977274CB54D003B8616 /* 二级折叠 */ = {
+			isa = PBXGroup;
+			children = (
+				04A7E978274CB57A003B8616 /* FoldVC.h */,
+				04A7E979274CB57A003B8616 /* FoldVC.m */,
+			);
+			path = "二级折叠";
+			sourceTree = "<group>";
+		};
 		04DD02722746569900B397F1 /* 整屏滑动八按钮 */ = {
 			isa = PBXGroup;
 			children = (
-				04DD02792746576800B397F1 /* SlideFullScreenView.h */,
-				04DD027A2746576800B397F1 /* SlideFullScreenView.m */,
+				04DD02792746576800B397F1 /* HomeEightBtnView.h */,
+				04DD027A2746576800B397F1 /* HomeEightBtnView.m */,
 				04DD0273274656ED00B397F1 /* SlideFullScreenVC.h */,
 				04DD0274274656ED00B397F1 /* SlideFullScreenVC.m */,
-				04DD027C2746596300B397F1 /* EightBtnModel.h */,
-				04DD027D2746596300B397F1 /* EightBtnModel.m */,
-				04DD027F27465ECA00B397F1 /* EightBtnCell.h */,
-				04DD028027465ECA00B397F1 /* EightBtnCell.m */,
+				04DD027C2746596300B397F1 /* HomeEightBtnModel.h */,
+				04DD027D2746596300B397F1 /* HomeEightBtnModel.m */,
+				04DD027F27465ECA00B397F1 /* HomeEightBtnCell.h */,
+				04DD028027465ECA00B397F1 /* HomeEightBtnCell.m */,
 			);
 			path = "整屏滑动八按钮";
 			sourceTree = "<group>";
@@ -352,6 +358,7 @@
 		29367BAA27424BF20017712F /* UITableView */ = {
 			isa = PBXGroup;
 			children = (
+				04A7E977274CB54D003B8616 /* 二级折叠 */,
 				2995F1FE2728D5C50000D90D /* cell类型 */,
 				29CD2C86273B7CEF00C0028B /* 高度自适应 */,
 			);
@@ -478,10 +485,6 @@
 			children = (
 				29946081272A5104009853CE /* TestVC.h */,
 				29946082272A5104009853CE /* TestVC.m */,
-				29D41C0527449C6F00728B4E /* MyVC.h */,
-				29D41C0827449C6F00728B4E /* MyVC.m */,
-				29D41C0727449C6F00728B4E /* MyView.h */,
-				29D41C0627449C6F00728B4E /* MyView.m */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -1029,21 +1032,19 @@
 				29693D4F2731673400475428 /* TextFieldVC.m in Sources */,
 				29367BB22742521C0017712F /* ScrollView.m in Sources */,
 				2995F2012728D5C50000D90D /* VCLifeCycle.m in Sources */,
-				29D41C0A27449C7000728B4E /* MyVC.m in Sources */,
 				2995F2D6272907670000D90D /* MBProgressHUD+Custom.m in Sources */,
 				2959A152272BED4400972EE3 /* UIFont+KFont.m in Sources */,
 				2995F2052728D5C50000D90D /* CollectionVC.m in Sources */,
 				292CE380272F95C0006FA8D9 /* CRBoxVC.m in Sources */,
-				29D41C0927449C6F00728B4E /* MyView.m in Sources */,
 				2995F2102728D5D50000D90D /* CellSelectVC.m in Sources */,
-				04DD027B2746576800B397F1 /* SlideFullScreenView.m in Sources */,
+				04DD027B2746576800B397F1 /* HomeEightBtnView.m in Sources */,
 				29639B39272B9F56001C693C /* DataGridComponentVC.m in Sources */,
 				2994608E272A8676009853CE /* NavCustomViewCell.m in Sources */,
 				29693D0E2730F32C00475428 /* SNSCodeCountdownButton.m in Sources */,
 				2995F2CA272907620000D90D /* KPopView.m in Sources */,
 				2995F1ED27280E8C0000D90D /* KSelectView.m in Sources */,
 				29946092272AA58E009853CE /* TXScrollLabelViewVC.m in Sources */,
-				04DD027E2746596300B397F1 /* EightBtnModel.m in Sources */,
+				04DD027E2746596300B397F1 /* HomeEightBtnModel.m in Sources */,
 				29AF60312738F14C006F5ABB /* PrivacyProtocolVC.m in Sources */,
 				2995F1D12728095A0000D90D /* ViewController.m in Sources */,
 				2995F21A2728D5DE0000D90D /* SPPageMenuVC.m in Sources */,
@@ -1071,12 +1072,13 @@
 				2995F22C2728EDF80000D90D /* DatePickerVC.m in Sources */,
 				2995F2282728ED740000D90D /* CXDatePickerView.m in Sources */,
 				29367BB92742558B0017712F /* TabAnimatedVC.m in Sources */,
-				04DD028127465ECA00B397F1 /* EightBtnCell.m in Sources */,
+				04DD028127465ECA00B397F1 /* HomeEightBtnCell.m in Sources */,
 				2995F2C2272907620000D90D /* KBottomPopView.m in Sources */,
 				2995F2042728D5C50000D90D /* CollectionCell.m in Sources */,
 				292893E627364F7A00B7C8D6 /* CountdownTimer.m in Sources */,
 				2959A14F272BEB4C00972EE3 /* UIViewController+KNavigation.m in Sources */,
 				29367BBC2742571B0017712F /* TabAnimatedCell.m in Sources */,
+				04A7E97A274CB57A003B8616 /* FoldVC.m in Sources */,
 				29693D0B2730F2EF00475428 /* TimeCountVC.m in Sources */,
 				29639B41272BA863001C693C /* RuntimeVC.m in Sources */,
 				2995F2112728D5D50000D90D /* NavCustomView.m in Sources */,

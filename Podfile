@@ -26,6 +26,6 @@ pod 'TXScrollLabelView','~>1.3.2'       #跑马灯消息播报
 pod 'TZImagePickerController','~>3.6.0' #图片框架
 # pod 'YYText'                            #富文本框架
 pod 'LFKit/Component/LFPopupMenu'       #带箭头选项窗LFPopupMenu
-
+#pod 'Zhugeio'
 end
 

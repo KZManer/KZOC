@@ -27,10 +27,11 @@
 }
 
 - (void)buttonClicked {
-    CXDatePickerView *pickerView = [[CXDatePickerView alloc]initWithDateStyle:CXDateStyleShowYearMonth CompleteBlock:^(NSDate *date) {
+    CXDatePickerView *pickerView = [[CXDatePickerView alloc]initWithDateStyle:CXDateStyleShowYearMonthDay CompleteBlock:^(NSDate *date) {
         NSLog(@"%@",date);
+        NSLog(@"%@",[KTools tools_timeDateConvertToString:date dateFormatter:@"YYYY-MM-dd"]);
     }];
-    pickerView.maxLimitDate = [NSDate date];
+    pickerView.minLimitDate = [NSDate date];
     [pickerView show];
 }
 @end

@@ -1,12 +1,12 @@
 //
-//  SlideFullScreenView.m
+//  HomeEightBtnView.m
 //  KZOC
 //
 //  Created by Zzz... on 2021/11/18.
 //
 
-#import "SlideFullScreenView.h"
-#import "EightBtnCell.h"
+#import "HomeEightBtnView.h"
+#import "HomeEightBtnCell.h"
 
 static NSString *cellIdentifier = @"cellIdentifier";
 int leftPageControlWidth = 18;
@@ -14,7 +14,7 @@ int rightPageControlWidth = 6;
 int pageControlWidth = 30;
 
 
-@interface SlideFullScreenView ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>
+@interface HomeEightBtnView ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>
 
 @property (nonatomic, strong) UICollectionView *collectionView;
 
@@ -27,9 +27,11 @@ int pageControlWidth = 30;
 /**非活跃态指示器的背景色*/
 @property (nonatomic, strong) UIColor *normalColor;
 
+@property (nonatomic, strong) NSArray<HomeEightBtnModel *> *eightBtnModels;
+
 @end
 
-@implementation SlideFullScreenView
+@implementation HomeEightBtnView
 
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
@@ -54,7 +56,7 @@ int pageControlWidth = 30;
     self.collectionView.pagingEnabled = true;
     self.collectionView.bounces = false;
     self.collectionView.showsHorizontalScrollIndicator = false;
-    [self.collectionView registerClass:[EightBtnCell class] forCellWithReuseIdentifier:cellIdentifier];
+    [self.collectionView registerClass:[HomeEightBtnCell class] forCellWithReuseIdentifier:cellIdentifier];
     [self addSubview:self.collectionView];
     
     [self.collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -93,6 +95,13 @@ int pageControlWidth = 30;
     }];
     [self.rightPageControl view_setCornerRadius:leftPageControlHeight/2 borderColor:nil borderWidth:0];
     
+}
+
+#pragma mark - public method
+
+- (void)echoContent:(NSArray<HomeEightBtnModel *> *)eightBtnModels {
+    self.eightBtnModels = [NSArray arrayWithArray:eightBtnModels];
+    [self.collectionView reloadData];
 }
 
 
@@ -169,17 +178,16 @@ int pageControlWidth = 30;
 #pragma mark UICollectionViewDataSource
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 8;
+    return self.eightBtnModels.count;
 }
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     
-    EightBtnCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellIdentifier forIndexPath:indexPath];
+    HomeEightBtnCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellIdentifier forIndexPath:indexPath];
     cell.backgroundColor = [KTools tools_colorRandom];
-    UILabel *label = [[UILabel alloc]initWithFrame:cell.contentView.bounds];
-    label.text = [NSString stringWithFormat:@"%lu",indexPath.item];
-    label.font = [UIFont font_fontPingFangSCBold:20];
-    label.textAlignment = NSTextAlignmentCenter;
-    [cell.contentView addSubview:label];
+    
+    HomeEightBtnModel *model = self.eightBtnModels[indexPath.item];
+    [cell echoContent:model];
+    
     return cell;
 }
 #pragma mark UICollectionViewDelegate
@@ -188,7 +196,8 @@ int pageControlWidth = 30;
 }
 #pragma mark UICollectionViewDelegateFlowLayout
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    return CGSizeMake([KTools tools_widthOfScreen]/4.0, 80);
+    float w = ([KTools tools_widthOfScreen] ) / 4.0;
+    return CGSizeMake(w, 80);
 }
 
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {

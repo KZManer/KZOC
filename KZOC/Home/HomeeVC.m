@@ -28,9 +28,6 @@
 - (void)viewWillLayoutSubviews {
     self.tableView.frame = self.view.frame;
     
-//    extern int HOMEHEADERVIEWCELLHEIGHT;
-//    extern int HOMEHEADERVIEWCELLCOLUMN;
-    
     int headerViewCellRow = 1;
     NSArray *sectionTitles = [SectionModel sectionTitles];
     
@@ -44,7 +41,6 @@
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc]init];
     HomeHeaderView *headerView = [[HomeHeaderView alloc] initWithFrame:CGRectMake(0, 0, [KTools tools_widthOfScreen], headerViewHeight) collectionViewLayout:flowLayout titles:sectionTitles];
     self.tableView.tableHeaderView = headerView;
-    
 }
 #pragma mark - UITableViewDataSource & UITableViewDelegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {

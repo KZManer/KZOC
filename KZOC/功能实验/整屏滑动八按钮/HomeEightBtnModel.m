@@ -1,13 +1,13 @@
 //
-//  EightBtnModel.m
+//  HomeEightBtnModel.m
 //  KZOC
 //
 //  Created by Zzz... on 2021/11/18.
 //
 
-#import "EightBtnModel.h"
+#import "HomeEightBtnModel.h"
 
-@implementation EightBtnModel
+@implementation HomeEightBtnModel
 
 - (instancetype)initWithTitle:(NSString *)title imageLink:(NSString *)imageLink {
     self = [super init];

@@ -68,6 +68,22 @@
     ];
 }
 
++ (NSArray *)sectionProjectTitles {
+    return @[
+        @"金题库",
+    ];
+}
+
++ (NSArray *)sectionProjectModels {
+    
+    return @[
+        //金题库
+        @[
+            [self sectionWithName:@"我的-我的地址" className:@"AddressVC"],
+            [self sectionWithName:@"我的-新建收货地址" className:@"AddressOperateVC"],
+        ],
+    ];
+}
 
 - (instancetype)initWithName:(NSString *)name className:(NSString *)className {
     self = [super init];

@@ -16,9 +16,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    NSArray *titles = @[@"日常记录",@"实验"];
-    NSArray *vcNames = @[@"HomeeVC",@"TestVC"];
-    NSArray *images = @[@"home",@"test"];
+    NSArray *titles = @[@"日常记录",@"项目预写",@"实验"];
+    NSArray *vcNames = @[@"HomeeVC",@"ProjectVC",@"TestVC"];
+    NSArray *images = @[@"home",@"project",@"test"];
     for (int i = 0; i < titles.count; i++) {
         Class cls = NSClassFromString(vcNames[i]);
         UIViewController *vc = [cls new];

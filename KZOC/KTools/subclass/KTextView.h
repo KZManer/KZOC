@@ -19,6 +19,8 @@ typedef void(^KLinkHandler)(int linkIndex);
 @property (nonatomic, copy) NSString *placeholder;
 /** 占位文字的颜色 */
 @property (nonatomic, strong) UIColor *placeholderColor;
+/** 占位文字的字体 */
+@property (nonatomic, strong) UIFont *placeholderFont;
 
 /**
  @brief 阅读协议之类的富文本，点击可跳转(此功能需在block回调中自己写)

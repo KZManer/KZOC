@@ -37,12 +37,14 @@
     [IQKeyboardManager sharedManager].shouldResignOnTouchOutside = true;
     
     /**骨架*/
-    [[TABAnimated sharedAnimated] initWithShimmerAnimated];
+    [[TABAnimated sharedAnimated] initWithBinAnimation];
     [[TABAnimated sharedAnimated] openLog];
-    
+    [TABAnimated sharedAnimated].openAnimationTag = true;
     
     [self monitorTextFieldInputAction];
     [self.window makeKeyAndVisible];
+    
+    NSLog(@"%f",[UIScreen mainScreen].scale);
     
     return YES;
 }

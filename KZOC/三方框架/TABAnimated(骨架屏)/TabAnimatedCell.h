@@ -2,7 +2,7 @@
 //  TabAnimatedCell.h
 //  KZOC
 //
-//  Created by KZ on 2021/11/15.
+//  Created by Zzz... on 2021/11/26.
 //
 
 #import <UIKit/UIKit.h>

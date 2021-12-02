@@ -18,6 +18,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (NSArray *)sectionModels;
 
++ (NSArray *)sectionProjectTitles;
+
++ (NSArray *)sectionProjectModels;
+
 @end
 
 NS_ASSUME_NONNULL_END

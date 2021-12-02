@@ -61,6 +61,11 @@
     [self setNeedsDisplay];
 }
 
+- (void)setPlaceholderFont:(UIFont *)placeholderFont {
+    _placeholderFont = placeholderFont;
+    [self setNeedsDisplay];
+}
+
 - (void)setText:(NSString *)text {
     [super setText:text];
     // setNeedsDisplay会在下一个消息循环时刻，调用drawRect:
@@ -83,7 +88,7 @@
     
     // 文字属性
     NSMutableDictionary *attrs = [NSMutableDictionary dictionary];
-    attrs[NSFontAttributeName] = self.font;
+    attrs[NSFontAttributeName] = self.placeholderFont;
     attrs[NSForegroundColorAttributeName] = self.placeholderColor ? self.placeholderColor:[UIColor colorWithRed:204.0/255 green:204.0/255 blue:204.0/255 alpha:1.0];
     // 画文字
     //    [self.placeholder drawAtPoint:CGPointMake(5, 8) withAttributes:attrs];

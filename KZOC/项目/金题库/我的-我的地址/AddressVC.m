@@ -22,8 +22,12 @@
     [super viewDidLoad];
     [self doNavUI];
     [self doViewUI];
+    [self setNeedsStatusBarAppearanceUpdate];
 }
 
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleDarkContent;
+}
 #pragma mark - custom method
 
 - (void)doNavUI {

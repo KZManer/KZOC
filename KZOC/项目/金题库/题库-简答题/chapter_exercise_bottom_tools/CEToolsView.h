@@ -10,11 +10,23 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@protocol CEToolsViewDelegate <NSObject>
+
+/**
+ @brief 顶部的功能按钮被点击
+ @param index 点击的下标
+ */
+- (void)dg_toolsViewCellPressed:(int)index;
+
+@end
+
 @interface CEToolsView : UIView
 
-- (instancetype)initWithFrame:(CGRect)frame;
+@property (nonatomic, weak) id<CEToolsViewDelegate> delegate;
 
 - (void)echoContent:(NSArray<CEToolsCellModel *> *)models;
+
+- (void)reloadData;
 
 @end
 

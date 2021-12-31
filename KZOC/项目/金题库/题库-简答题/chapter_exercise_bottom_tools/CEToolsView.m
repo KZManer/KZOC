@@ -41,7 +41,6 @@
         make.top.equalTo(topLine.mas_bottom);
         make.left.right.bottom.equalTo(@0);
     }];
-//    self.collectionView.backgroundColor = [UIColor orangeColor];
 }
 
 #pragma mark - public method
@@ -49,14 +48,15 @@
     self.datasource = [NSArray arrayWithArray:models];
     [self.collectionView reloadData];
 }
-
+- (void)reloadData {
+    [self.collectionView reloadData];
+}
 #pragma mark UICollectionViewDataSource
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     return self.datasource.count;
 }
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    
     CEToolsCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CellIdChapterExerciseTools forIndexPath:indexPath];
     [cell echoContent:self.datasource[indexPath.item]];
     return cell;
@@ -66,6 +66,9 @@
     CEToolsCellModel *model = self.datasource[indexPath.item];
     model.isSelected = !model.isSelected;
     [collectionView reloadData];
+    if (self.delegate && [self.delegate respondsToSelector:@selector(dg_toolsViewCellPressed:)]) {
+        [self.delegate dg_toolsViewCellPressed:(int)indexPath.item];
+    }
 //    [collectionView reloadItemsAtIndexPaths:@[indexPath]];
 }
 #pragma mark UICollectionViewDelegateFlowLayout

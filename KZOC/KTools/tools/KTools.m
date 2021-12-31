@@ -22,7 +22,7 @@
     return [UIScreen mainScreen].bounds.size.height;
 }
 //获取状态栏的高度
-+ (CGFloat)tools_heightOfStatusBar {
++ (CGFloat)tools_heightOfStatus {
     
     if (@available(iOS 13,*)) {
 //        iOS 13.0 之后使用
@@ -37,28 +37,33 @@
 }
 
 //获取导航栏的高度
-+ (CGFloat)tools_heightOfNavigationBar {
++ (CGFloat)tools_heightOfNavigation {
 
     return 44.0;
 }
 
 // 获取状态栏+导航栏的高度
-+ (CGFloat)tools_heightOfStatusBarAndNavigationBar {
-    return ([self tools_heightOfStatusBar] + [self tools_heightOfNavigationBar]);
++ (CGFloat)tools_heightOfStatusAndNavigation {
+    return ([self tools_heightOfStatus] + [self tools_heightOfNavigation]);
 }
 //获取菜单栏的高度
 + (CGFloat)tools_heightOfTabBar {
-    return [self tools_deviceIsIphoneX]?(49.f + 34.f):49.f;
+    return [self tools_deviceIsIphoneX] ? (49.f + 34.f) : 49.f;
 }
 //获取主屏幕的高度（设备的高度-状态栏高度-菜单栏高度-导航栏高度）
-+ (CGFloat)tools_heightOfActiveArea {
-    CGFloat height = [KTools tools_heightOfScreen] - [KTools tools_heightOfStatusBarAndNavigationBar] - [KTools tools_heightOfTabBar];
++ (CGFloat)tools_heightOfActiveAreaMin {
+    CGFloat height = [KTools tools_heightOfScreen] - [KTools tools_heightOfStatusAndNavigation] - [KTools tools_heightOfTabBar];
     return height;
 }
 //获取主屏幕的高度（设备的高度-状态栏高度-导航栏高度）
-+ (CGFloat)tools_heightOfActiveAreaWithTabBar {
-    CGFloat height = [KTools tools_heightOfScreen] - [KTools tools_heightOfStatusBarAndNavigationBar];
++ (CGFloat)tools_heightOfActiveAreaMax {
+    CGFloat height = [KTools tools_heightOfScreen] - [KTools tools_heightOfStatusAndNavigation];
     return height;
+}
+
+//底部区域,具有刘海儿的屏幕底部为34,其他手机为0
++ (CGFloat)tools_heightOfBottomSpace {
+    return [self tools_deviceIsIphoneX] ? 34.f : 0.f;
 }
 
 //计算文本高度
@@ -301,73 +306,35 @@
     
 }
 #pragma mark - 比较
-/**比较两个日期，第一个是不是比第二个大（第一个日期靠后）*/
-+ (BOOL)tools_firstDateBigThanSecondDate:(NSDate *_Nonnull)firstDate secondDate:(NSDate *_Nonnull)secondDate {
+/**比较两个日期哪个大*/
++ (int)tools_compareTimeWithFirstTime:(NSString *_Nonnull)firstTime secondTime:(NSString *_Nonnull)secondTime {
+    
+    NSDateFormatter *dateformater = [[NSDateFormatter alloc] init];
+    [dateformater setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    NSDate *firstDate = [[NSDate alloc] init];
+    NSDate *secondDate = [[NSDate alloc] init];
+    
+    firstDate = [dateformater dateFromString:firstTime];
+    secondDate = [dateformater dateFromString:secondTime];
+    NSComparisonResult result = [firstDate compare:secondDate];
+    //firstDate = secondDate
+    if (result == NSOrderedSame) return 0;
+    //firstDate > secondDate
+    if (result == NSOrderedDescending) return 1;
+    //firstDate < secondDate
+    return -1;//result == NSOrderedAscending
+}
+
+//比较指定时间是否比当前时间大(yyyy-MM-dd HH:mm:ss)
++ (BOOL)tools_compareCurrentTimeBigWithGivenTime:(NSString *_Nonnull)givenTime {
+    NSString *currentTime = [self tools_getCurrentDate:@"yyyy-MM-dd HH:mm:ss"];
+    int result = [self tools_compareTimeWithFirstTime:currentTime secondTime:givenTime];
+    if (result == 1) {
+        return true;
+    }
     return false;
 }
-#pragma mark - 颜色相关
 
-//返回一个随机的颜色
-+ (UIColor *)tools_colorRandom {
-    int arcRed = arc4random()%256;
-    int arcGreen = arc4random()%256;
-    int arcBlue = arc4random()%256;
-    //    float arcAlpha = arc4random()%101/100.0;
-    float arcAlpha = 1.0;
-    UIColor *color = [UIColor colorWithRed:arcRed/255.0 green:arcGreen/255.0 blue:arcBlue/255.0 alpha:arcAlpha];
-    return color;
-}
-
-//16进制 => UIColor
-+ (UIColor *)tools_colorWithHexString:(NSString *)hexColor {
-    return [self tools_colorWithHexString:hexColor alpha:1.0f];
-}
-
-//16进制 => UIColor
-+ (UIColor *)tools_colorWithHexString:(NSString *)hexColor alpha:(CGFloat)alpha {
-    //删除字符串中的空格
-    NSString *cString = [[hexColor stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] uppercaseString];
-    // String should be 6 or 8 characters
-    if ([cString length] < 6)
-    {
-        return [UIColor clearColor];
-    }
-    // strip 0X if it appears
-    //如果是0x开头的，那么截取字符串，字符串从索引为2的位置开始，一直到末尾
-    if ([cString hasPrefix:@"0X"])
-    {
-        cString = [cString substringFromIndex:2];
-    }
-    //如果是#开头的，那么截取字符串，字符串从索引为1的位置开始，一直到末尾
-    if ([cString hasPrefix:@"#"])
-    {
-        cString = [cString substringFromIndex:1];
-    }
-    if ([cString length] != 6)
-    {
-        return [UIColor clearColor];
-    }
-    
-    // Separate into r, g, b substrings
-    NSRange range;
-    range.location = 0;
-    range.length = 2;
-    //r
-    NSString *rString = [cString substringWithRange:range];
-    //g
-    range.location = 2;
-    NSString *gString = [cString substringWithRange:range];
-    //b
-    range.location = 4;
-    NSString *bString = [cString substringWithRange:range];
-    
-    // Scan values
-    unsigned int r, g, b;
-    [[NSScanner scannerWithString:rString] scanHexInt:&r];
-    [[NSScanner scannerWithString:gString] scanHexInt:&g];
-    [[NSScanner scannerWithString:bString] scanHexInt:&b];
-    return [UIColor colorWithRed:((float)r / 255.0f) green:((float)g / 255.0f) blue:((float)b / 255.0f) alpha:alpha];
-}
 
 #pragma mark - 手机号
 
@@ -422,7 +389,7 @@
 + (NSString *)tools_getCurrentDate:(NSString *)format {
     
     if (format == nil || [format isEqualToString:@""]) {
-        format = @"YYYY-MM-dd HH:mm:ss";
+        format = @"yyyy-MM-dd HH:mm:ss";
     }
     //格林尼治日期
     NSDate *date = [NSDate date];
@@ -496,10 +463,10 @@
 //时间：NSDate => NSString
 + (NSString *)tools_timeDateConvertToString:(NSDate *)date dateFormatter:(NSString *)formatter {
     if ([KTools tools_isBlankString:formatter]) {
-        formatter = @"YYYY-MM-dd HH:mm:ss";
+        formatter = @"yyyy-MM-dd HH:mm:ss";
     }
     NSDateFormatter *format = [[NSDateFormatter alloc] init];
-    format.dateFormat = formatter;
+    [format setDateFormat:formatter];
     NSString *timeString = [format stringFromDate:date];
     return timeString;
 }
@@ -589,6 +556,21 @@
     return string;
 }
 
+//根据颜色生成对应颜色的图片
++ (UIImage *)tools_convertImageWithColor:(UIColor *)color {
+    CGRect rect = CGRectMake(0.0f, 0.0f, 1.0f, 1.0f);
+    UIGraphicsBeginImageContext(rect.size);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+ 
+    CGContextSetFillColorWithColor(context, [color CGColor]);
+    CGContextFillRect(context, rect);
+ 
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+ 
+    return image;
+}
+
 #pragma mark 单位转换
 //米=>公里
 + (NSString *)tools_convertMeterToKilometer:(CGFloat)distance {
@@ -636,6 +618,70 @@
         [result appendFormat:@"%02X", digest[i]];
     }
     return result;
+}
+
+#pragma mark - 颜色相关
+
+//返回一个随机的颜色
++ (UIColor *)tools_colorRandom {
+    int arcRed = arc4random()%256;
+    int arcGreen = arc4random()%256;
+    int arcBlue = arc4random()%256;
+    //    float arcAlpha = arc4random()%101/100.0;
+    float arcAlpha = 1.0;
+    UIColor *color = [UIColor colorWithRed:arcRed/255.0 green:arcGreen/255.0 blue:arcBlue/255.0 alpha:arcAlpha];
+    return color;
+}
+
+//16进制 => UIColor
++ (UIColor *)tools_colorWithHexString:(NSString *)hexColor {
+    return [self tools_colorWithHexString:hexColor alpha:1.0f];
+}
+
+//16进制 => UIColor
++ (UIColor *)tools_colorWithHexString:(NSString *)hexColor alpha:(CGFloat)alpha {
+    //删除字符串中的空格
+    NSString *cString = [[hexColor stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] uppercaseString];
+    // String should be 6 or 8 characters
+    if ([cString length] < 6)
+    {
+        return [UIColor clearColor];
+    }
+    // strip 0X if it appears
+    //如果是0x开头的，那么截取字符串，字符串从索引为2的位置开始，一直到末尾
+    if ([cString hasPrefix:@"0X"])
+    {
+        cString = [cString substringFromIndex:2];
+    }
+    //如果是#开头的，那么截取字符串，字符串从索引为1的位置开始，一直到末尾
+    if ([cString hasPrefix:@"#"])
+    {
+        cString = [cString substringFromIndex:1];
+    }
+    if ([cString length] != 6)
+    {
+        return [UIColor clearColor];
+    }
+    
+    // Separate into r, g, b substrings
+    NSRange range;
+    range.location = 0;
+    range.length = 2;
+    //r
+    NSString *rString = [cString substringWithRange:range];
+    //g
+    range.location = 2;
+    NSString *gString = [cString substringWithRange:range];
+    //b
+    range.location = 4;
+    NSString *bString = [cString substringWithRange:range];
+    
+    // Scan values
+    unsigned int r, g, b;
+    [[NSScanner scannerWithString:rString] scanHexInt:&r];
+    [[NSScanner scannerWithString:gString] scanHexInt:&g];
+    [[NSScanner scannerWithString:bString] scanHexInt:&b];
+    return [UIColor colorWithRed:((float)r / 255.0f) green:((float)g / 255.0f) blue:((float)b / 255.0f) alpha:alpha];
 }
 
 #pragma mark - 图片
@@ -708,13 +754,86 @@
     return newImage;
 }
 
+//截取当前屏幕
++ (UIImage *)tools_imageSnapshotWithScreen {
+    CGSize size = [UIScreen mainScreen].bounds.size;
+    CGFloat scale = [UIScreen mainScreen].scale;
+    //背景是否透明：ture 透明 false 不透明
+    UIGraphicsBeginImageContextWithOptions(size, false, scale);
+    [[UIApplication sharedApplication].keyWindow.layer renderInContext:UIGraphicsGetCurrentContext()];
+    UIImage * image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return image;
+}
+
+//将指定的view转成图片
++ (UIImage *)tools_imageSnapshotWithView:(UIView *)view {
+    CGSize size = view.frame.size;
+    CGFloat scale = [UIScreen mainScreen].scale;
+    //背景是否透明：ture 透明 false 不透明
+    UIGraphicsBeginImageContextWithOptions(size, false, scale);
+    [view.layer renderInContext:UIGraphicsGetCurrentContext()];
+    UIImage * image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return image;
+}
+
+//获取某个scrollView上的截图
++ (UIImage *)tools_imageSnapshotWithScrollviewShot:(UIScrollView *) scrollView {
+    CGSize size = scrollView.contentSize;
+    CGFloat scale = [UIScreen mainScreen].scale;
+    UIGraphicsBeginImageContextWithOptions(size, false, scale);
+
+    //获取当前scrollview的frame 和 contentOffset
+    CGRect saveFrame = scrollView.frame;
+    CGPoint saveOffset = scrollView.contentOffset;
+    //置为起点
+    scrollView.contentOffset = CGPointZero;
+    scrollView.frame = CGRectMake(0, 0, scrollView.contentSize.width, scrollView.contentSize.height);
+
+    [scrollView.layer renderInContext:UIGraphicsGetCurrentContext()];
+    UIImage * image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+      //还原
+    scrollView.frame = saveFrame;
+    scrollView.contentOffset = saveOffset;
+    return image;
+}
+
+//获得某个范围内的屏幕图像
++ (UIImage *)tools_imageSnapshotWithCurrentInnerViewShot:(UIView *) innerView atFrame:(CGRect)rect {
+    UIGraphicsBeginImageContext(innerView.frame.size);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextSaveGState(context);
+    UIRectClip(rect);
+    [innerView.layer renderInContext:context];
+    UIImage *theImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return  theImage;
+}
+
+
+#pragma mark - 动画
++ (CABasicAnimation *)tools_animationOpacityForever:(float)time {
+    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"opacity"];//必须写opacity才行。
+    animation.fromValue = [NSNumber numberWithFloat:1.0f];
+    animation.toValue = [NSNumber numberWithFloat:0.4f];//这是透明度。
+    animation.autoreverses = YES;
+    animation.duration = time;
+    animation.repeatCount = MAXFLOAT;
+    animation.removedOnCompletion = NO;
+    animation.fillMode = kCAFillModeForwards;
+     animation.timingFunction=[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn];///没有的话是均匀的动画。
+    return animation;
+}
+
 #pragma mark - 打印设备信息
 
 + (void)tools_printEquipParameter {
     CGFloat screenH = [KTools tools_heightOfScreen];
     CGFloat screenW = [KTools tools_widthOfScreen];
-    CGFloat statusH = [KTools tools_heightOfStatusBar];
-    CGFloat navigaH = [KTools tools_heightOfNavigationBar];
+    CGFloat statusH = [KTools tools_heightOfStatus];
+    CGFloat navigaH = [KTools tools_heightOfNavigation];
     CGFloat tabbarH = [KTools tools_heightOfTabBar];
     UIDevice *device = [UIDevice currentDevice];
     
@@ -765,4 +884,5 @@
 }
 
 @end
+
 

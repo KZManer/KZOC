@@ -22,12 +22,12 @@
     self.view.backgroundColor = [UIColor whiteColor];
     self.edgesForExtendedLayout = UIRectEdgeBottom;
     
-    self.pageMenu = [SPPageMenu pageMenuWithFrame:CGRectZero trackerStyle:SPPageMenuTrackerStyleLineAttachment];
+    self.pageMenu = [SPPageMenu pageMenuWithFrame:CGRectZero trackerStyle:SPPageMenuTrackerStyleLine];
     self.pageMenu.backgroundColor = [UIColor whiteColor];
     NSArray *titles = @[@"北京市",@"上海市",@"广州市"];
     [self.pageMenu setItems:titles selectedItemIndex:1];
     self.pageMenu.permutationWay = SPPageMenuPermutationWayNotScrollEqualWidths;
-    self.pageMenu.trackerWidth = self.view.width / 3.0;
+    self.pageMenu.trackerWidth = 30;
     self.pageMenu.tracker.backgroundColor = [UIColor blueColor];
     
     [self.view addSubview:self.pageMenu];
@@ -35,7 +35,6 @@
         make.top.left.right.equalTo(@0);
         make.height.mas_equalTo(50);
     }];
-    
     
     self.scrollView = [[UIScrollView alloc]init];
     self.scrollView.backgroundColor = [UIColor whiteColor];

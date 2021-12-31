@@ -32,6 +32,7 @@
         //UICollectionView
         @[
             [self sectionWithName:@"Cell边距问题" className:@"CollectionVC"],
+            [self sectionWithName:@"Cell复用问题" className:@"CollectionReuseVC"],
         ],
         //系统相关
         @[
@@ -46,11 +47,14 @@
             [self sectionWithName:@"导航栏淡入淡出" className:@"NavigationVC"],
             [self sectionWithName:@"图片水印" className:@"ImageWatermarkVC"],
             [self sectionWithName:@"读取剪切板内容" className:@"ShearVC"],
+            [self sectionWithName:@"ScrollView手势冲突" className:@"GestureVC"],
+            [self sectionWithName:@"UILabel加标签" className:@"LabelWithTagVC"],
         ],
         //组件封装
         @[
             [self sectionWithName:@"Cell选择器" className:@"CellSelectVC"],
             [self sectionWithName:@"箭头弹窗" className:@"ArrowPopVC"],
+            [self sectionWithName:@"轮播广告" className:@"SlideshowVC"],
         ],
         //三方框架
         @[
@@ -81,6 +85,8 @@
         @[
             [self sectionWithName:@"我的-我的地址" className:@"AddressVC"],
             [self sectionWithName:@"我的-新建收货地址" className:@"AddressOperateVC"],
+            [self sectionWithName:@"题库-简答题" className:@"ShortAnswerQuestionVC"],
+            [self sectionWithName:@"简答题-设置" className:@"ShortAnswerSettingVC"],
         ],
     ];
 }

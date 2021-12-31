@@ -11,6 +11,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface CollectionReuseCell : UICollectionViewCell
 
+- (void)echoContent:(NSString *)text;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -1,56 +1,76 @@
 //
 //  UIViewController+KNavigation.m
-//  TimeInternational
+//  KZOC
 //
-//  Created by KZ on 2021/8/13.
+//  Created by Zzz... on 2021/12/16.
 //
 
 #import "UIViewController+KNavigation.h"
 
 @implementation UIViewController (KNavigation)
 
-- (void)vc_navBackImageBlackWithAction:(nullable SEL)action {
-    [self vc_navBackImageTintColor:[UIColor blackColor] action:action];
-}
-
-- (void)vc_navBackImageTintColor:(UIColor *)tintColor action:(nullable SEL)action {
-    if (action == nil) {
-        action = @selector(vc_navClickBackItem);
-    }
-    UIBarButtonItem *backItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"c_arrow_l_black"] style:UIBarButtonItemStylePlain target:self action:action];
-    [backItem setTintColor:tintColor];
+- (void)cg_navBackItemWithTintColor:(UIColor *)tintColor selector:(SEL)selector {
+    
+    //侧滑返回手势（自定义返回item的时候侧滑手势会失效，加上下面这句代码即可）
+    self.navigationController.interactivePopGestureRecognizer.delegate = (id)self;
+    
+    tintColor = tintColor ? tintColor : Color_Hex(@"#333333");
+    selector = selector ? selector : @selector(private_pressedBackItem);
+    UIBarButtonItem *backItem = [[UIBarButtonItem alloc]initWithImage:[[UIImage imageNamed:@"c_arrow_left"]imageWithRenderingMode:UIImageRenderingModeAutomatic] style:UIBarButtonItemStylePlain target:self action:selector];
+    backItem.tintColor = tintColor;
     self.navigationItem.leftBarButtonItem = backItem;
 }
-
-- (void)vc_navClickBackItem {
-    [self.navigationController popViewControllerAnimated:YES];
-}
-//去掉导航栏下边的黑边
-- (void)vc_navRemoveBottomBlackSide {
-    [self.navigationController.navigationBar setShadowImage:[[UIImage alloc]init]];
-}
-//展示导航栏下边的黑边
-- (void)vc_navShowBottomBlackSide {
-    [self.navigationController.navigationBar setShadowImage:nil];
-}
-//导航栏透明
-- (void)vc_navLucency {
-    //设置导航栏背景图片为一个空的image，这样就透明了
-    [self.navigationController.navigationBar setBackgroundImage:[[UIImage alloc]init] forBarMetrics:UIBarMetricsDefault];
-    [self vc_navRemoveBottomBlackSide];
-    [self.navigationController.navigationBar setTranslucent:YES];
-}
-//导航栏不透明
-- (void)vc_navNoLucency {
-    [self.navigationController.navigationBar setBackgroundImage:nil forBarMetrics:UIBarMetricsDefault];
-    [self.navigationController.navigationBar setShadowImage:nil];
-    [self.navigationController.navigationBar setTranslucent:NO];
+//返回上一页
+- (void)private_pressedBackItem {
+    [self.navigationController popViewControllerAnimated:true];
 }
 
-//设置标题和标题颜色
-- (void)vc_navTitle:(NSString *)title tintColor:(UIColor *)tintColor {
-    self.navigationItem.title = title;
-    [self.navigationController.navigationBar setTitleTextAttributes:
-         @{NSForegroundColorAttributeName:tintColor}];
+- (void)cg_navShowWithTranslucent:(BOOL)translucent showLine:(BOOL)line bgColor:(UIColor *)bgColor {
+    
+    self.navigationController.navigationBar.hidden = false;
+    
+    if (@available(iOS 13.0, *)) {
+        
+        UINavigationBarAppearance *appearance = [[UINavigationBarAppearance alloc]init];
+        if (translucent) {
+            [appearance configureWithTransparentBackground];
+        } else {
+            [appearance configureWithDefaultBackground];
+        }
+        //是否半透明
+        self.navigationController.navigationBar.translucent = translucent;
+        //导航栏背景色
+        appearance.backgroundColor = bgColor;
+        //是否有底部线
+        if (line) {
+            //有线
+            appearance.shadowColor = UIColor.lightGrayColor;
+        } else {
+            //没有线
+            appearance.shadowColor = UIColor.clearColor;
+        }
+        self.navigationController.navigationBar.standardAppearance = appearance;
+        if (@available(iOS 15.0, *)) {
+            self.navigationController.navigationBar.scrollEdgeAppearance = appearance;
+        }
+    } else {
+        self.navigationController.navigationBar.translucent = translucent;
+        //是否有底部线
+        if (line) {
+            //有线
+            self.navigationController.navigationBar.shadowImage = nil;
+        } else {
+            //没有线
+            self.navigationController.navigationBar.shadowImage = [UIImage new];
+        }
+        //设置导航栏背景色
+        self.navigationController.navigationBar.barTintColor = bgColor;
+    }
 }
+
+
+- (void)cg_navHide {
+    self.navigationController.navigationBar.hidden = true;
+}
+
 @end

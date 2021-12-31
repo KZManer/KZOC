@@ -12,7 +12,6 @@ NSString * const CellIdChapterExerciseTools = @"CellIdChapterExerciseTools";
 
 @interface CEToolsCell ()
 
-@property (nonatomic, strong) UIButton *btn;
 @property (nonatomic, strong) UIImageView *kImageView;
 @property (nonatomic, strong) UILabel *kLabel;
 
@@ -32,6 +31,12 @@ NSString * const CellIdChapterExerciseTools = @"CellIdChapterExerciseTools";
 #pragma mark - private method
 - (void)doViewUI {
     
+    self.kImageView = [[UIImageView alloc]init];
+    [self.contentView addSubview:self.kImageView];
+    [self.kImageView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(@5);
+        make.centerX.equalTo(@0);
+    }];
     
     self.kLabel = [[UILabel alloc]init];
     self.kLabel.textColor = Color_Hex(@"#999999");
@@ -39,16 +44,8 @@ NSString * const CellIdChapterExerciseTools = @"CellIdChapterExerciseTools";
     self.kLabel.textAlignment = NSTextAlignmentCenter;
     [self.contentView addSubview:self.kLabel];
     [self.kLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.bottom.equalTo(@(-5));
+        make.top.equalTo(self.kImageView.mas_bottom).offset(3);
         make.left.right.equalTo(self.contentView);
-    }];
-    
-    self.kImageView = [[UIImageView alloc]init];
-    [self.contentView addSubview:self.kImageView];
-    [self.kImageView mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.bottom.equalTo(self.kLabel.mas_top).offset(4);
-        make.top.equalTo(@5);
-        make.centerX.equalTo(@0);
     }];
 }
 

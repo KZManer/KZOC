@@ -31,7 +31,7 @@
     [self addSubview:navigationView];
     [navigationView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.left.right.mas_equalTo(0);
-        make.height.mas_equalTo([KTools tools_heightOfStatusBarAndNavigationBar]);
+        make.height.mas_equalTo([KTools tools_heightOfStatusAndNavigation]);
     }];
     UILabel *navigationLabel = [[UILabel alloc]init];
     navigationLabel.textAlignment = NSTextAlignmentCenter;
@@ -149,7 +149,7 @@
     [bottomScrollView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.equalTo(baseFullView);
         make.top.equalTo(pageMenuView.mas_bottom);
-        make.height.mas_equalTo([KTools tools_heightOfActiveArea] - 50);
+        make.height.mas_equalTo([KTools tools_heightOfActiveAreaMin] - 50);
     }];
     
     //更新baseFullView的高度

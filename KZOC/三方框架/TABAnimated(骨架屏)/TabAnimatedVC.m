@@ -32,13 +32,18 @@ static NSString *CellIdTabAnimatedCollectionCell = @"CellIdTabAnimatedCollection
     self.tableView.delegate = self;
     [self.tableView registerClass:[TabAnimatedCell class] forCellReuseIdentifier:CellIdentifierTabAnimated];
     
-    self.tableView.tabAnimated = [TABTableAnimated animatedWithCellClass:[TabAnimatedCell class] cellHeight:120];
     [self.view addSubview:self.tableView];
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.left.right.equalTo(self.view);
         make.height.equalTo(self.view).multipliedBy(0.5);
     }];
     
+    self.tableView.tabAnimated = [TABTableAnimated animatedWithCellClass:[TabAnimatedCell class] cellHeight:120];
+    self.tableView.tabAnimated.adjustBlock = ^(TABComponentManager * _Nonnull manager) {
+//        manager.animation(2).remove();
+//        manager.animation(3).remove();
+//        manager.animation(4).height(18).space(5).line(4).radius(3);
+    };
     [self.tableView tab_startAnimation];
     
     

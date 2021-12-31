@@ -99,6 +99,7 @@
                         .LeeCustomView(view)
                         .LeeItemInsets(UIEdgeInsetsZero)
                         .LeeHeaderInsets(UIEdgeInsetsZero)
+                        .LeeClickBackgroundClose(true)
                         .LeeShow();
                     
                 }break;

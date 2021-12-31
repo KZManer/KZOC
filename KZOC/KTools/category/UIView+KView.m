@@ -5,9 +5,9 @@
 //  Created by KZ on 2021/4/16.
 //
 
-#import "UIView+kView.h"
+#import "UIView+KView.h"
 
-@implementation UIView (kView)
+@implementation UIView (KView)
 
 //setCornerRadius   给view设置圆角
 - (void)view_setCornerRadius:(CGFloat)value addRectCorners:(UIRectCorner)rectCorner {

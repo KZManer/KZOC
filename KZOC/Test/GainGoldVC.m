@@ -6,26 +6,37 @@
 //
 
 #import "GainGoldVC.h"
+#import "UIViewController+KNavigation.h"
+#import "GainGoldView.h"
 
 @interface GainGoldVC ()
+
+@property (nonatomic, strong) GainGoldView *homeView;
 
 @end
 
 @implementation GainGoldVC
 
+#pragma mark - override method
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self doNavUI];
+    [self doViewUI];
+}
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self cg_navShowWithTranslucent:false showLine:false bgColor:Color_Hex(@"#F5F5F5")];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+#pragma mark - custom method
+- (void)doNavUI {
+    [self cg_navBackItemWithTintColor:nil selector:nil];
+    self.title = @"赚金币";
 }
-*/
+- (void)doViewUI {
+    self.view.backgroundColor = Color_Hex(@"#F5F5F5");
+    self.homeView = [[GainGoldView alloc]initWithFrame:self.view.frame];
+    [self.view addSubview:self.homeView];
+}
 
 @end

@@ -6,8 +6,12 @@
 //
 
 #import "ShortAnswerQuestionVC.h"
+#import "ShortAnswerQuestionView.h"
+#import "CEToolsCellModel.h"
 
 @interface ShortAnswerQuestionVC ()
+
+@property (nonatomic, strong) ShortAnswerQuestionView *homeView;
 
 @end
 
@@ -15,17 +19,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.view.backgroundColor = UIColor.whiteColor;
+    self.edgesForExtendedLayout = UIRectEdgeBottom;
+    self.homeView = [[ShortAnswerQuestionView alloc]initWithFrame:self.view.frame];
+    [self.view addSubview:self.homeView];
+    NSLog(@"%f",self.view.height);
+    [self.homeView echoContent:[CEToolsCellModel shortAnswerToolsModels]];
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)viewWillLayoutSubviews {
+    [super viewWillLayoutSubviews];
+    self.homeView.frame = self.view.frame;
 }
-*/
-
 @end

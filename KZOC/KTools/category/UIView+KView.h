@@ -9,7 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface UIView (kView)
+@interface UIView (KView)
 
 /**
  * @brief category   给view设置圆角

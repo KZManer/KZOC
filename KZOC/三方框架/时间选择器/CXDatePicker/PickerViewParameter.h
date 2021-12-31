@@ -31,7 +31,7 @@
 #define PickerWeight                    kScreenFrame.size.width
 #define PickerHeight                    200
 
-#define ButtonTitleColor                [UIColor colorWithHexString:@"#323232"]
+#define ButtonTitleColor                RGB(50,50,50) //#323232
 #define BackViewColor                   [UIColor whiteColor]
 
 

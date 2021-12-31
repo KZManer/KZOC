@@ -18,6 +18,26 @@
 
 @interface KTools : NSObject
 
+#pragma mark - 控件高度-宽度 define
+//屏幕宽度
+#define Width_Screen [KTools tools_widthOfScreen]
+//屏幕高度
+#define Height_Screen [KTools tools_heightOfScreen]
+//状态栏高度
+#define Height_Status [KTools tools_heightOfStatus]
+//导航栏高度
+#define Height_Navigation [KTools tools_heightOfNavigation]
+//状态栏+导航栏高度
+#define Height_Status_Navigation [KTools tools_heightOfStatusAndNavigation]
+//菜单栏高度
+#define Height_TabBar [KTools tools_heightOfTabBar]
+//主屏幕高度1（设备高度-状态栏高度-菜单栏高度-导航栏高度）
+#define Height_Active_Min [KTools tools_heightOfActiveAreaMin]
+//主屏幕高度2（设备高度-状态栏高度-导航栏高度）
+#define Height_Active_Max [KTools tools_heightOfActiveAreaMax]
+//底部区域,具有刘海儿的屏幕底部为34,其他手机为0,目前适配到iPhone13，之后的机型还没出
+#define Height_Bottom_Space [KTools tools_heightOfBottomSpace]
+
 #pragma mark - 控件高度-宽度
 
 /**
@@ -33,17 +53,17 @@
 /**
  * 获取状态栏的高度
 */
-+ (CGFloat)tools_heightOfStatusBar;
++ (CGFloat)tools_heightOfStatus;
 
 /**
 *  获取导航栏的高度
 */
-+ (CGFloat)tools_heightOfNavigationBar;
++ (CGFloat)tools_heightOfNavigation;
 
 /**
 * 获取状态栏+导航栏的高度
  */
-+ (CGFloat)tools_heightOfStatusBarAndNavigationBar;
++ (CGFloat)tools_heightOfStatusAndNavigation;
 
 /**
 *  获取菜单栏的高度
@@ -53,12 +73,18 @@
 /**
  *  获取主屏幕的高度（设备的高度-状态栏高度-菜单栏高度-导航栏高度）
  */
-+ (CGFloat)tools_heightOfActiveArea;
++ (CGFloat)tools_heightOfActiveAreaMin;
 
 /**
  *  获取主屏幕的高度（设备的高度-状态栏高度-导航栏高度）
  */
-+ (CGFloat)tools_heightOfActiveAreaWithTabBar;
++ (CGFloat)tools_heightOfActiveAreaMax;
+
+/**
+ 底部区域,具有刘海儿的屏幕底部为34,其他手机为0
+ 目前适配到iPhone13，之后的机型还没出
+ */
++ (CGFloat)tools_heightOfBottomSpace;
 
 /**
 * 根据文字内容计算文本高度
@@ -134,30 +160,19 @@
 + (BOOL)tools_deviceIsIphoneX;
 
 #pragma mark - 比较
-/**未写完：比较两个日期，第一个是不是比第二个大（第一个日期靠后）*/
-+ (BOOL)tools_firstDateBigThanSecondDate:(NSDate *_Nonnull)firstDate secondDate:(NSDate *_Nonnull)secondDate;
-
-#pragma mark - 颜色相关
-
 /**
-*  返回一个随机的颜色
-*/
-+ (UIColor *_Nonnull)tools_colorRandom;
-
-/**
- @brief 16进制 => UIColor
- @param hexColor 16进制色值
- @return UIColor
+ @brief:比较两个时间哪个大(yyyy-MM-dd HH:mm:ss)
+ @param firstTime 第一个时间
+ @param secondTime 第二个时间
+ @return 0:相等 1:firstTime大 -1:firstTime小 2:未知
  */
-+ (UIColor *_Nonnull)tools_colorWithHexString:(NSString *_Nonnull)hexColor;
-
++ (int)tools_compareTimeWithFirstTime:(NSString *_Nonnull)firstTime secondTime:(NSString *_Nonnull)secondTime;
 /**
- @brief 16进制 => UIColor
- @param hexColor 16进制色值
- @param alpha    透明度
- @return UIColor
+ @brief:比较指定时间是否比当前时间大(yyyy-MM-dd HH:mm:ss)
+ @param givenTime 指定的时间
+ @return ture:当前时间大 false:指定时间大
  */
-+ (UIColor *_Nonnull)tools_colorWithHexString:(NSString *_Nonnull)hexColor alpha:(CGFloat)alpha;
++ (BOOL)tools_compareCurrentTimeBigWithGivenTime:(NSString *_Nonnull)givenTime;
 
 #pragma mark - 手机号
 
@@ -258,6 +273,13 @@
  */
 + (NSString *_Nullable)tools_imagesConvertToBase64String:(NSArray<UIImage *> *_Nullable)images;
 
+/**
+ @brief 根据颜色生成对应颜色的图片
+ @param color 要生成的图片的颜色
+ @return 生成的图片
+ */
++ (UIImage *_Nullable)tools_convertImageWithColor:(UIColor *_Nonnull)color;
+
 #pragma mark 单位转换
 /**
  @brief 单位转换 米=>公里
@@ -271,6 +293,28 @@
 + (NSString *_Nonnull)tools_MD5:(NSString *_Nonnull)string;
 
 + (NSString *_Nonnull)tools_SHA256:(NSString *_Nonnull)string;
+
+#pragma mark - 颜色相关
+
+/**
+*  返回一个随机的颜色
+*/
++ (UIColor *_Nonnull)tools_colorRandom;
+
+/**
+ @brief 16进制 => UIColor
+ @param hexColor 16进制色值
+ @return UIColor
+ */
++ (UIColor *_Nonnull)tools_colorWithHexString:(NSString *_Nonnull)hexColor;
+
+/**
+ @brief 16进制 => UIColor
+ @param hexColor 16进制色值
+ @param alpha    透明度
+ @return UIColor
+ */
++ (UIColor *_Nonnull)tools_colorWithHexString:(NSString *_Nonnull)hexColor alpha:(CGFloat)alpha;
 
 #pragma mark - 图片
 /**
@@ -286,6 +330,42 @@
  @return 添加完水印的图片
  */
 + (UIImage *_Nonnull)tools_imageAddWatermark:(UIImage *_Nonnull)image showText:(NSString *_Nullable)showText;
+
+/**
+ @brief 截取当前屏幕
+ @return 返回截屏图
+ */
++ (UIImage *_Nonnull)tools_imageSnapshotWithScreen;
+
+/**
+ @brief 将指定的view转成图片
+ @param view 要转成图片的view
+ @return 转换后的图片
+ */
++ (UIImage *_Nonnull)tools_imageSnapshotWithView:(UIView *_Nonnull)view;
+
+/**
+ @brief 获取某个scrollView上的截图
+ @param scrollView 要截取的scrollView
+ @return 转换后的图片
+ */
++ (UIImage *_Nonnull)tools_imageSnapshotWithScrollviewShot:(UIScrollView *_Nonnull)scrollView;
+
+/**
+ @brief 获得某个范围内的屏幕图像
+ @param innerView 要操作view
+ @param rect 要截取的大小
+ @return 转换后的图片
+ */
++ (UIImage *_Nonnull)tools_imageSnapshotWithCurrentInnerViewShot:(UIView *_Nonnull) innerView atFrame:(CGRect)rect;
+
+#pragma mark - 动画
+
+/**
+ @brief 闪烁动画：使用[view.layer addAnimation:[KTools tools_animationOpacityForever:0.6] forKey:nil];
+ @param time 变换时长
+ */
++ (CABasicAnimation *_Nonnull)tools_animationOpacityForever:(float)time;
 
 #pragma mark - 打印设备信息
 /**
@@ -320,3 +400,4 @@
  */
 + (void)viewTools_showAlertWithTitle:(NSString *_Nullable)title message:(NSString *_Nullable)message certainTitle:(NSString *_Nullable)certainTitle showViewController:(UIViewController *_Nonnull)showVC confirmAction:(void(^_Nullable)(UIAlertAction *_Nonnull confirmAction))confirmHandler;
 @end
+

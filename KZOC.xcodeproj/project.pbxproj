@@ -28,6 +28,13 @@
 		0426DD9F275B7C4C00B8F91E /* ShortAnswerQuestionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0426DD9E275B7C4C00B8F91E /* ShortAnswerQuestionCell.m */; };
 		0442C6EC277E9A4F00A7C8C2 /* LabelWithTagVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0442C6EB277E9A4F00A7C8C2 /* LabelWithTagVC.m */; };
 		0442C6EF277EA08F00A7C8C2 /* KILabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0442C6ED277EA08F00A7C8C2 /* KILabel.m */; };
+		0442C73F277EDB8D00A7C8C2 /* ThreeLevelFoldVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0442C73E277EDB8D00A7C8C2 /* ThreeLevelFoldVC.m */; };
+		0442C742277EDC7F00A7C8C2 /* TLSectionHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 0442C741277EDC7F00A7C8C2 /* TLSectionHeader.m */; };
+		0442C745277EE1EC00A7C8C2 /* TLHomeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0442C744277EE1EC00A7C8C2 /* TLHomeView.m */; };
+		0442C748277EE26800A7C8C2 /* TLModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0442C747277EE26800A7C8C2 /* TLModel.m */; };
+		0442C74E277EE3D900A7C8C2 /* TLSecondCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0442C74D277EE3D900A7C8C2 /* TLSecondCell.m */; };
+		0442C751277EE3E300A7C8C2 /* TLThirdCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0442C750277EE3E300A7C8C2 /* TLThirdCell.m */; };
+		0442C754277EE4B700A7C8C2 /* TLFirstCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0442C753277EE4B700A7C8C2 /* TLFirstCell.m */; };
 		0454496527718B7E00B83706 /* KTImageTextModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0454496227718B7E00B83706 /* KTImageTextModel.m */; };
 		0454496627718B7E00B83706 /* KTImageTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0454496327718B7E00B83706 /* KTImageTextCell.m */; };
 		0454496727718B7E00B83706 /* KTImageTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0454496427718B7E00B83706 /* KTImageTextView.m */; };
@@ -191,6 +198,20 @@
 		0442C6EB277E9A4F00A7C8C2 /* LabelWithTagVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LabelWithTagVC.m; sourceTree = "<group>"; };
 		0442C6ED277EA08F00A7C8C2 /* KILabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KILabel.m; sourceTree = "<group>"; };
 		0442C6EE277EA08F00A7C8C2 /* KILabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KILabel.h; sourceTree = "<group>"; };
+		0442C73D277EDB8D00A7C8C2 /* ThreeLevelFoldVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThreeLevelFoldVC.h; sourceTree = "<group>"; };
+		0442C73E277EDB8D00A7C8C2 /* ThreeLevelFoldVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThreeLevelFoldVC.m; sourceTree = "<group>"; };
+		0442C740277EDC7F00A7C8C2 /* TLSectionHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TLSectionHeader.h; sourceTree = "<group>"; };
+		0442C741277EDC7F00A7C8C2 /* TLSectionHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TLSectionHeader.m; sourceTree = "<group>"; };
+		0442C743277EE1EC00A7C8C2 /* TLHomeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TLHomeView.h; sourceTree = "<group>"; };
+		0442C744277EE1EC00A7C8C2 /* TLHomeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TLHomeView.m; sourceTree = "<group>"; };
+		0442C746277EE26800A7C8C2 /* TLModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TLModel.h; sourceTree = "<group>"; };
+		0442C747277EE26800A7C8C2 /* TLModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TLModel.m; sourceTree = "<group>"; };
+		0442C74C277EE3D900A7C8C2 /* TLSecondCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TLSecondCell.h; sourceTree = "<group>"; };
+		0442C74D277EE3D900A7C8C2 /* TLSecondCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TLSecondCell.m; sourceTree = "<group>"; };
+		0442C74F277EE3E300A7C8C2 /* TLThirdCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TLThirdCell.h; sourceTree = "<group>"; };
+		0442C750277EE3E300A7C8C2 /* TLThirdCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TLThirdCell.m; sourceTree = "<group>"; };
+		0442C752277EE4B700A7C8C2 /* TLFirstCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TLFirstCell.h; sourceTree = "<group>"; };
+		0442C753277EE4B700A7C8C2 /* TLFirstCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TLFirstCell.m; sourceTree = "<group>"; };
 		0454495F27718B7E00B83706 /* KTImageTextModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTImageTextModel.h; sourceTree = "<group>"; };
 		0454496027718B7E00B83706 /* KTImageTextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTImageTextCell.h; sourceTree = "<group>"; };
 		0454496127718B7E00B83706 /* KTImageTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTImageTextView.h; sourceTree = "<group>"; };
@@ -518,6 +539,27 @@
 			path = "UILabel加标签";
 			sourceTree = "<group>";
 		};
+		0442C73C277EDB6C00A7C8C2 /* 三级折叠 */ = {
+			isa = PBXGroup;
+			children = (
+				0442C73D277EDB8D00A7C8C2 /* ThreeLevelFoldVC.h */,
+				0442C73E277EDB8D00A7C8C2 /* ThreeLevelFoldVC.m */,
+				0442C746277EE26800A7C8C2 /* TLModel.h */,
+				0442C747277EE26800A7C8C2 /* TLModel.m */,
+				0442C743277EE1EC00A7C8C2 /* TLHomeView.h */,
+				0442C744277EE1EC00A7C8C2 /* TLHomeView.m */,
+				0442C740277EDC7F00A7C8C2 /* TLSectionHeader.h */,
+				0442C741277EDC7F00A7C8C2 /* TLSectionHeader.m */,
+				0442C752277EE4B700A7C8C2 /* TLFirstCell.h */,
+				0442C753277EE4B700A7C8C2 /* TLFirstCell.m */,
+				0442C74C277EE3D900A7C8C2 /* TLSecondCell.h */,
+				0442C74D277EE3D900A7C8C2 /* TLSecondCell.m */,
+				0442C74F277EE3E300A7C8C2 /* TLThirdCell.h */,
+				0442C750277EE3E300A7C8C2 /* TLThirdCell.m */,
+			);
+			path = "三级折叠";
+			sourceTree = "<group>";
+		};
 		0454495E27718B7E00B83706 /* KTImageTextView */ = {
 			isa = PBXGroup;
 			children = (
@@ -680,6 +722,7 @@
 		29367BAA27424BF20017712F /* UITableView */ = {
 			isa = PBXGroup;
 			children = (
+				0442C73C277EDB6C00A7C8C2 /* 三级折叠 */,
 				04A7E977274CB54D003B8616 /* 二级折叠 */,
 				2995F1FE2728D5C50000D90D /* cell类型 */,
 				29CD2C86273B7CEF00C0028B /* 高度自适应 */,
@@ -1369,6 +1412,7 @@
 				04717BE1277970B500743218 /* GainGoldTbCell.m in Sources */,
 				29639B3D272BA010001C693C /* DataGridComponent.m in Sources */,
 				2995F2C9272907620000D90D /* KPickerView.m in Sources */,
+				0442C745277EE1EC00A7C8C2 /* TLHomeView.m in Sources */,
 				049BA967276B096100D51D1A /* UIViewController+KCustom.m in Sources */,
 				04C932592755AF4B00563809 /* HZPhotoBrowser.m in Sources */,
 				2995F1EB27280E8C0000D90D /* KUIViewExt.m in Sources */,
@@ -1387,6 +1431,7 @@
 				2995F2062728D5C50000D90D /* TableViewVC.m in Sources */,
 				04A7E993274CE3A0003B8616 /* AddressCell.m in Sources */,
 				29AF602E2738D288006F5ABB /* PrivacyProtocolView.m in Sources */,
+				0442C73F277EDB8D00A7C8C2 /* ThreeLevelFoldVC.m in Sources */,
 				04C9325B2755AF4B00563809 /* HZPhotoBrowserView.m in Sources */,
 				2995F2122728D5D50000D90D /* NavigationVC.m in Sources */,
 				29693D4F2731673400475428 /* TextFieldVC.m in Sources */,
@@ -1442,6 +1487,7 @@
 				2994607D272A50D3009853CE /* TabBarRootVC.m in Sources */,
 				2995F2C5272907620000D90D /* KPhotoCollectionView.m in Sources */,
 				2995F2272728ED740000D90D /* NSDate+CXCategory.m in Sources */,
+				0442C751277EE3E300A7C8C2 /* TLThirdCell.m in Sources */,
 				04D3DEE9274DDE8000630F3F /* KNetworkManager.m in Sources */,
 				04BFFEE127607C470020AA34 /* ShortAnswerSettingVC.m in Sources */,
 				04717BD527795A9800743218 /* GainGoldVC.m in Sources */,
@@ -1458,7 +1504,10 @@
 				042276F52750DF0E00BAD153 /* TabAnimatedCell.m in Sources */,
 				0454496527718B7E00B83706 /* KTImageTextModel.m in Sources */,
 				2959A14F272BEB4C00972EE3 /* UIViewController+KNavigation.m in Sources */,
+				0442C748277EE26800A7C8C2 /* TLModel.m in Sources */,
+				0442C74E277EE3D900A7C8C2 /* TLSecondCell.m in Sources */,
 				04A7E97A274CB57A003B8616 /* FoldVC.m in Sources */,
+				0442C754277EE4B700A7C8C2 /* TLFirstCell.m in Sources */,
 				0426DD86275A255200B8F91E /* GFirstVC.m in Sources */,
 				29693D0B2730F2EF00475428 /* TimeCountVC.m in Sources */,
 				29639B41272BA863001C693C /* RuntimeVC.m in Sources */,
@@ -1470,6 +1519,7 @@
 				292893E027362EAC00B7C8D6 /* ArrowPopVC.m in Sources */,
 				2995F2C3272907620000D90D /* KEvaluateView.m in Sources */,
 				0426DD7A2759F3DE00B8F91E /* PGIndexBannerSubiew.m in Sources */,
+				0442C742277EDC7F00A7C8C2 /* TLSectionHeader.m in Sources */,
 				29CE735827392D080063612F /* CRBoxInputView+Paste.m in Sources */,
 				042056D0275DA32C00712F44 /* CEToolsView.m in Sources */,
 				2995F2DA272926EE0000D90D /* BMProgressHUDVC.m in Sources */,

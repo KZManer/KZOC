@@ -28,6 +28,7 @@
             [self sectionWithName:@"Cell类型" className:@"TableViewVC"],
             [self sectionWithName:@"高度自适应" className:@"TableViewVC1"],
             [self sectionWithName:@"二级折叠" className:@"FoldVC"],
+            [self sectionWithName:@"三级折叠" className:@"ThreeLevelFoldVC"]
         ],
         //UICollectionView
         @[

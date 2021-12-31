@@ -24,6 +24,7 @@
     [super viewDidLoad];
     self.sectionInfos = [SectionModel sectionModels];
     [self.view addSubview:self.tableView];
+    
 }
 - (void)viewWillLayoutSubviews {
     self.tableView.frame = self.view.frame;

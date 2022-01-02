@@ -73,6 +73,9 @@ NSString * const CellIdTLThirdCell = @"CellIdTLThirdCell";
     self.subheadLabel.text = tlInfo.subhead;
     self.headBtn.selected = !tlInfo.fold;
 }
+- (void)echoNodeContent:(TTThirdNode *)nodeInfo {
+    self.titleLabel.text = nodeInfo.shortName;
+}
 
 #pragma mark lazy loading
 - (UIButton *)headBtn {

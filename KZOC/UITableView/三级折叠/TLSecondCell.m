@@ -62,9 +62,9 @@ NSString * const CellIdTLSecondCell = @"CellIdTLSecondCell";
         make.centerY.equalTo(@0);
         make.left.equalTo(self.titleLabel.mas_right).offset(5);
     }];
-//    self.headBtn.backgroundColor = UIColor.orangeColor;
-//    self.titleLabel.backgroundColor = [UIColor.blueColor colorWithAlphaComponent:.4];
-//    self.subheadLabel.backgroundColor = [UIColor.lightGrayColor colorWithAlphaComponent:.6];
+    //    self.headBtn.backgroundColor = UIColor.orangeColor;
+    //    self.titleLabel.backgroundColor = [UIColor.blueColor colorWithAlphaComponent:.4];
+    //    self.subheadLabel.backgroundColor = [UIColor.lightGrayColor colorWithAlphaComponent:.6];
 }
 
 #pragma mark public method
@@ -72,6 +72,16 @@ NSString * const CellIdTLSecondCell = @"CellIdTLSecondCell";
     self.titleLabel.text = tlInfo.title;
     self.subheadLabel.text = tlInfo.subhead;
     self.headBtn.selected = !tlInfo.fold;
+}
+- (void)echoNodeContent:(TTSecondNode *)nodeInfo {
+    self.titleLabel.text = nodeInfo.name;
+    if (nodeInfo.children.count == 0) {
+        NSLog(@"come in");
+        [self.headBtn setImage:[UIImage imageNamed:@"tl_second_normal"] forState:UIControlStateNormal];
+    } else {
+        [self.headBtn setImage:[UIImage imageNamed:@"tl_second_fold"] forState:UIControlStateNormal];
+        self.headBtn.selected = nodeInfo.expand;
+    }
 }
 
 #pragma mark lazy loading

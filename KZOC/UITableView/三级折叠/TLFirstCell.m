@@ -74,6 +74,10 @@ NSString * const CellIdTLFirstCell = @"CellIdTLFirstCell";
     self.subheadLabel.text = tlInfo.subhead;
     self.headBtn.selected = !tlInfo.fold;
 }
+- (void)echoNodeContent:(TTFirstNode *)nodeInfo {
+    self.titleLabel.text = nodeInfo.name;
+    self.headBtn.selected = nodeInfo.expand;
+}
 
 #pragma mark lazy loading
 - (UIButton *)headBtn {

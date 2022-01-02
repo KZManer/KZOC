@@ -16,6 +16,7 @@
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSArray<TLModel *> *tlInfos;
 @property (nonatomic, strong) NSMutableArray<TLModel *> *tempInfos;
+@property (nonatomic, assign) int count;
 
 
 @end
@@ -100,11 +101,17 @@
     } else {
         selInfo.fold = !selInfo.fold;
         if (selInfo.fold) {
+            self.count = 0;
+            [self foldWithId:selInfo.iid tlInfos:[self.tempInfos copy]];
+            [self.tableView reloadData];
+            NSLog(@"%d",self.count);
+            return;
             //折叠
             //找到当前节点的子节点，从tempInfos中移除
             __block NSMutableArray<NSIndexPath *> *tempIndexPaths = [NSMutableArray array];
             NSArray<TLModel *> *tempINFOS = [self.tempInfos copy];
             [tempINFOS enumerateObjectsUsingBlock:^(TLModel * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                self.count++;
                 if ([selInfo.iid isEqualToString:obj.fid]) {
                     //将当前节点的子节点删除
                     obj.fold = true;
@@ -114,6 +121,7 @@
                 if (selInfo.level == TLLevelFirst) {
                     //进入此if说明点击的是一级节点，要删除子节点的子节点
                     [tempINFOS enumerateObjectsUsingBlock:^(TLModel * _Nonnull obj1, NSUInteger idx1, BOOL * _Nonnull stop1) {
+                        self.count++;
                         //[obj.iid isEqualToString:obj1.fid] 此判断用于确定二级节点的子节点
                         //[selInfo.iid isEqualToString:obj.fid] 此判断用于确定处理的是当前一级节点的二级节点，防止误处理其他一级节点展开的二级节点
                         if ([obj.iid isEqualToString:obj1.fid] && [selInfo.iid isEqualToString:obj.fid]) {
@@ -124,10 +132,10 @@
                     }];
                 }
             }];
-       
+            NSLog(@"%d",self.count);
             [tableView deleteRowsAtIndexPaths:tempIndexPaths withRowAnimation:UITableViewRowAnimationNone];
             [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
-
+            
         } else {
             //展开
             //找到当前节点的子节点，加到tempInfos中
@@ -147,7 +155,38 @@
         }
     }
 }
-
+//递归处理
+- (void)foldWithId:(NSString *)iid tlInfos:(NSArray<TLModel *> *)infos {
+    NSLog(@"计算");
+    NSMutableArray *tempInfos = [NSMutableArray arrayWithArray:infos];
+    for (TLModel *obj in infos) {
+        if (obj.level == TLLevelThird) {
+            self.count++;
+            if ([iid isEqualToString:obj.fid]) {
+                
+                [self.tempInfos removeObject:obj];
+                [tempInfos removeObject:obj];
+                //            return;
+                continue;
+            } else {
+                [tempInfos removeObject:obj];
+            }
+        } else {
+            self.count++;
+            if ([iid isEqualToString:obj.fid]) {
+                
+                [self.tempInfos removeObject:obj];
+                [tempInfos removeObject:obj];
+                [self foldWithId:obj.iid tlInfos:tempInfos];
+            } else {
+                [tempInfos removeObject:obj];
+            }
+        }
+    }
+    
+    NSLog(@"come in");
+    
+}
 #pragma mark - lazy loading
 - (UITableView *)tableView {
     if (!_tableView) {

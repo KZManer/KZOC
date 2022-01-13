@@ -18,7 +18,6 @@
 @property (nonatomic, strong) NSMutableArray<TTNodeModel *> *tempNodeInfos;
 @property (nonatomic, assign) int count;
 
-
 @end
 
 @implementation TTListView

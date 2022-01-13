@@ -17,6 +17,7 @@
         @"功能实验",
         @"组件封装",
         @"三方框架",
+        @"动画相关",
     ];
 }
 
@@ -41,7 +42,6 @@
             [self sectionWithName:@"VC生命周期" className:@"VCLifeCycle"],
             [self sectionWithName:@"Runtime" className:@"RuntimeVC"],
             [self sectionWithName:@"UITextField(正则表达式)" className:@"TextFieldVC"],
-            [self sectionWithName:@"金题库首页" className:@"ScrollVC"],
         ],
         //功能实验
         @[
@@ -51,6 +51,7 @@
             [self sectionWithName:@"读取剪切板内容" className:@"ShearVC"],
             [self sectionWithName:@"ScrollView手势冲突" className:@"GestureVC"],
             [self sectionWithName:@"UILabel加标签" className:@"LabelWithTagVC"],
+            [self sectionWithName:@"导航栏角标" className:@"NavigationBadgeVC"],
         ],
         //组件封装
         @[
@@ -71,6 +72,10 @@
             [self sectionWithName:@"倒计时" className:@"TimeCountVC"],
             [self sectionWithName:@"TABAnimated(骨架屏)" className:@"TabAnimatedVC"],
         ],
+        //动画相关
+        @[
+            [self sectionWithName:@"分割View" className:@"CutOffViewVC"],
+        ],
     ];
 }
 
@@ -85,10 +90,12 @@
     return @[
         //金题库
         @[
+            [self sectionWithName:@"金题库首页" className:@"KTHomeVC"],
             [self sectionWithName:@"我的-我的地址" className:@"AddressVC"],
             [self sectionWithName:@"我的-新建收货地址" className:@"AddressOperateVC"],
             [self sectionWithName:@"题库-简答题" className:@"ShortAnswerQuestionVC"],
             [self sectionWithName:@"简答题-设置" className:@"ShortAnswerSettingVC"],
+            [self sectionWithName:@"课程-直播课" className:@"CLiveCourseVC"],
         ],
     ];
 }

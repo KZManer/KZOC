@@ -15,6 +15,7 @@ pod 'AFNetworking'                      #网络请求框架
 pod 'CRBoxInputView', '1.2.1'           #验证码输入框架
 pod 'DZNEmptyDataSet', '~> 1.8.1'       #空白数据集显示框架
 pod 'FLAnimatedImage'
+pod 'IGListKit', '~> 3.0'
 pod 'IQKeyboardManager'                 #键盘管理框架
 pod 'LEEAlert','~>1.5.0'                #Alert ActionSheet
 pod 'Masonry','~>1.1.0'                 #布局框架
@@ -30,6 +31,7 @@ pod 'TXScrollLabelView','~>1.3.2'       #跑马灯消息播报
 pod 'TZImagePickerController','~>3.6.0' #图片框架
 pod 'YYText'                            #富文本框架
 pod 'LFKit/Component/LFPopupMenu'       #带箭头选项窗LFPopupMenu
+
 #pod 'YYImage'
 #pod 'Zhugeio'
 end

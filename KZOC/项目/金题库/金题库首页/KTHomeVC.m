@@ -31,6 +31,8 @@ static const CGFloat kHeightPageMenu     = 40;
 @property (nonatomic, strong) NSMutableArray<UIViewController *> *childVCs;
 @property (nonatomic, assign) CGFloat cutHeight;//吸顶触发的高度
 @property (nonatomic, strong) UIScrollView *childScrollView;
+@property (nonatomic, assign) CGFloat heightWelfare;//新人福利高度
+@property (nonatomic, assign) CGFloat heightVipQuestions;//VIP题库高度
 
 @end
 
@@ -42,9 +44,9 @@ static const CGFloat kHeightPageMenu     = 40;
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.cutHeight = kHeightSlideshow + kHeightEightItem + kHeightWelfare + kHeightVipQuestions;
     [self doViewUI];
     [self doConfigNoti];
+    [self configContent];
 }
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
@@ -55,24 +57,51 @@ static const CGFloat kHeightPageMenu     = 40;
 - (void)doViewUI {
     self.view.backgroundColor = [UIColor whiteColor];
     //导航栏
-    UIButton *navigationBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    [navigationBtn setTitle:@"返回" forState:UIControlStateNormal];
-    [navigationBtn setBackgroundColor:UIColor.orangeColor];
-    [navigationBtn addTarget:self action:@selector(pressedBackAction) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:navigationBtn];
-    [navigationBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+    UIView *navigationView = [[UIView alloc]init];
+    navigationView.backgroundColor = UIColor.lightGrayColor;
+    [self.view addSubview:navigationView];
+    [navigationView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(@(Height_Status));
-        make.left.right.equalTo(@0);
+        make.left.equalTo(@0);
+        make.width.equalTo(@(Width_Screen));
         make.height.equalTo(@(Height_Navigation));
+    }];
+    //导航栏 - 返回按钮
+    UIButton *backBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [backBtn setTitle:@"返回" forState:UIControlStateNormal];
+    [backBtn setTitleColor:[KTools tools_colorRandom] forState:UIControlStateNormal];
+    backBtn.backgroundColor = [KTools tools_colorRandom];
+    [backBtn addTarget:self action:@selector(pressedBackButton) forControlEvents:UIControlEventTouchUpInside];
+    [navigationView addSubview:backBtn];
+    [backBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.left.equalTo(@0);
+        make.height.width.equalTo(navigationView.mas_height);
+    }];
+    //导航栏 - 更换
+    UIButton *changeBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [changeBtn setTitle:@"更换" forState:UIControlStateNormal];
+    [changeBtn setTitleColor:[KTools tools_colorRandom] forState:UIControlStateNormal];
+    changeBtn.backgroundColor = [KTools tools_colorRandom];
+    [changeBtn addTarget:self action:@selector(pressedChangeButton) forControlEvents:UIControlEventTouchUpInside];
+    [navigationView addSubview:changeBtn];
+    [changeBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.center.equalTo(navigationView);
+        make.height.width.equalTo(navigationView.mas_height);
     }];
     
     //tableView
     [self.view addSubview:self.tableView];
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(navigationBtn.mas_bottom);
+        make.top.equalTo(navigationView.mas_bottom);
         make.left.right.bottom.equalTo(@0);
     }];
     
+    
+}
+- (void)doConfigNoti {
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(childTableViewDidScroll:) name:Noti_ChildTableViewDidScroll object:nil];
+}
+- (void)configContent {
     //配置sppagemenu
     [self.pageMenu removeAllItems];
     for (UIViewController *vc in self.childViewControllers) {
@@ -93,18 +122,31 @@ static const CGFloat kHeightPageMenu     = 40;
     self.scrollView.contentSize = CGSizeMake(Width_Screen * 3, 0);
     self.scrollView.contentOffset = CGPointMake(Width_Screen * self.pageMenu.selectedItemIndex, 0);
     
+    
+    //福利view的高度
+    BOOL showWelfare = arc4random_uniform(10) < 5;
+    NSLog(@"%d",showWelfare);
+    self.heightWelfare = showWelfare ? kHeightWelfare : 0;
+    //VIP题库高度
+    BOOL showVipQuestions = arc4random_uniform(10) < 5;
+    NSLog(@"%d",showVipQuestions);
+    self.heightVipQuestions = showVipQuestions ? kHeightVipQuestions : 0;
+    
+    
+    self.cutHeight = kHeightSlideshow + kHeightEightItem + self.heightWelfare + self.heightVipQuestions;
+    
     [self.tableView reloadData];
     
     NSLog(@"外层tableView：%p",self.tableView);
     NSLog(@"外层scrolView：%p",self.scrollView);
 }
-- (void)doConfigNoti {
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(childTableViewDidScroll:) name:Noti_ChildTableViewDidScroll object:nil];
-}
 
 #pragma mark gesture event
-- (void)pressedBackAction {
+- (void)pressedBackButton {
     [self.navigationController popViewControllerAnimated:true];
+}
+- (void)pressedChangeButton {
+    [self configContent];
 }
 
 #pragma mark notification method
@@ -113,13 +155,15 @@ static const CGFloat kHeightPageMenu     = 40;
     if (self.childScrollView != childScrollView) {
         self.childScrollView = childScrollView;
     }
-    NSLog(@"%f",self.tableView.contentOffset.y);
-    NSLog(@"通知：%p",childScrollView);
+//    NSLog(@"%f",self.tableView.contentOffset.y);
+//    NSLog(@"通知：%p",childScrollView);
     if (self.tableView.contentOffset.y < self.cutHeight) {
         childScrollView.contentOffset = CGPointZero;
+        self.childScrollView.showsVerticalScrollIndicator = false;
 //        [[NSNotificationCenter defaultCenter] postNotificationName:Noti_ResetTableViewLocationToZero object:nil];
     } else {
         self.tableView.contentOffset = CGPointMake(0, self.cutHeight);
+        self.childScrollView.showsVerticalScrollIndicator = true;
     }
 }
 
@@ -131,8 +175,8 @@ static const CGFloat kHeightPageMenu     = 40;
 
 #pragma mark UIScrollViewDelegate
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    NSLog(@"主代理：%p",scrollView);
-    NSLog(@"%f",self.tableView.contentOffset.y);
+//    NSLog(@"主代理：%p",scrollView);
+//    NSLog(@"%f",self.tableView.contentOffset.y);
     if (self.tableView == scrollView) {
         if ((self.childScrollView && self.childScrollView.contentOffset.y > 0)) {
             self.tableView.contentOffset = CGPointMake(0, self.cutHeight);
@@ -160,8 +204,8 @@ static const CGFloat kHeightPageMenu     = 40;
     
     if (indexPath.section == 0) return kHeightSlideshow;
     if (indexPath.section == 1) return kHeightEightItem;
-    if (indexPath.section == 2) return kHeightWelfare;
-    if (indexPath.section == 3) return kHeightVipQuestions;
+    if (indexPath.section == 2) return self.heightWelfare;
+    if (indexPath.section == 3) return self.heightVipQuestions;
     if (indexPath.section == 4) return Height_Active_Max - kHeightPageMenu;
     return 0;
 }

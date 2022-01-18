@@ -9,6 +9,7 @@
 #import "ProgressView.h"
 #import "CJReportProgressView.h"
 #import "CJSmartProgressView.h"
+#import "KPickerView.h"
 
 @interface TestVC ()
 
@@ -56,7 +57,9 @@
 }
 
 - (void)pressedButton {
-    
+    [KPickerView showInView:self.tabBarController.view titleArr:@[@"1",@"2"] showIndex:0 finishHandler:^(NSInteger selectIndex) {
+        NSLog(@"%ld",selectIndex);
+    }];
 }
 
 

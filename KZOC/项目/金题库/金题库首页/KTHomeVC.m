@@ -95,12 +95,11 @@ static const CGFloat kHeightPageMenu     = 40;
         make.top.equalTo(navigationView.mas_bottom);
         make.left.right.bottom.equalTo(@0);
     }];
-    
-    
 }
 - (void)doConfigNoti {
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(childTableViewDidScroll:) name:Noti_ChildTableViewDidScroll object:nil];
 }
+///下面这个方法实际中需要根据接口返回数据来处理要展示的功能，这里用随机数模拟
 - (void)configContent {
     //配置sppagemenu
     [self.pageMenu removeAllItems];
@@ -110,18 +109,46 @@ static const CGFloat kHeightPageMenu     = 40;
         [vc removeFromParentViewController];
     }
     
-    [self.pageMenu setItems:@[@"真题闯关",@"考点资料",@"活动资讯"] selectedItemIndex:0];
+    //sppagemenu随机item
+    NSArray *fullItems = @[@"真题闯关",@"考点资料",@"活动资讯"];
+    NSMutableArray *tempArr = [NSMutableArray array];
+    uint32_t showItemNum = arc4random_uniform(3)+1;
+    for (int i = 0; i<showItemNum; i++) {
+        uint32_t index = arc4random_uniform(showItemNum);
+        NSString *itemName = fullItems[index];
+        if (![tempArr containsObject:itemName]) {
+            [tempArr addObject:itemName];
+        }
+    }
+    if (tempArr.count == 0) {
+        [tempArr addObject:fullItems.firstObject];
+    }
+    
+    [self.pageMenu setItems:tempArr selectedItemIndex:0];
     int i = 0;
-    for (UIViewController *vc in @[[QuestionChallengeVC new],[ExamDatumVC new],[ActivityInfoVC new]]) {
+    for (NSString *itemName in tempArr) {
+        UIViewController *vc;
+        if ([itemName isEqualToString:@"真题闯关"]) {
+            vc = (QuestionChallengeVC *)[QuestionChallengeVC new];
+        } else if ([itemName isEqualToString:@"考点资料"]) {
+            vc = (ExamDatumVC *)[ExamDatumVC new];
+        } else {
+            vc = (ActivityInfoVC *)[ActivityInfoVC new];
+        }
         vc.view.frame = CGRectMake(Width_Screen * i, 0, Width_Screen, Height_Active_Max);
         [self addChildViewController:vc];
         [self.scrollView addSubview:vc.view];
         i++;
     }
+//    for (UIViewController *vc in @[[QuestionChallengeVC new],[ExamDatumVC new],[ActivityInfoVC new]]) {
+//        vc.view.frame = CGRectMake(Width_Screen * i, 0, Width_Screen, Height_Active_Max);
+//        [self addChildViewController:vc];
+//        [self.scrollView addSubview:vc.view];
+//        i++;
+//    }
     
-    self.scrollView.contentSize = CGSizeMake(Width_Screen * 3, 0);
+    self.scrollView.contentSize = CGSizeMake(Width_Screen * tempArr.count, 0);
     self.scrollView.contentOffset = CGPointMake(Width_Screen * self.pageMenu.selectedItemIndex, 0);
-    
     
     //福利view的高度
     BOOL showWelfare = arc4random_uniform(10) < 5;
@@ -131,7 +158,6 @@ static const CGFloat kHeightPageMenu     = 40;
     BOOL showVipQuestions = arc4random_uniform(10) < 5;
     NSLog(@"%d",showVipQuestions);
     self.heightVipQuestions = showVipQuestions ? kHeightVipQuestions : 0;
-    
     
     self.cutHeight = kHeightSlideshow + kHeightEightItem + self.heightWelfare + self.heightVipQuestions;
     

@@ -377,8 +377,11 @@ typedef void(^doneZeroDayBlock)(NSInteger days,NSInteger hours,NSInteger minutes
         _dateLabelColor =  RGB(247, 133, 51);
     }
     
+    CGFloat offsetX = 0;
     for (int i=0; i<nameArr.count; i++) {
-        CGFloat labelX = PickerWeight/(nameArr.count*2)+18+PickerWeight/nameArr.count*i;
+        offsetX = i == 0 && nameArr.count > 1 ? 24 : 18;
+        CGFloat labelX = PickerWeight/(nameArr.count*2)+offsetX+PickerWeight/nameArr.count*i;
+//        CGFloat labelX = PickerWeight/(nameArr.count*2)+18+PickerWeight/nameArr.count*i;
         UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(labelX, self.showYearView.frame.size.height/2-15/2.0, 15, 15)];
         label.text = nameArr[i];
         label.textAlignment = NSTextAlignmentCenter;

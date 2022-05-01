@@ -79,6 +79,9 @@
 		04DD028127465ECA00B397F1 /* HomeEightBtnCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DD028027465ECA00B397F1 /* HomeEightBtnCell.m */; };
 		292055DC281E5C7100F260C2 /* MessVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 292055DB281E5C7100F260C2 /* MessVC.m */; };
 		292055DF281E5DCF00F260C2 /* KZHomeBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 292055DE281E5DCF00F260C2 /* KZHomeBaseView.m */; };
+		292055E3281E65DD00F260C2 /* ThreadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 292055E2281E65DD00F260C2 /* ThreadVC.m */; };
+		292055E6281E664A00F260C2 /* TOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 292055E5281E664A00F260C2 /* TOperation.m */; };
+		292055E9281E676800F260C2 /* TSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 292055E8281E676800F260C2 /* TSingleton.m */; };
 		292893E027362EAC00B7C8D6 /* ArrowPopVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 292893DF27362EAC00B7C8D6 /* ArrowPopVC.m */; };
 		292893E627364F7A00B7C8D6 /* CountdownTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 292893E427364F7A00B7C8D6 /* CountdownTimer.m */; };
 		2929544527819A9800C249F3 /* TTListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2929544427819A9800C249F3 /* TTListVC.m */; };
@@ -322,6 +325,12 @@
 		292055DB281E5C7100F260C2 /* MessVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessVC.m; sourceTree = "<group>"; };
 		292055DD281E5DCF00F260C2 /* KZHomeBaseView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KZHomeBaseView.h; sourceTree = "<group>"; };
 		292055DE281E5DCF00F260C2 /* KZHomeBaseView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KZHomeBaseView.m; sourceTree = "<group>"; };
+		292055E1281E65DD00F260C2 /* ThreadVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThreadVC.h; sourceTree = "<group>"; };
+		292055E2281E65DD00F260C2 /* ThreadVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThreadVC.m; sourceTree = "<group>"; };
+		292055E4281E664A00F260C2 /* TOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TOperation.h; sourceTree = "<group>"; };
+		292055E5281E664A00F260C2 /* TOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TOperation.m; sourceTree = "<group>"; };
+		292055E7281E676800F260C2 /* TSingleton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSingleton.h; sourceTree = "<group>"; };
+		292055E8281E676800F260C2 /* TSingleton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TSingleton.m; sourceTree = "<group>"; };
 		292893DE27362EAC00B7C8D6 /* ArrowPopVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArrowPopVC.h; sourceTree = "<group>"; };
 		292893DF27362EAC00B7C8D6 /* ArrowPopVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArrowPopVC.m; sourceTree = "<group>"; };
 		292893E427364F7A00B7C8D6 /* CountdownTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountdownTimer.m; sourceTree = "<group>"; };
@@ -890,8 +899,22 @@
 			children = (
 				292055DA281E5C7100F260C2 /* MessVC.h */,
 				292055DB281E5C7100F260C2 /* MessVC.m */,
+				292055E0281E65AB00F260C2 /* 多线程&单例 */,
 			);
 			path = "凌乱";
+			sourceTree = "<group>";
+		};
+		292055E0281E65AB00F260C2 /* 多线程&单例 */ = {
+			isa = PBXGroup;
+			children = (
+				292055E1281E65DD00F260C2 /* ThreadVC.h */,
+				292055E2281E65DD00F260C2 /* ThreadVC.m */,
+				292055E4281E664A00F260C2 /* TOperation.h */,
+				292055E5281E664A00F260C2 /* TOperation.m */,
+				292055E7281E676800F260C2 /* TSingleton.h */,
+				292055E8281E676800F260C2 /* TSingleton.m */,
+			);
+			path = "多线程&单例";
 			sourceTree = "<group>";
 		};
 		292893DD27362E3E00B7C8D6 /* 箭头弹窗 */ = {
@@ -1621,6 +1644,7 @@
 				2995F1EB27280E8C0000D90D /* KUIViewExt.m in Sources */,
 				29367BA02741FFF20017712F /* ShearView.m in Sources */,
 				04A7E98D274CE0DC003B8616 /* AddressVC.m in Sources */,
+				292055E3281E65DD00F260C2 /* ThreadVC.m in Sources */,
 				0442C6EC277E9A4F00A7C8C2 /* LabelWithTagVC.m in Sources */,
 				29946080272A50ED009853CE /* HomeeVC.m in Sources */,
 				2995F29A272907530000D90D /* UIImage+KSize.m in Sources */,
@@ -1670,6 +1694,7 @@
 				2995F1D12728095A0000D90D /* ViewController.m in Sources */,
 				2995F21A2728D5DE0000D90D /* SPPageMenuVC.m in Sources */,
 				2995F1CB2728095A0000D90D /* AppDelegate.m in Sources */,
+				292055E6281E664A00F260C2 /* TOperation.m in Sources */,
 				04D3DEF0274DEE3B00630F3F /* AddressOperateVC.m in Sources */,
 				04A152F0278E6F55006934B6 /* NavigationBadgeVC.m in Sources */,
 				2995F1F02728D5B60000D90D /* SectionModel.m in Sources */,
@@ -1750,6 +1775,7 @@
 				047788E82785357400185710 /* CLiveCourseTopView.m in Sources */,
 				0426DD96275B770200B8F91E /* ShortAnswerQuestionVC.m in Sources */,
 				0454496627718B7E00B83706 /* KTImageTextCell.m in Sources */,
+				292055E9281E676800F260C2 /* TSingleton.m in Sources */,
 				04BFFED2275F69370020AA34 /* CollectionReuseVC.m in Sources */,
 				2995F2C6272907620000D90D /* KPhotoCell.m in Sources */,
 				0442C6EF277EA08F00A7C8C2 /* KILabel.m in Sources */,

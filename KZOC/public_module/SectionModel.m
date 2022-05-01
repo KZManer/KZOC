@@ -97,18 +97,13 @@
 }
 + (NSArray *)sectionMessTitles {
     return @[
-        @"--"
+        @"临时存放"
     ];
 }
 + (NSArray<NSArray<SectionModel *> *> *)sectionMessModels {
     return @[
         @[
-            [self sectionWithName:@"首页" className:@"KTHomeVC"],
-            [self sectionWithName:@"我的-我的地址" className:@"AddressVC"],
-            [self sectionWithName:@"我的-新建收货地址" className:@"AddressOperateVC"],
-            [self sectionWithName:@"题库-简答题" className:@"ShortAnswerQuestionVC"],
-            [self sectionWithName:@"简答题-设置" className:@"ShortAnswerSettingVC"],
-            [self sectionWithName:@"课程-直播课" className:@"CLiveCourseVC"],
+            [self sectionWithName:@"多线程&单例" className:@"ThreadVC"],
         ],
     ];
 }

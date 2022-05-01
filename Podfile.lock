@@ -36,6 +36,7 @@ PODS:
   - SDWebImageFLPlugin (0.5.0):
     - FLAnimatedImage (>= 1.0.11)
     - SDWebImage/Core (~> 5.10)
+  - SPPageMenu (3.5.0)
   - SVProgressHUD (2.2.5)
   - TABAnimated (2.5.9)
   - TXScrollLabelView (1.3.2)
@@ -57,6 +58,7 @@ DEPENDENCIES:
   - SAMKeychain (~> 1.5.3)
   - SDWebImage (~> 5.0)
   - SDWebImageFLPlugin
+  - SPPageMenu
   - SVProgressHUD (~> 2.2.5)
   - TABAnimated
   - TXScrollLabelView (~> 1.3.2)
@@ -79,6 +81,7 @@ SPEC REPOS:
     - SAMKeychain
     - SDWebImage
     - SDWebImageFLPlugin
+    - SPPageMenu
     - SVProgressHUD
     - TABAnimated
     - TXScrollLabelView
@@ -100,12 +103,13 @@ SPEC CHECKSUMS:
   SAMKeychain: 483e1c9f32984d50ca961e26818a534283b4cd5c
   SDWebImage: a7f831e1a65eb5e285e3fb046a23fcfbf08e696d
   SDWebImageFLPlugin: 245c7ce1e77028b6ef415240847b3f8aa4b106b7
+  SPPageMenu: da182aafcec55719d5c326103cc7716c1e48f311
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   TABAnimated: 8d077a20de46de0c7744c665cd56aae28c49d397
   TXScrollLabelView: 0e1650caf61198bf5dc0938ea6493254aeb80f90
   TZImagePickerController: 1cc39ec0454d6e94d0397418953164d7aa631719
   YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
 
-PODFILE CHECKSUM: 7bd43c5aae1178a00895ff779ab83deb07282075
+PODFILE CHECKSUM: da741c657c63720a7094df0922076f22893abf99
 
 COCOAPODS: 1.11.3

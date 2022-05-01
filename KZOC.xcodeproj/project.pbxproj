@@ -77,6 +77,8 @@
 		04DD027B2746576800B397F1 /* HomeEightBtnView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DD027A2746576800B397F1 /* HomeEightBtnView.m */; };
 		04DD027E2746596300B397F1 /* HomeEightBtnModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DD027D2746596300B397F1 /* HomeEightBtnModel.m */; };
 		04DD028127465ECA00B397F1 /* HomeEightBtnCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DD028027465ECA00B397F1 /* HomeEightBtnCell.m */; };
+		292055DC281E5C7100F260C2 /* MessVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 292055DB281E5C7100F260C2 /* MessVC.m */; };
+		292055DF281E5DCF00F260C2 /* KZHomeBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 292055DE281E5DCF00F260C2 /* KZHomeBaseView.m */; };
 		292893E027362EAC00B7C8D6 /* ArrowPopVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 292893DF27362EAC00B7C8D6 /* ArrowPopVC.m */; };
 		292893E627364F7A00B7C8D6 /* CountdownTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 292893E427364F7A00B7C8D6 /* CountdownTimer.m */; };
 		2929544527819A9800C249F3 /* TTListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2929544427819A9800C249F3 /* TTListVC.m */; };
@@ -315,6 +317,11 @@
 		04DD027F27465ECA00B397F1 /* HomeEightBtnCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeEightBtnCell.h; sourceTree = "<group>"; };
 		04DD028027465ECA00B397F1 /* HomeEightBtnCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeEightBtnCell.m; sourceTree = "<group>"; };
 		0A58ED9FFA5AD146D30D45AD /* Pods-KZOC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KZOC.debug.xcconfig"; path = "Target Support Files/Pods-KZOC/Pods-KZOC.debug.xcconfig"; sourceTree = "<group>"; };
+		292055D7281E59F500F260C2 /* Record.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Record.h; sourceTree = "<group>"; };
+		292055DA281E5C7100F260C2 /* MessVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessVC.h; sourceTree = "<group>"; };
+		292055DB281E5C7100F260C2 /* MessVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessVC.m; sourceTree = "<group>"; };
+		292055DD281E5DCF00F260C2 /* KZHomeBaseView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KZHomeBaseView.h; sourceTree = "<group>"; };
+		292055DE281E5DCF00F260C2 /* KZHomeBaseView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KZHomeBaseView.m; sourceTree = "<group>"; };
 		292893DE27362EAC00B7C8D6 /* ArrowPopVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArrowPopVC.h; sourceTree = "<group>"; };
 		292893DF27362EAC00B7C8D6 /* ArrowPopVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArrowPopVC.m; sourceTree = "<group>"; };
 		292893E427364F7A00B7C8D6 /* CountdownTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountdownTimer.m; sourceTree = "<group>"; };
@@ -744,7 +751,7 @@
 			children = (
 				04A7E986274CDE09003B8616 /* ProjectVC.h */,
 				04A7E987274CDE09003B8616 /* ProjectVC.m */,
-				04A7E98A274CE0C6003B8616 /* 金题库 */,
+				04A7E98A274CE0C6003B8616 /* 项目 */,
 			);
 			path = "项目";
 			sourceTree = "<group>";
@@ -762,17 +769,17 @@
 			path = "我的-我的地址";
 			sourceTree = "<group>";
 		};
-		04A7E98A274CE0C6003B8616 /* 金题库 */ = {
+		04A7E98A274CE0C6003B8616 /* 项目 */ = {
 			isa = PBXGroup;
 			children = (
-				29367BAC27424CD10017712F /* 金题库首页 */,
+				29367BAC27424CD10017712F /* 首页 */,
 				047788E22785323900185710 /* 课程-直播课 */,
 				04BFFEDE27607C280020AA34 /* 简答题-设置 */,
 				0426DD93275B76D700B8F91E /* 题库-简答题 */,
 				04A7E989274CE0B9003B8616 /* 我的-我的地址 */,
 				04D3DEED274DEE1900630F3F /* 我的-新建收货地址 */,
 			);
-			path = "金题库";
+			path = "项目";
 			sourceTree = "<group>";
 		};
 		04BFFECF275F69000020AA34 /* cell复用问题 */ = {
@@ -850,6 +857,43 @@
 			path = "整屏滑动八按钮";
 			sourceTree = "<group>";
 		};
+		292055D4281E3FBC00F260C2 /* 日常记录 */ = {
+			isa = PBXGroup;
+			children = (
+				29367BAA27424BF20017712F /* UITableView */,
+				29367BAB27424BFD0017712F /* UICollectionView */,
+				2995F1F12728D5C50000D90D /* 系统相关 */,
+				2995F21C2728E69C0000D90D /* 功能实验 */,
+				2995F2072728D5D50000D90D /* 组件封装 */,
+				2995F2132728D5DE0000D90D /* 三方框架 */,
+				041D80BB2786977F008AC164 /* 动画相关 */,
+			);
+			path = "日常记录";
+			sourceTree = "<group>";
+		};
+		292055D5281E404100F260C2 /* root_module */ = {
+			isa = PBXGroup;
+			children = (
+				292055D7281E59F500F260C2 /* Record.h */,
+				2995F1C92728095A0000D90D /* AppDelegate.h */,
+				2995F1CA2728095A0000D90D /* AppDelegate.m */,
+				29693D502731676100475428 /* AppDelegate+KTextField.h */,
+				29693D512731676100475428 /* AppDelegate+KTextField.m */,
+				29693D532732220300475428 /* UITextField+KTextField.h */,
+				29693D542732220300475428 /* UITextField+KTextField.m */,
+			);
+			path = root_module;
+			sourceTree = "<group>";
+		};
+		292055D9281E5C4500F260C2 /* 凌乱 */ = {
+			isa = PBXGroup;
+			children = (
+				292055DA281E5C7100F260C2 /* MessVC.h */,
+				292055DB281E5C7100F260C2 /* MessVC.m */,
+			);
+			path = "凌乱";
+			sourceTree = "<group>";
+		};
 		292893DD27362E3E00B7C8D6 /* 箭头弹窗 */ = {
 			isa = PBXGroup;
 			children = (
@@ -906,7 +950,7 @@
 			path = UICollectionView;
 			sourceTree = "<group>";
 		};
-		29367BAC27424CD10017712F /* 金题库首页 */ = {
+		29367BAC27424CD10017712F /* 首页 */ = {
 			isa = PBXGroup;
 			children = (
 				046AF96327902DBD00E6BD44 /* v */,
@@ -921,7 +965,7 @@
 				29367BC927428AFA0017712F /* ActivityInfoVC.h */,
 				29367BCA27428AFA0017712F /* ActivityInfoVC.m */,
 			);
-			path = "金题库首页";
+			path = "首页";
 			sourceTree = "<group>";
 		};
 		29367BB32742551D0017712F /* TABAnimated(骨架屏) */ = {
@@ -1001,7 +1045,7 @@
 			path = UITextField;
 			sourceTree = "<group>";
 		};
-		29946077272A390A009853CE /* Home */ = {
+		29946077272A390A009853CE /* public_module */ = {
 			isa = PBXGroup;
 			children = (
 				2994607B272A50D3009853CE /* TabBarRootVC.h */,
@@ -1014,11 +1058,13 @@
 				29946079272A3932009853CE /* HomeHeaderViewCell.m */,
 				2995F1EE2728D5B60000D90D /* SectionModel.h */,
 				2995F1EF2728D5B60000D90D /* SectionModel.m */,
+				292055DD281E5DCF00F260C2 /* KZHomeBaseView.h */,
+				292055DE281E5DCF00F260C2 /* KZHomeBaseView.m */,
 			);
-			path = Home;
+			path = public_module;
 			sourceTree = "<group>";
 		};
-		29946085272A7A93009853CE /* Test */ = {
+		29946085272A7A93009853CE /* 实验 */ = {
 			isa = PBXGroup;
 			children = (
 				29946081272A5104009853CE /* TestVC.h */,
@@ -1031,7 +1077,7 @@
 				04A15211278BD718006934B6 /* ProgressView.m */,
 				0454495E27718B7E00B83706 /* KTImageTextView */,
 			);
-			path = Test;
+			path = "实验";
 			sourceTree = "<group>";
 		};
 		2994608F272AA53B009853CE /* TXScrollLabelView(跑马灯) */ = {
@@ -1064,29 +1110,19 @@
 		2995F1C82728095A0000D90D /* KZOC */ = {
 			isa = PBXGroup;
 			children = (
-				2995F1C92728095A0000D90D /* AppDelegate.h */,
-				2995F1CA2728095A0000D90D /* AppDelegate.m */,
-				29693D502731676100475428 /* AppDelegate+KTextField.h */,
-				29693D512731676100475428 /* AppDelegate+KTextField.m */,
-				29693D532732220300475428 /* UITextField+KTextField.h */,
-				29693D542732220300475428 /* UITextField+KTextField.m */,
-				29946077272A390A009853CE /* Home */,
-				29367BAA27424BF20017712F /* UITableView */,
-				29367BAB27424BFD0017712F /* UICollectionView */,
-				2995F1F12728D5C50000D90D /* 系统相关 */,
-				2995F21C2728E69C0000D90D /* 功能实验 */,
-				2995F2072728D5D50000D90D /* 组件封装 */,
-				2995F2132728D5DE0000D90D /* 三方框架 */,
-				041D80BB2786977F008AC164 /* 动画相关 */,
+				292055D5281E404100F260C2 /* root_module */,
+				29946077272A390A009853CE /* public_module */,
+				2995F1E327280E8B0000D90D /* tools_module */,
+				292055D4281E3FBC00F260C2 /* 日常记录 */,
 				04A7E985274CDDE3003B8616 /* 项目 */,
-				29946085272A7A93009853CE /* Test */,
-				2995F1E327280E8B0000D90D /* KTools */,
+				292055D9281E5C4500F260C2 /* 凌乱 */,
+				29946085272A7A93009853CE /* 实验 */,
 				2995F28D272906330000D90D /* Supporting Files */,
 			);
 			path = KZOC;
 			sourceTree = "<group>";
 		};
-		2995F1E327280E8B0000D90D /* KTools */ = {
+		2995F1E327280E8B0000D90D /* tools_module */ = {
 			isa = PBXGroup;
 			children = (
 				040952862754F9E5009F023B /* tools_third */,
@@ -1096,7 +1132,7 @@
 				2995F28E272907530000D90D /* category */,
 				2995F2D0272907660000D90D /* category_third */,
 			);
-			path = KTools;
+			path = tools_module;
 			sourceTree = "<group>";
 		};
 		2995F1E427280E8B0000D90D /* tools */ = {
@@ -1602,6 +1638,7 @@
 				0442C73F277EDB8D00A7C8C2 /* ThreeLevelFoldVC.m in Sources */,
 				04C9325B2755AF4B00563809 /* HZPhotoBrowserView.m in Sources */,
 				2995F2122728D5D50000D90D /* NavigationVC.m in Sources */,
+				292055DF281E5DCF00F260C2 /* KZHomeBaseView.m in Sources */,
 				29693D4F2731673400475428 /* TextFieldVC.m in Sources */,
 				0426DD83275A236F00B8F91E /* GestureVC.m in Sources */,
 				2995F2012728D5C50000D90D /* VCLifeCycle.m in Sources */,
@@ -1644,6 +1681,7 @@
 				29946076272A379C009853CE /* HomeHeaderView.m in Sources */,
 				04DD0275274656ED00B397F1 /* SlideFullScreenVC.m in Sources */,
 				04C932582755AF4B00563809 /* HZWaitingView.m in Sources */,
+				292055DC281E5C7100F260C2 /* MessVC.m in Sources */,
 				29946083272A5104009853CE /* TestVC.m in Sources */,
 				04A15300278E75AD006934B6 /* CAAnimation+WAnimation.m in Sources */,
 				2994608B272A83D2009853CE /* NavMenuModel.m in Sources */,
@@ -1867,7 +1905,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2WD2BG8F8Y;
+				DEVELOPMENT_TEAM = GDHLWE42T5;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/KZOC/Supporting Files/PrefixHeader.pch";
 				INFOPLIST_FILE = "KZOC/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.3;
@@ -1888,7 +1926,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2WD2BG8F8Y;
+				DEVELOPMENT_TEAM = GDHLWE42T5;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/KZOC/Supporting Files/PrefixHeader.pch";
 				INFOPLIST_FILE = "KZOC/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.3;

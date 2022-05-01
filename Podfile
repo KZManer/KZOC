@@ -24,7 +24,7 @@ pod 'MJExtension','~>3.3.0'             #字典转模型框架
 pod 'SAMKeychain','~>1.5.3'             #钥匙串存储框架
 pod 'SDWebImage', '~> 5.0'
 pod 'SDWebImageFLPlugin'
-
+pod 'SPPageMenu'
 pod 'SVProgressHUD','~>2.2.5'           #提示器框架 --- 1
 pod 'TABAnimated'                       #骨架屏
 pod 'TXScrollLabelView','~>1.3.2'       #跑马灯消息播报

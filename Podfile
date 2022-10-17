@@ -2,7 +2,8 @@
 #source 'https://github.com/CocoaPods/Specs.git'
 
 ##推荐使用清华大学镜像源
-source 'https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git'
+# source 'https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git'
+source 'https://github.com/CocoaPods/Specs.git'
 
 ##忽略.cocoapods中多个specs源引起的警告问题
 install! 'cocoapods', :warn_for_unused_master_specs_repo => false
